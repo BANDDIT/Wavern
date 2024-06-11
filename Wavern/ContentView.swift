@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
-import UserNotifications
 
 struct ContentView: View {
+   let notificationDelegate = NotificationDelegate()
+   
    var body: some View {
       //        VStack {
       //            Text("Wavern Notification Demo")
@@ -41,11 +42,8 @@ struct ContentView: View {
                // MARK: Tiga button diatas
                HStack{
                   ForEach(0..<3){ _ in
-                     Rectangle()
+                     Circle()
                         .frame(width: 8, height: 8)
-                        .clipShape(
-                           RoundedRectangle(cornerRadius: 25)
-                        )
                         .opacity(0.2)
                   }
                }
@@ -95,52 +93,13 @@ struct ContentView: View {
       .background(
          LinearGradient(
             stops: [
-               Gradient.Stop(color: Color(red: 0.33, green: 0.19, blue: 0.99), location: 0.00),
-               Gradient.Stop(color: Color(red: 0.53, green: 0.45, blue: 1), location: 1.00),
+               Gradient.Stop(color: .primaryPurple, location: 0.00),
+               Gradient.Stop(color: .secondaryPurple, location: 1.00),
             ],
             startPoint: UnitPoint(x: 0.5, y: 0),
             endPoint: UnitPoint(x: 0.5, y: 1)
          )
       )
-   }
-   
-   // Function to request notification permission
-   func requestNotificationPermission() {
-      UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
-         if granted {
-            print("Permission granted")
-         } else if let error = error {
-            print("Error requesting permission: \(error.localizedDescription)")
-         }
-      }
-   }
-   
-   // Function to schedule a notification
-   func scheduleNotification() {
-      let content = UNMutableNotificationContent()
-      content.title = "Hello!"
-      content.body = "This is a test notification."
-      content.sound = .default
-      
-      // Trigger the notification to fire in 5 seconds
-      let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-      
-      // Create the request
-      let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-      
-      // Schedule the notification
-      UNUserNotificationCenter.current().add(request) { error in
-         if let error = error {
-            print("Error scheduling notification: \(error.localizedDescription)")
-         }
-      }
-   }
-}
-
-// Notification Delegate to handle notifications when the app is in the foreground
-class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
-   func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-      completionHandler([.banner, .sound])
    }
 }
 
