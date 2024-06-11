@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C8872C180A0A00854500 /* NotificationDelegate.swift */; };
+		AC11C88B2C1812C300854500 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88A2C1812C300854500 /* LoginView.swift */; };
+		AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88C2C1812CA00854500 /* SignUpView.swift */; };
+		AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88E2C1812D000854500 /* OnboardingView.swift */; };
 		C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FC9F22C118C7600A7001A /* WavernApp.swift */; };
 		C06FC9F52C118C7600A7001A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FC9F42C118C7600A7001A /* ContentView.swift */; };
 		C06FC9F72C118C7700A7001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06FC9F62C118C7700A7001A /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		AC11C8872C180A0A00854500 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
+		AC11C88A2C1812C300854500 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AC11C88C2C1812CA00854500 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		AC11C88E2C1812D000854500 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C06FC9EF2C118C7600A7001A /* Wavern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wavern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06FC9F22C118C7600A7001A /* WavernApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernApp.swift; sourceTree = "<group>"; };
 		C06FC9F42C118C7600A7001A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AC11C8892C1812AF00854500 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC11C88A2C1812C300854500 /* LoginView.swift */,
+				AC11C88C2C1812CA00854500 /* SignUpView.swift */,
+				AC11C88E2C1812D000854500 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C06FC9E62C118C7600A7001A = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +120,7 @@
 		C06FC9F12C118C7600A7001A /* Wavern */ = {
 			isa = PBXGroup;
 			children = (
+				AC11C8892C1812AF00854500 /* View */,
 				AC11C8862C1809FF00854500 /* Model */,
 				C06FC9F22C118C7600A7001A /* WavernApp.swift */,
 				C06FC9F42C118C7600A7001A /* ContentView.swift */,
@@ -269,7 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06FC9F52C118C7600A7001A /* ContentView.swift in Sources */,
+				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
+				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
+				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,
 				C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
