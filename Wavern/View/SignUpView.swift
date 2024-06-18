@@ -12,6 +12,11 @@ struct SignUpView: View {
    @State var email: String = ""
    @State var password: String = ""
    @State var confirmPassword: String = ""
+   @State var isPasswordVisible: Bool = false
+   
+   private var areTextFieldsFilled: Bool {
+      name.isEmpty || email.isEmpty || password.isEmpty || confirmPassword.isEmpty
+   }
    
    var body: some View {
       VStack{
@@ -63,8 +68,23 @@ struct SignUpView: View {
                      .fontWeight(.semibold)
                      .frame(maxWidth: .infinity, alignment: .leading)
                   
-                  TextField(text: $password) {
-                     Text("Password")
+                  HStack{
+                     if isPasswordVisible {
+                        TextField(text: $password) {
+                           Text("Password")
+                        }
+                     }else{
+                        SecureField(text: $password) {
+                           Text("Password")
+                        }
+                     }
+                     
+                     Button(action: {
+                        isPasswordVisible.toggle()
+                     }, label: {
+                        Image(systemName: isPasswordVisible ? "eye.slash" : "eye")
+                     })
+                     .foregroundStyle(.gray)
                   }
                   .frame(height: 52)
                   .padding(.horizontal)
@@ -78,8 +98,23 @@ struct SignUpView: View {
                   .fontWeight(.semibold)
                   .frame(maxWidth: .infinity, alignment: .leading)
                
-               TextField(text: $confirmPassword) {
-                  Text("Confirm Password")
+               HStack{
+                  if isPasswordVisible {
+                     TextField(text: $confirmPassword) {
+                        Text("Password")
+                     }
+                  }else{
+                     SecureField(text: $confirmPassword) {
+                        Text("Password")
+                     }
+                  }
+                  
+                  Button(action: {
+                     isPasswordVisible.toggle()
+                  }, label: {
+                     Image(systemName: isPasswordVisible ? "eye.slash" : "eye")
+                  })
+                  .foregroundStyle(.gray)
                }
                .frame(height: 52)
                .padding(.horizontal)
@@ -92,16 +127,17 @@ struct SignUpView: View {
             // MARK: Button
             VStack{
                NavigationLink(destination: LoginView()) {
-                  Text("Login")
+                  Text("Sign Up")
                      .frame(minWidth: 0, maxWidth: .infinity)
                      .font(.system(size: 17))
                      .fontWeight(.semibold)
                      .padding()
-                     .foregroundColor(.white)
-                     .background(.primaryPurple)
+                     .foregroundColor(areTextFieldsFilled ? .neutral500 : .white)
+                     .background(areTextFieldsFilled ? .neutral300 : .primaryPurple)
                      .clipShape(RoundedRectangle(cornerRadius: 12))
                }
                .padding(.bottom, 16)
+               .disabled(areTextFieldsFilled)
                
                HStack{
                   Text("Have an account?")

@@ -39,8 +39,8 @@ struct OnboardingView: View {
                   
                   // MARK: Button login & sign up
                   VStack {
-                     NavigationLink(destination: LoginView()) {
-                        Text("Login")
+                     NavigationLink(destination: SignUpView()) {
+                        Text("Get Started")
                            .frame(minWidth: 0, maxWidth: .infinity)
                            .font(.system(size: 17))
                            .fontWeight(.semibold)
@@ -50,8 +50,8 @@ struct OnboardingView: View {
                            .clipShape(RoundedRectangle(cornerRadius: 12))
                      }
                      
-                     NavigationLink(destination: SignUpView()) {
-                        Text("Sign Up")
+                     NavigationLink(destination: LoginView()) {
+                        Text("I already have an account")
                            .frame(minWidth: 0, maxWidth: .infinity)
                            .font(.system(size: 17))
                            .fontWeight(.semibold)

@@ -10,6 +10,11 @@ import SwiftUI
 struct LoginView: View {
    @State var email: String = ""
    @State var password: String = ""
+   @State private var isPasswordVisible: Bool = false
+   
+   private var areTextFieldsFilled: Bool {
+      email.isEmpty || password.isEmpty
+   }
    
    var body: some View {
       VStack{
@@ -44,8 +49,23 @@ struct LoginView: View {
                   .fontWeight(.semibold)
                   .frame(maxWidth: .infinity, alignment: .leading)
                
-               TextField(text: $password) {
-                  Text("Password")
+               HStack {
+                  if isPasswordVisible {
+                     TextField(text: $password) {
+                        Text("Password")
+                     }
+                  } else {
+                     SecureField(text: $password) {
+                        Text("Password")
+                     }
+                  }
+                  
+                  Button(action: {
+                     isPasswordVisible.toggle()
+                  }) {
+                     Image(systemName: isPasswordVisible ? "eye.slash" : "eye")
+                        .foregroundColor(.gray)
+                  }
                }
                .frame(height: 52)
                .padding(.horizontal)
@@ -63,11 +83,12 @@ struct LoginView: View {
                      .font(.system(size: 17))
                      .fontWeight(.semibold)
                      .padding()
-                     .foregroundColor(.white)
-                     .background(.primaryPurple)
+                     .foregroundColor(areTextFieldsFilled ? .neutral500 : .white)
+                     .background(areTextFieldsFilled ? .neutral300 : .primaryPurple)
                      .clipShape(RoundedRectangle(cornerRadius: 12))
                }
                .padding(.bottom, 16)
+               .disabled(areTextFieldsFilled)
                
                HStack{
                   Text("Don't have an account?")
@@ -80,7 +101,7 @@ struct LoginView: View {
                   }
                   .foregroundStyle(.primaryPurple)
                   .fontWeight(.semibold)
-
+                  
                }
             }
          }
