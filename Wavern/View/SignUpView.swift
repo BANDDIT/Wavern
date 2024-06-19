@@ -23,7 +23,7 @@ struct SignUpView: View {
          Spacer()
          
          VStack{
-            Text("Sign Up")
+            Text("Sign Ups")
                .font(.title)
                .fontWeight(.semibold)
                .frame(maxWidth: .infinity, alignment: .leading)
