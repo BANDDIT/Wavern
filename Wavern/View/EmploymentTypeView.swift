@@ -12,9 +12,10 @@ struct EmploymentTypeView:View{
    enum employmentType{
       case full_time
       case part_time
+      case freelance
    }
    
-   var type:employmentType
+   var type: employmentType
    @State var text:String = ""
    @State var bgColor:Color = .clear
    @State var txtColor:Color = .clear
@@ -38,6 +39,11 @@ struct EmploymentTypeView:View{
             text="Part-time"
             bgColor = .info100
             txtColor = .info600
+            
+         case .freelance:
+            text = "Freelance"
+            bgColor = .error100
+            txtColor = .error600
          }
       }
    }

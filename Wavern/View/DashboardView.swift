@@ -42,7 +42,7 @@ struct DashboardView: View {
                      }
                   }
                   .padding()
-                  .background(Color(.systemGray6))
+                  .background(.white)
                   .clipShape(RoundedRectangle(cornerRadius: 12))
                }
                .padding(.horizontal)
@@ -50,13 +50,56 @@ struct DashboardView: View {
             .padding(.top, 60)
          }
          
-         
-         // MARK: Talent list
+         // MARK: Challenge Box & Talents List
          ScrollView {
+            VStack(alignment: .leading) {
+               Text("Your Challenge")
+                  .font(.title2)
+                  .fontWeight(.semibold)
+                  .foregroundStyle(.neutral600)
+               
+               ZStack{
+                  Image("challenge_bg")
+                  
+                  HStack{
+                     Image("gold_star")
+                        .padding(.trailing)
+                     
+                     VStack(alignment: .leading){
+                        Text("First Journey")
+                           .font(.headline)
+                           .foregroundStyle(.white)
+                        Text("Reach out your first talent")
+                           .font(.subheadline)
+                           .foregroundStyle(.white)
+                        Text("+100 Points")
+                           .font(.subheadline)
+                           .padding(3)
+                           .padding(.horizontal, 8)
+                           .foregroundStyle(.white)
+                           .background(.white.opacity(0.2))
+                           .clipShape(RoundedRectangle(cornerRadius: 12))
+                     }
+                     
+                     Spacer()
+                  }
+                  .padding(.horizontal, 21)
+               }
+               .frame(width: 345, height: 112)
+            }
+            .padding(.top, 24)
+            .padding(.bottom, 20)
+            
+            
+            Rectangle()
+               .frame(width: 393, height: 4)
+               .foregroundStyle(.neutral)
+            
+            
             VStack{
                Text("Explore Talents")
                   .frame(maxWidth: .infinity, alignment: .leading)
-                  .font(.title)
+                  .font(.title2)
                   .fontWeight(.semibold)
                   .foregroundStyle(.neutral600)
                
@@ -70,10 +113,10 @@ struct DashboardView: View {
                   }
             }
             .padding(.horizontal, 21)
-            .padding(.top, 26)
+            .padding(.top, 16)
          }
       }
-      .background(.neutral)
+      .background(.white)
       .ignoresSafeArea(edges: .top)
    }
 }
