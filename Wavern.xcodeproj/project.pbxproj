@@ -22,6 +22,9 @@
 		C06FCA0E2C118C7700A7001A /* WavernUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA0D2C118C7700A7001A /* WavernUITests.swift */; };
 		C06FCA102C118C7700A7001A /* WavernUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */; };
 		C0B594442C227D5A005FF10A /* TalentsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B594432C227D5A005FF10A /* TalentsProfileView.swift */; };
+		F12CD1392C229ADD00202C5A /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F12CD1372C229ADD00202C5A /* CoreData.xcdatamodeld */; };
+		F12CD13A2C229ADD00202C5A /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F12CD1372C229ADD00202C5A /* CoreData.xcdatamodeld */; };
+		F12CD13B2C229ADD00202C5A /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F12CD1372C229ADD00202C5A /* CoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,7 @@
 		C06FCA0D2C118C7700A7001A /* WavernUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernUITests.swift; sourceTree = "<group>"; };
 		C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C0B594432C227D5A005FF10A /* TalentsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentsProfileView.swift; sourceTree = "<group>"; };
+		F12CD1382C229ADD00202C5A /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		C06FC9F12C118C7600A7001A /* Wavern */ = {
 			isa = PBXGroup;
 			children = (
+				F12CD1372C229ADD00202C5A /* CoreData.xcdatamodeld */,
 				AC11C8862C1809FF00854500 /* Model */,
 				AC11C8892C1812AF00854500 /* View */,
 				C06FC9F22C118C7600A7001A /* WavernApp.swift */,
@@ -300,6 +305,7 @@
 				C06FC9F52C118C7600A7001A /* ContentView.swift in Sources */,
 				AC0817522C21694900ACDE83 /* ProfileView.swift in Sources */,
 				C0B594442C227D5A005FF10A /* TalentsProfileView.swift in Sources */,
+				F12CD1392C229ADD00202C5A /* CoreData.xcdatamodeld in Sources */,
 				AC0817502C2167E300ACDE83 /* MainView.swift in Sources */,
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
@@ -314,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12CD13A2C229ADD00202C5A /* CoreData.xcdatamodeld in Sources */,
 				C06FCA042C118C7700A7001A /* WavernTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +331,7 @@
 			files = (
 				C06FCA0E2C118C7700A7001A /* WavernUITests.swift in Sources */,
 				C06FCA102C118C7700A7001A /* WavernUITestsLaunchTests.swift in Sources */,
+				F12CD13B2C229ADD00202C5A /* CoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +640,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F12CD1372C229ADD00202C5A /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F12CD1382C229ADD00202C5A /* CoreData.xcdatamodel */,
+			);
+			currentVersion = F12CD1382C229ADD00202C5A /* CoreData.xcdatamodel */;
+			name = CoreData.xcdatamodeld;
+			path = /Users/justinjefferson/Documents/Wavern/Wavern/CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C06FC9E72C118C7600A7001A /* Project object */;
 }
