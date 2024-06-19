@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct MainView: View {
+   init() {
+      // Customize the appearance of the tab bar
+      let tabBarAppearance = UITabBarAppearance()
+      tabBarAppearance.configureWithOpaqueBackground()
+      tabBarAppearance.backgroundColor = .white // Change to your desired color
+      UITabBar.appearance().standardAppearance = tabBarAppearance
+      UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+   }
+   
    var body: some View {
       TabView {
          NavigationStack{
