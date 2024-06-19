@@ -101,7 +101,6 @@ struct DashboardView: View {
                .frame(width: 393, height: 4)
                .foregroundStyle(.neutral)
             
-            
             VStack{
                HStack {
                   Text("Explore Talents")
