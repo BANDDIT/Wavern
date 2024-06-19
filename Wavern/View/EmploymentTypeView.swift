@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct EmploymentTypeView:View{
+   let corners: UIRectCorner
+   
    enum employmentType{
       case full_time
       case part_time
@@ -26,7 +28,7 @@ struct EmploymentTypeView:View{
             .font(.system(size:13,weight:.medium))
             .foregroundColor(txtColor)
             .frame(width:72,height:24).background(bgColor)
-            .clipShape(CustomCorners(corners: [.topLeft, .bottomRight], radius: 12))
+            .clipShape(CustomCorners(corners: corners, radius: 12))
       }
       .onAppear{
          switch(type){

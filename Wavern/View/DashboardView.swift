@@ -29,6 +29,12 @@ struct DashboardView: View {
                      .resizable()
                      .frame(width: 24, height: 24)
                      .foregroundStyle(.neutral)
+                     .padding(.horizontal)
+                  
+                  Image(systemName: "bookmark")
+                     .resizable()
+                     .frame(width: 20, height: 24)
+                     .foregroundStyle(.neutral)
                }
                .padding()
                
@@ -97,20 +103,39 @@ struct DashboardView: View {
             
             
             VStack{
-               Text("Explore Talents")
-                  .frame(maxWidth: .infinity, alignment: .leading)
-                  .font(.title2)
-                  .fontWeight(.semibold)
-                  .foregroundStyle(.neutral600)
-               
-               TalentListView()
-                  .padding()
-                  .background(.white)
-                  .clipShape(RoundedRectangle(cornerRadius: 12))
-                  .overlay {
-                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(.black.opacity(0.1))
+               HStack {
+                  Text("Explore Talents")
+                     .frame(maxWidth: .infinity, alignment: .leading)
+                     .font(.title2)
+                     .fontWeight(.semibold)
+                     .foregroundStyle(.neutral600)
+                  
+                  NavigationLink {
+                     AllTalentsView()
+                        .toolbar(.hidden, for: .tabBar)
+                        .navigationBarBackButtonHidden(true)
+                  } label: {
+                     Text("See all")
                   }
+                  .foregroundStyle(.black.opacity(0.4))
+                  
+               }
+               
+               NavigationLink {
+                  TalentDetailView()
+                     .toolbar(.hidden, for: .tabBar)
+                     .navigationBarBackButtonHidden(true)
+               } label: {
+                  TalentListView()
+                     .padding()
+                     .background(.white)
+                     .clipShape(RoundedRectangle(cornerRadius: 12))
+                     .overlay {
+                        RoundedRectangle(cornerRadius: 12)
+                           .stroke(.black.opacity(0.1))
+                     }
+               }
+               .foregroundStyle(.black)
             }
             .padding(.horizontal, 21)
             .padding(.top, 16)
