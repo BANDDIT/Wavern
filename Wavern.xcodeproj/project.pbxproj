@@ -21,6 +21,7 @@
 		C06FCA042C118C7700A7001A /* WavernTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA032C118C7700A7001A /* WavernTests.swift */; };
 		C06FCA0E2C118C7700A7001A /* WavernUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA0D2C118C7700A7001A /* WavernUITests.swift */; };
 		C06FCA102C118C7700A7001A /* WavernUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */; };
+		C0B594442C227D5A005FF10A /* TalentsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B594432C227D5A005FF10A /* TalentsProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C06FCA092C118C7700A7001A /* WavernUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WavernUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06FCA0D2C118C7700A7001A /* WavernUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernUITests.swift; sourceTree = "<group>"; };
 		C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0B594432C227D5A005FF10A /* TalentsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentsProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				AC08174D2C215ABE00ACDE83 /* DashboardView.swift */,
 				AC08174F2C2167E300ACDE83 /* MainView.swift */,
 				AC0817512C21694900ACDE83 /* ProfileView.swift */,
+				C0B594432C227D5A005FF10A /* TalentsProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				C06FC9F52C118C7600A7001A /* ContentView.swift in Sources */,
 				AC0817522C21694900ACDE83 /* ProfileView.swift in Sources */,
+				C0B594442C227D5A005FF10A /* TalentsProfileView.swift in Sources */,
 				AC0817502C2167E300ACDE83 /* MainView.swift in Sources */,
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
