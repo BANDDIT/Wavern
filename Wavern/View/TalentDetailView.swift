@@ -15,6 +15,7 @@ extension UIScreen{
 
 struct TalentDetailView: View {
    @Environment(\.dismiss) var dismiss
+   var timer: Timer = Timer()
    
    let corners: UIRectCorner = [.topLeft, .bottomLeft, .topRight, .bottomRight]
    
@@ -139,7 +140,12 @@ struct TalentDetailView: View {
          VStack{
             Button(action:{
                withAnimation{
-                  isInvited=true
+                  isInvited = true
+                  
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                     isInvited = false
+                  }
+                  
                   interviewBtnColor = .neutral300
                   interviewTxtColor = .neutral500
                }
@@ -149,6 +155,7 @@ struct TalentDetailView: View {
                }.frame(width:361,height:56).background(interviewBtnColor).cornerRadius(12)
             })
             .padding(16)
+            
             Spacer()
             
             VStack{

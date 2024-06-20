@@ -20,6 +20,9 @@
 		AC61FD672C2295620010CBE8 /* EmploymentTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */; };
 		AC61FD692C22D0D30010CBE8 /* InviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD682C22D0D30010CBE8 /* InviteView.swift */; };
 		AC61FD6B2C22D0E30010CBE8 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */; };
+		AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */; };
+		AC8ACA2D2C23EF540096DA36 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */; };
+		AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */; };
 		ACB09AC52C23D2C60089E205 /* SkillTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC42C23D2C60089E205 /* SkillTagView.swift */; };
 		ACB09AC72C23D70E0089E205 /* PortfolioTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */; };
 		ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3D64E2C228F7E0052C895 /* TalentListView.swift */; };
@@ -63,6 +66,9 @@
 		AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmploymentTypeView.swift; sourceTree = "<group>"; };
 		AC61FD682C22D0D30010CBE8 /* InviteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteView.swift; sourceTree = "<group>"; };
 		AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
+		AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
 		ACB09AC42C23D2C60089E205 /* SkillTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTagView.swift; sourceTree = "<group>"; };
 		ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTagView.swift; sourceTree = "<group>"; };
 		ACB3D64E2C228F7E0052C895 /* TalentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentListView.swift; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 				AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */,
 				ACB09AC42C23D2C60089E205 /* SkillTagView.swift */,
 				ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */,
+				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
+				AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */,
+				AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,7 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC61FD672C2295620010CBE8 /* EmploymentTypeView.swift in Sources */,
+				AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */,
 				C06FC9F52C118C7600A7001A /* ContentView.swift in Sources */,
+				AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */,
 				AC61FD652C2295310010CBE8 /* CustomCorners.swift in Sources */,
 				AC0817522C21694900ACDE83 /* ProfileView.swift in Sources */,
 				ACB09AC52C23D2C60089E205 /* SkillTagView.swift in Sources */,
@@ -330,6 +341,7 @@
 				ACB09AC72C23D70E0089E205 /* PortfolioTagView.swift in Sources */,
 				AC61FD6B2C22D0E30010CBE8 /* ResultView.swift in Sources */,
 				AC55B51D2C2310D600AC94A7 /* AllTalentsView.swift in Sources */,
+				AC8ACA2D2C23EF540096DA36 /* BackgroundView.swift in Sources */,
 				AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */,
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
