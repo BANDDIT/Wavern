@@ -2,6 +2,13 @@
 //  TalentsProfileView.swift
 //  Wavern
 //
+//  Created by Arrick Russell Adinoto on 20/06/24.
+//
+
+//
+//  TalentsProfileView.swift
+//  Wavern
+//
 //  Created by Arrick Russell Adinoto on 19/06/24.
 //
 
@@ -200,57 +207,8 @@ struct PortofolioTagView:View{
 }
 
 
-struct SkillTagView:View{
-    var text:String
-    
-    init(_ text:String){
-        self.text=text
-    }
-    
-    var body : some View{
-        VStack{
-            Text(text).foregroundColor(.primaryPurple)
-                .font(.system(size:12,weight:.medium)).padding(8)
-        }.background(.primary100).cornerRadius(82)
-    }
-}
 
 
-struct EmploymentTypeView:View{
-    
-    enum employmentType{
-        case full_time
-        case part_time
-    }
-    
-    var type:employmentType
-    @State var text:String=""
-    @State var bgColor:Color=Color.clear
-    @State var txtColor:Color=Color.clear
-    
-    
-    
-    var body : some View{
-        VStack{
-            Text(text).font(.system(size:13,weight:.medium)).foregroundColor(txtColor).frame(width:72,height:24).background(bgColor).cornerRadius(200)
-        }
-        .onAppear{
-            switch(type){
-            case .full_time:
-                text="Full-time"
-                bgColor = .success100
-                txtColor = .success600
-
-            case .part_time:
-                text="Part-time"
-                bgColor = .info100
-                txtColor = .info600
-            }
-        }
-    }
-    
-    
-}
 
 #Preview {
     
