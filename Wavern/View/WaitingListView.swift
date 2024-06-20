@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct WaitingListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+   var body: some View {
+      HStack{
+         VStack{
+            Text("JUN")
+            Text("22")
+         }
+         .padding(.horizontal)
+         
+         VStack(alignment: .leading){
+            Text("10:00 - 10:30")
+            Text("Stefanie Angel")
+            Text("Product Designer")
+         }
+         .padding(.horizontal)
+      }
+   }
 }
 
 #Preview {
-    WaitingListView()
+   WaitingListView()
 }

@@ -29,11 +29,11 @@ struct MainView: View {
          .tag(0)
          
          NavigationStack{
-            InviteView()
+            InterviewView()
          }
          .tabItem {
-            Text("Invites")
-            Image(systemName: "rectangle.portrait.and.arrow.right")
+            Text("Interview")
+            Image(systemName: "arrowtriangle.forward")
          }
          .tag(1)
          

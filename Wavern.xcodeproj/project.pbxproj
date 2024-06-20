@@ -18,11 +18,13 @@
 		AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */; };
 		AC61FD652C2295310010CBE8 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD642C2295310010CBE8 /* CustomCorners.swift */; };
 		AC61FD672C2295620010CBE8 /* EmploymentTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */; };
-		AC61FD692C22D0D30010CBE8 /* InviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD682C22D0D30010CBE8 /* InviteView.swift */; };
 		AC61FD6B2C22D0E30010CBE8 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */; };
 		AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */; };
 		AC8ACA2D2C23EF540096DA36 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */; };
 		AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */; };
+		AC8ACA312C2435610096DA36 /* InterviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA302C2435610096DA36 /* InterviewView.swift */; };
+		AC8ACA332C243AF20096DA36 /* WaitingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA322C243AF20096DA36 /* WaitingListView.swift */; };
+		AC8ACA352C243AFF0096DA36 /* InterviewedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */; };
 		ACB09AC52C23D2C60089E205 /* SkillTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC42C23D2C60089E205 /* SkillTagView.swift */; };
 		ACB09AC72C23D70E0089E205 /* PortfolioTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */; };
 		ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3D64E2C228F7E0052C895 /* TalentListView.swift */; };
@@ -64,11 +66,13 @@
 		AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentDetailView.swift; sourceTree = "<group>"; };
 		AC61FD642C2295310010CBE8 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmploymentTypeView.swift; sourceTree = "<group>"; };
-		AC61FD682C22D0D30010CBE8 /* InviteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteView.swift; sourceTree = "<group>"; };
 		AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
 		AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
+		AC8ACA302C2435610096DA36 /* InterviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewView.swift; sourceTree = "<group>"; };
+		AC8ACA322C243AF20096DA36 /* WaitingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingListView.swift; sourceTree = "<group>"; };
+		AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewedListView.swift; sourceTree = "<group>"; };
 		ACB09AC42C23D2C60089E205 /* SkillTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTagView.swift; sourceTree = "<group>"; };
 		ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTagView.swift; sourceTree = "<group>"; };
 		ACB3D64E2C228F7E0052C895 /* TalentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentListView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AC11C88A2C1812C300854500 /* LoginView.swift */,
+				AC8ACA302C2435610096DA36 /* InterviewView.swift */,
 				AC11C88C2C1812CA00854500 /* SignUpView.swift */,
 				AC11C88E2C1812D000854500 /* OnboardingView.swift */,
 				AC08174D2C215ABE00ACDE83 /* DashboardView.swift */,
@@ -129,7 +134,6 @@
 				AC0817512C21694900ACDE83 /* ProfileView.swift */,
 				ACB3D64E2C228F7E0052C895 /* TalentListView.swift */,
 				AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */,
-				AC61FD682C22D0D30010CBE8 /* InviteView.swift */,
 				AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */,
 				AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */,
 				AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */,
@@ -138,6 +142,8 @@
 				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
 				AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */,
 				AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */,
+				AC8ACA322C243AF20096DA36 /* WaitingListView.swift */,
+				AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,18 +343,20 @@
 				AC61FD652C2295310010CBE8 /* CustomCorners.swift in Sources */,
 				AC0817522C21694900ACDE83 /* ProfileView.swift in Sources */,
 				ACB09AC52C23D2C60089E205 /* SkillTagView.swift in Sources */,
+				AC8ACA312C2435610096DA36 /* InterviewView.swift in Sources */,
+				AC8ACA352C243AFF0096DA36 /* InterviewedListView.swift in Sources */,
 				AC0817502C2167E300ACDE83 /* MainView.swift in Sources */,
 				ACB09AC72C23D70E0089E205 /* PortfolioTagView.swift in Sources */,
 				AC61FD6B2C22D0E30010CBE8 /* ResultView.swift in Sources */,
 				AC55B51D2C2310D600AC94A7 /* AllTalentsView.swift in Sources */,
 				AC8ACA2D2C23EF540096DA36 /* BackgroundView.swift in Sources */,
 				AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */,
+				AC8ACA332C243AF20096DA36 /* WaitingListView.swift in Sources */,
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
 				AC08174E2C215ABE00ACDE83 /* DashboardView.swift in Sources */,
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
-				AC61FD692C22D0D30010CBE8 /* InviteView.swift in Sources */,
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,
 				C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */,
 			);
