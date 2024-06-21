@@ -14,6 +14,7 @@
 		AC11C88B2C1812C300854500 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88A2C1812C300854500 /* LoginView.swift */; };
 		AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88C2C1812CA00854500 /* SignUpView.swift */; };
 		AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88E2C1812D000854500 /* OnboardingView.swift */; };
+		AC3CEFB32C251B000088FDB2 /* CompletedChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */; };
 		AC55B51D2C2310D600AC94A7 /* AllTalentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */; };
 		AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */; };
 		AC61FD652C2295310010CBE8 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD642C2295310010CBE8 /* CustomCorners.swift */; };
@@ -62,6 +63,7 @@
 		AC11C88A2C1812C300854500 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AC11C88C2C1812CA00854500 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		AC11C88E2C1812D000854500 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedChallenge.swift; sourceTree = "<group>"; };
 		AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTalentsView.swift; sourceTree = "<group>"; };
 		AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentDetailView.swift; sourceTree = "<group>"; };
 		AC61FD642C2295310010CBE8 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */,
 				AC8ACA322C243AF20096DA36 /* WaitingListView.swift */,
 				AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */,
+				AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				AC61FD672C2295620010CBE8 /* EmploymentTypeView.swift in Sources */,
 				AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */,
 				C06FC9F52C118C7600A7001A /* ContentView.swift in Sources */,
+				AC3CEFB32C251B000088FDB2 /* CompletedChallenge.swift in Sources */,
 				AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */,
 				AC61FD652C2295310010CBE8 /* CustomCorners.swift in Sources */,
 				AC0817522C21694900ACDE83 /* ProfileView.swift in Sources */,
