@@ -9,14 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
    // TODO: Move to view model
-   @State var email: String = ""
-   @State var password: String = ""
-   @State private var isPasswordVisible: Bool = false
-   
-   // TODO: Move to view model
-   private var areTextFieldsFilled: Bool {
-      email.isEmpty || password.isEmpty
-   }
+   @StateObject private var viewModel = AuthenticationSignIn()
    
    var body: some View {
       VStack{
@@ -36,7 +29,7 @@ struct LoginView: View {
                      .fontWeight(.semibold)
                      .frame(maxWidth: .infinity, alignment: .leading)
                   
-                  TextField(text: $email) {
+                  TextField(text: $viewModel.email) {
                      Text("Email")
                   }
                   .frame(height: 52)
@@ -52,20 +45,20 @@ struct LoginView: View {
                   .frame(maxWidth: .infinity, alignment: .leading)
                
                HStack {
-                  if AuthenticationSignIn.isPasswordVisible {
-                     TextField(text: $password) {
+                  if viewModel.isPasswordVisible {
+                     TextField(text: $viewModel.password) {
                         Text("Password")
                      }
                   } else {
-                     SecureField(text: $password) {
+                     SecureField(text: $viewModel.password) {
                         Text("Password")
                      }
                   }
                   
                   Button(action: {
-                     
+                     viewModel.isPasswordVisible.toggle()
                   }) {
-                     Image(systemName: AuthenticationSignIn.isPasswordVisible ? "eye.slash" : "eye")
+                     Image(systemName: viewModel.isPasswordVisible ? "eye.slash" : "eye")
                         .foregroundColor(.gray)
                   }
                }
@@ -80,10 +73,10 @@ struct LoginView: View {
             // MARK: Button
             VStack{
                NavigationLink(destination: LoginView()) {
-                  CustomNavigationLink(bgColor: Colors.neutral300, txtColor: Colors.neutral500, text: "Login")
+                  viewModel.navigationLink()
                }
                .padding(.bottom, 16)
-               .disabled(areTextFieldsFilled)
+               .disabled(viewModel.areTextFieldsFilled())
                
                HStack{
                   Text("Don't have an account?")

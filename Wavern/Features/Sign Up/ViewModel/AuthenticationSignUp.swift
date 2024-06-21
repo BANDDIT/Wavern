@@ -1,5 +1,5 @@
 //
-//  AuthenticationSignIn.swift
+//  AuthenticationSignUp.swift
 //  Wavern
 //
 //  Created by Paulus Michael on 21/06/24.
@@ -8,13 +8,15 @@
 import Foundation
 import SwiftUI
 
-class AuthenticationSignIn: ObservableObject {
+class AuthenticationSignUp: ObservableObject {
+   @Published var name: String = ""
    @Published var email: String = ""
    @Published var password: String = ""
+   @Published var confirmPassword: String = ""
    @Published var isPasswordVisible: Bool = false
    
    func areTextFieldsFilled() -> Bool {
-      return email.isEmpty || password.isEmpty
+      return name.isEmpty || email.isEmpty || password.isEmpty || confirmPassword.isEmpty
    }
    
    func navigationLink() -> some View{
