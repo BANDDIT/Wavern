@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TalentListView: View {
+   let corners: UIRectCorner = [.topLeft, .bottomRight]
+   
    var body: some View {
       HStack{
          ZStack(alignment: .topLeading){
@@ -15,7 +17,7 @@ struct TalentListView: View {
                .resizable()
                .frame(width: 104, height: 140)
             
-            EmploymentTypeView(type: .full_time)
+            EmploymentTypeView(corners: corners, type: .full_time)
          }
          .clipShape(RoundedRectangle(cornerRadius: 12))
          

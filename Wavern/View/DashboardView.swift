@@ -9,46 +9,63 @@ import SwiftUI
 
 struct DashboardView: View {
    @State var search: String = ""
+   let increments = [150, 250, 350, 450]
+   
    var body: some View {
       VStack(spacing: 0){
          // MARK: Top Section (Details)
-         ZStack(alignment: .top){
-            Image("dashboard_bg")
-               .scaledToFit()
+         VStack {
+            HStack{
+               Text("Explore")
+                  .fontWeight(.semibold)
+                  .font(.title)
+                  .foregroundStyle(.neutral)
+               
+               Spacer()
+               
+               Image(systemName: "bell")
+                  .resizable()
+                  .frame(width: 24, height: 24)
+                  .foregroundStyle(.neutral)
+                  .padding(.horizontal)
+               
+               Image(systemName: "bookmark")
+                  .resizable()
+                  .frame(width: 20, height: 24)
+                  .foregroundStyle(.neutral)
+            }
+            .padding()
             
             VStack {
-               HStack{
-                  Text("Wavern")
-                     .fontWeight(.semibold)
-                     .font(.title)
-                     .foregroundStyle(.neutral)
+               HStack {
+                  Image(systemName: "magnifyingglass")
+                     .opacity(0.3)
                   
-                  Spacer()
-                  
-                  Image(systemName: "bell")
-                     .resizable()
-                     .frame(width: 24, height: 24)
-                     .foregroundStyle(.neutral)
+                  TextField(text: $search) {
+                     Text("Enter Role, Skills, YOE, or Budget")
+                  }
                }
                .padding()
-               
-               VStack {
-                  HStack {
-                     Image(systemName: "magnifyingglass")
-                        .opacity(0.3)
-                     
-                     TextField(text: $search) {
-                        Text("Enter Role, Skills, YOE, or Budget")
-                     }
-                  }
-                  .padding()
-                  .background(.white)
-                  .clipShape(RoundedRectangle(cornerRadius: 12))
-               }
-               .padding(.horizontal)
+               .background(.white)
+               .clipShape(RoundedRectangle(cornerRadius: 12))
             }
-            .padding(.top, 60)
+            .padding(.horizontal)
          }
+         .padding(.bottom)
+         .padding(.top, 60)
+         .background(
+            ZStack {
+               LinearGradient(
+                  stops: [
+                     Gradient.Stop(color: .primaryPurple, location: 0.00),
+                     Gradient.Stop(color: .secondaryPurple, location: 1.00),
+                  ],
+                  startPoint: UnitPoint(x: 0.5, y: 0),
+                  endPoint: UnitPoint(x: 0.5, y: 1)
+               )
+            }
+         )
+         .ignoresSafeArea()
          
          // MARK: Challenge Box & Talents List
          ScrollView {
@@ -95,22 +112,40 @@ struct DashboardView: View {
                .frame(width: 393, height: 4)
                .foregroundStyle(.neutral)
             
-            
             VStack{
-               Text("Explore Talents")
-                  .frame(maxWidth: .infinity, alignment: .leading)
-                  .font(.title2)
-                  .fontWeight(.semibold)
-                  .foregroundStyle(.neutral600)
-               
-               TalentListView()
-                  .padding()
-                  .background(.white)
-                  .clipShape(RoundedRectangle(cornerRadius: 12))
-                  .overlay {
-                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(.black.opacity(0.1))
+               HStack {
+                  Text("Explore Talents")
+                     .frame(maxWidth: .infinity, alignment: .leading)
+                     .font(.title2)
+                     .fontWeight(.semibold)
+                     .foregroundStyle(.neutral600)
+                  
+                  NavigationLink {
+                     AllTalentsView()
+                        .toolbar(.hidden, for: .tabBar)
+                        .navigationBarBackButtonHidden(true)
+                  } label: {
+                     Text("See all")
                   }
+                  .foregroundStyle(.black.opacity(0.4))
+                  
+               }
+               
+               NavigationLink {
+                  TalentDetailView()
+                     .toolbar(.hidden, for: .tabBar)
+                     .navigationBarBackButtonHidden(true)
+               } label: {
+                  TalentListView()
+                     .padding()
+                     .background(.white)
+                     .clipShape(RoundedRectangle(cornerRadius: 12))
+                     .overlay {
+                        RoundedRectangle(cornerRadius: 12)
+                           .stroke(.black.opacity(0.1))
+                     }
+               }
+               .foregroundStyle(.black)
             }
             .padding(.horizontal, 21)
             .padding(.top, 16)
