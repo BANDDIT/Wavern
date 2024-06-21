@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct SkillTagView: View {
-   var text:String
+   var text: String
    
-   init(_ text:String){
-      self.text=text
+   init(_ text: String){
+      self.text = text
    }
    
    var body: some View {
       VStack{
          Text(text).foregroundColor(.primaryPurple)
-            .font(.system(size:12,weight:.medium)).padding(8)
-      }.background(.purple100).cornerRadius(82)
+            .font(.system(size: 12, weight: .medium))
+            .padding(8)
+      }
+      .background(.purple100)
+      .cornerRadius(82)
    }
 }
 

@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
+   // TODO: Move to view model
    @State var email: String = ""
    @State var password: String = ""
    @State private var isPasswordVisible: Bool = false
    
+   // TODO: Move to view model
    private var areTextFieldsFilled: Bool {
       email.isEmpty || password.isEmpty
    }

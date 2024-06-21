@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+
+// TODO: Dont use any generic name for class
 struct ContentView: View {
+   // TODO: handle the notification at App
    let notificationDelegate = NotificationDelegate()
    
    var body: some View {
+      // TODO: Clean the command
       //        VStack {
       //            Text("Wavern Notification Demo")
       //                .padding()
@@ -29,8 +33,8 @@ struct ContentView: View {
       //        .onAppear {
       //            UNUserNotificationCenter.current().delegate = NotificationDelegate()
       //        }
-      
-      OnboardingView()
+      // TODO: Dont use any generic name for class
+      MainView()
    }
 }
 

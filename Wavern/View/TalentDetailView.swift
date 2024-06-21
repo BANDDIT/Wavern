@@ -25,11 +25,29 @@ struct TalentDetailView: View {
    
    var body: some View {
       VStack{
-         Image("DummyTalentsProfile")
+         ZStack (alignment: .topLeading){
+            HStack{
+               Button(action:{
+                  dismiss()
+               },label:{
+                  Image(systemName:"arrow.backward").foregroundColor(.white)
+                     .imageScale(.large)
+               })
+               Spacer()
+            }
+            .zIndex(10)
+            .padding(.vertical, 60)
+            .padding(.horizontal)
+            
+            Image("DummyTalentsProfile")
+         }
+         
+         // TODO: di buat 1 komponen
          HStack{
             VStack(alignment:.leading){
                HStack{
                   Text("Jesslyn Devaline").font(.system(size:20,weight:.semibold))
+                  
                   EmploymentTypeView(corners: corners, type: .full_time)
                }
                Text("Product Designer").font(.system(size:16,weight:.regular)).foregroundColor(.neutral500)
@@ -59,9 +77,10 @@ struct TalentDetailView: View {
             .padding([.top,.bottom],20)
             Spacer()
          }
-         .frame(width:UIScreen.screenWidth).background(.white)
+         .background(.white)
          
          HStack{
+            // TODO: change to grid
             VStack(alignment:.leading){
                Text("Skills").font(.system(size:20,weight:.semibold))
                HStack{
@@ -80,13 +99,14 @@ struct TalentDetailView: View {
             .padding(.leading,24)
             Spacer()
             
-         }.frame(width:UIScreen.screenWidth, height:144).background(.white)
+         }.padding(.vertical).background(.white)
          
          HStack{
             VStack(alignment:.leading){
                Text("Portofolio Links").font(.system(size:20,weight:.semibold))
                
                
+               // TODO: change to list or for each
                HStack{
                   Button(action:{
                      
@@ -132,17 +152,18 @@ struct TalentDetailView: View {
                
             }.padding(.leading,24)
             Spacer()
-            
-         }.frame(width:UIScreen.screenWidth,height:118).background(.white)
+         }.padding(.vertical).background(.white)
          
          Spacer()
          
          VStack{
+            
+            // TODO: Move to 1 file
             Button(action:{
                withAnimation{
                   isInvited = true
                   
-                  DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                  DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                      isInvited = false
                   }
                   
@@ -152,7 +173,7 @@ struct TalentDetailView: View {
             },label:{
                VStack{
                   Text("Invite to Interview").foregroundColor(interviewTxtColor).font(.system(size:17,weight:.semibold))
-               }.frame(width:361,height:56).background(interviewBtnColor).cornerRadius(12)
+               }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: 56).background(interviewBtnColor).cornerRadius(12)
             })
             .padding(16)
             
@@ -160,8 +181,8 @@ struct TalentDetailView: View {
             
             VStack{
                Text("")
-            }.frame(width:120,height:5).background(.black).cornerRadius(5).padding(10).padding(.bottom,10)
-         }.frame(width:UIScreen.screenWidth,height:128).background(.white)
+            }.background(.black).cornerRadius(5).padding(10).padding(.bottom,10)
+         }.background(.white)
       }
       .overlay{
          if isInvited{
@@ -173,24 +194,11 @@ struct TalentDetailView: View {
                }
                .padding(.leading,16)
                Spacer()
-            }.frame(width:361,height:48).background(.success600).cornerRadius(12).offset(y:260)
+            }.frame(maxWidth:361, minHeight:48).background(.success600).cornerRadius(12).offset(y:260)
          }
-         
-         
       }
       .background(.neutral)
       .ignoresSafeArea()
-      .navigationBarBackButtonHidden().toolbar{
-         HStack{
-            Button(action:{
-               dismiss()
-            },label:{
-               Image(systemName:"arrow.backward").foregroundColor(.white)
-            }).padding([.leading,.top],24)
-            Spacer()
-         }
-         .frame(width:UIScreen.screenWidth)
-      }
    }
 }
 

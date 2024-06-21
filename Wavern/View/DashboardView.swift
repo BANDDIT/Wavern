@@ -23,12 +23,6 @@ struct DashboardView: View {
                
                Spacer()
                
-               Image(systemName: "bell")
-                  .resizable()
-                  .frame(width: 24, height: 24)
-                  .foregroundStyle(.neutral)
-                  .padding(.horizontal)
-               
                Image(systemName: "bookmark")
                   .resizable()
                   .frame(width: 20, height: 24)
@@ -152,10 +146,12 @@ struct DashboardView: View {
          }
       }
       .background(.white)
-      .ignoresSafeArea(edges: .top)
+      .ignoresSafeArea()
    }
 }
 
 #Preview {
-   DashboardView()
+   NavigationStack {
+      DashboardView()
+   }
 }

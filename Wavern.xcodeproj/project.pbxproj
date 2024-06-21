@@ -26,6 +26,7 @@
 		AC8ACA312C2435610096DA36 /* InterviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA302C2435610096DA36 /* InterviewView.swift */; };
 		AC8ACA332C243AF20096DA36 /* WaitingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA322C243AF20096DA36 /* WaitingListView.swift */; };
 		AC8ACA352C243AFF0096DA36 /* InterviewedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */; };
+		AC9E3FFB2C2537FD00A3813E /* Talent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E3FFA2C2537FD00A3813E /* Talent.swift */; };
 		ACB09AC52C23D2C60089E205 /* SkillTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC42C23D2C60089E205 /* SkillTagView.swift */; };
 		ACB09AC72C23D70E0089E205 /* PortfolioTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */; };
 		ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3D64E2C228F7E0052C895 /* TalentListView.swift */; };
@@ -75,6 +76,7 @@
 		AC8ACA302C2435610096DA36 /* InterviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewView.swift; sourceTree = "<group>"; };
 		AC8ACA322C243AF20096DA36 /* WaitingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingListView.swift; sourceTree = "<group>"; };
 		AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewedListView.swift; sourceTree = "<group>"; };
+		AC9E3FFA2C2537FD00A3813E /* Talent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent.swift; sourceTree = "<group>"; };
 		ACB09AC42C23D2C60089E205 /* SkillTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTagView.swift; sourceTree = "<group>"; };
 		ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTagView.swift; sourceTree = "<group>"; };
 		ACB3D64E2C228F7E0052C895 /* TalentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentListView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		AC0FB31C2C25265000E6047B /* Separated Views */ = {
 			isa = PBXGroup;
 			children = (
+				ACB09AC42C23D2C60089E205 /* SkillTagView.swift */,
 				AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */,
 				ACB3D64E2C228F7E0052C895 /* TalentListView.swift */,
 				AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */,
@@ -141,6 +144,7 @@
 		AC11C8892C1812AF00854500 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC9E3FF42C25373300A3813E /* Profile */,
 				AC0FB31C2C25265000E6047B /* Separated Views */,
 				AC11C88A2C1812C300854500 /* LoginView.swift */,
 				AC8ACA302C2435610096DA36 /* InterviewView.swift */,
@@ -152,11 +156,80 @@
 				AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */,
 				AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */,
 				AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */,
-				ACB09AC42C23D2C60089E205 /* SkillTagView.swift */,
 				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
 				AC8ACA322C243AF20096DA36 /* WaitingListView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AC9E3FF42C25373300A3813E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AC9E3FF52C2537BB00A3813E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E3FF62C2537D100A3813E /* Talent */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AC9E3FF62C2537D100A3813E /* Talent */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E3FF72C2537DA00A3813E /* Model */,
+				AC9E3FF82C2537E000A3813E /* ViewModels */,
+				AC9E3FF92C2537E500A3813E /* Views */,
+			);
+			path = Talent;
+			sourceTree = "<group>";
+		};
+		AC9E3FF72C2537DA00A3813E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E3FFA2C2537FD00A3813E /* Talent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC9E3FF82C2537E000A3813E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AC9E3FF92C2537E500A3813E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC9E3FFC2C25382C00A3813E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E3FFE2C25388600A3813E /* Constants */,
+				AC9E3FFD2C25383800A3813E /* UI */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AC9E3FFD2C25383800A3813E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AC9E3FFE2C25388600A3813E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		C06FC9E62C118C7600A7001A = {
@@ -182,6 +255,8 @@
 		C06FC9F12C118C7600A7001A /* Wavern */ = {
 			isa = PBXGroup;
 			children = (
+				AC9E3FFC2C25382C00A3813E /* Shared */,
+				AC9E3FF52C2537BB00A3813E /* Features */,
 				AC11C8862C1809FF00854500 /* Model */,
 				AC11C8892C1812AF00854500 /* View */,
 				C06FC9F22C118C7600A7001A /* WavernApp.swift */,
@@ -371,6 +446,7 @@
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,
 				C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */,
+				AC9E3FFB2C2537FD00A3813E /* Talent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

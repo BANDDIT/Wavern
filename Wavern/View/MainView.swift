@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+struct Phrases {
+   static let exploreTitle = "Explore"
+}
+
+struct MainColor {
+   static let primaryPurple: Color = .primaryPurple
+}
+
 struct MainView: View {
    init() {
       let tabBarAppearance = UITabBarAppearance()
@@ -23,9 +31,11 @@ struct MainView: View {
             DashboardView()
          }
          .tabItem {
-            Text("Explore")
+            // TODO: Move all constant to 1 file and 1 struct
+            Text(Phrases.exploreTitle)
             Image(systemName: "safari")
          }
+         // TODO: Use enum to handle tag in tabItem
          .tag(0)
          
          NavigationStack{
@@ -55,7 +65,7 @@ struct MainView: View {
          }
          .tag(3)
       }
-      .tint(.primaryPurple)
+      .tint(MainColor.primaryPurple)
       .navigationBarBackButtonHidden(true)
    }
 }
