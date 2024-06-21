@@ -152,39 +152,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AC0FB31C2C25265000E6047B /* Separated Views */ = {
-			isa = PBXGroup;
-			children = (
-				AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */,
-				AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */,
-			);
-			path = "Separated Views";
-			sourceTree = "<group>";
-		};
-		AC11C8862C1809FF00854500 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				AC11C8872C180A0A00854500 /* NotificationDelegate.swift */,
-				AC61FD642C2295310010CBE8 /* CustomCorners.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		AC11C8892C1812AF00854500 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				AC0FB31C2C25265000E6047B /* Separated Views */,
-				AC8ACA302C2435610096DA36 /* InterviewView.swift */,
-				AC08174F2C2167E300ACDE83 /* MainView.swift */,
-				AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */,
-				AC8ACA322C243AF20096DA36 /* WaitingListView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		AC9E3FF52C2537BB00A3813E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				AC9E404E2C2575AA00A3813E /* Result */,
+				AC9E404D2C2575A200A3813E /* Interview */,
 				AC9E404C2C25710900A3813E /* HR Profile & Benefits */,
 				AC9E404B2C25704C00A3813E /* Sign Up */,
 				AC9E40412C256C9B00A3813E /* Sign In */,
@@ -242,6 +214,7 @@
 		AC9E3FFD2C25383800A3813E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AC61FD642C2295310010CBE8 /* CustomCorners.swift */,
 				AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */,
 				AC9E400B2C254DFE00A3813E /* DescriptionView.swift */,
 				AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */,
@@ -259,6 +232,7 @@
 		AC9E3FFE2C25388600A3813E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				AC11C8872C180A0A00854500 /* NotificationDelegate.swift */,
 				AC9E40012C253B3800A3813E /* Colors.swift */,
 				AC9E40032C253D6300A3813E /* Phrases.swift */,
 				AC9E40052C253DC200A3813E /* Size.swift */,
@@ -389,10 +363,29 @@
 		AC9E404C2C25710900A3813E /* HR Profile & Benefits */ = {
 			isa = PBXGroup;
 			children = (
+				AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */,
 				AC0817512C21694900ACDE83 /* ProfileView.swift */,
 				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
 			);
 			path = "HR Profile & Benefits";
+			sourceTree = "<group>";
+		};
+		AC9E404D2C2575A200A3813E /* Interview */ = {
+			isa = PBXGroup;
+			children = (
+				AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */,
+				AC8ACA322C243AF20096DA36 /* WaitingListView.swift */,
+				AC8ACA302C2435610096DA36 /* InterviewView.swift */,
+			);
+			path = Interview;
+			sourceTree = "<group>";
+		};
+		AC9E404E2C2575AA00A3813E /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		C06FC9E62C118C7600A7001A = {
@@ -422,9 +415,8 @@
 				AC9E40142C25509500A3813E /* Fonts */,
 				AC9E3FFC2C25382C00A3813E /* Shared */,
 				AC9E3FF52C2537BB00A3813E /* Features */,
-				AC11C8862C1809FF00854500 /* Model */,
-				AC11C8892C1812AF00854500 /* View */,
 				C06FC9F22C118C7600A7001A /* WavernApp.swift */,
+				AC08174F2C2167E300ACDE83 /* MainView.swift */,
 				C06FC9F42C118C7600A7001A /* ContentView.swift */,
 				C06FC9F62C118C7700A7001A /* Assets.xcassets */,
 				C06FC9F82C118C7700A7001A /* Preview Content */,

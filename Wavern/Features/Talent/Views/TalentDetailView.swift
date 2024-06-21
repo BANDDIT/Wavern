@@ -17,8 +17,6 @@ struct TalentDetailView: View {
    @Environment(\.dismiss) var dismiss
    var timer: Timer = Timer()
    
-   let corners: UIRectCorner = [.topLeft, .bottomLeft, .topRight, .bottomRight]
-   
    @State var isInvited:Bool=false
    
    var body: some View {
