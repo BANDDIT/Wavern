@@ -25,9 +25,11 @@ struct EmploymentTypeView:View{
    var body : some View{
       VStack{
          Text(text)
-            .font(.system(size:13,weight:.medium))
+            .font(Fonts.medium10)
             .foregroundColor(txtColor)
-            .frame(width:72,height:24).background(bgColor)
+            .padding(.horizontal)
+            .frame(height:24)
+            .background(bgColor)
             .clipShape(CustomCorners(corners: corners, radius: 12))
       }
       .onAppear{

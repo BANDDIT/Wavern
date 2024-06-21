@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-struct Phrases {
-   static let exploreTitle = "Explore"
-}
-
-struct MainColor {
-   static let primaryPurple: Color = .primaryPurple
-}
-
 struct MainView: View {
    init() {
       let tabBarAppearance = UITabBarAppearance()
@@ -33,7 +25,7 @@ struct MainView: View {
          .tabItem {
             // TODO: Move all constant to 1 file and 1 struct
             Text(Phrases.exploreTitle)
-            Image(systemName: "safari")
+            Image(systemName: Phrases.exploreSymbol)
          }
          // TODO: Use enum to handle tag in tabItem
          .tag(0)
@@ -42,8 +34,8 @@ struct MainView: View {
             InterviewView()
          }
          .tabItem {
-            Text("Interview")
-            Image(systemName: "arrowtriangle.forward")
+            Text(Phrases.interviewTitle)
+            Image(systemName: Phrases.interviewSymbol)
          }
          .tag(1)
          
@@ -51,8 +43,8 @@ struct MainView: View {
             ResultView()
          }
          .tabItem {
-            Text("Results")
-            Image(systemName: "doc")
+            Text(Phrases.resultTitle)
+            Image(systemName: Phrases.resultSymbol)
          }
          .tag(2)
          
@@ -60,12 +52,12 @@ struct MainView: View {
             ProfileView()
          }
          .tabItem {
-            Text("Profile")
-            Image(systemName: "person")
+            Text(Phrases.profileTitle)
+            Image(systemName: Phrases.profileSymbol)
          }
          .tag(3)
       }
-      .tint(MainColor.primaryPurple)
+      .tint(Colors.purple600)
       .navigationBarBackButtonHidden(true)
    }
 }

@@ -49,15 +49,7 @@ struct RewardsView: View {
          .padding()
          .padding(.top, 60)
          .background(
-            LinearGradient(
-               stops: [
-                  Gradient.Stop(color: .primaryPurple, location: 0.00),
-                  Gradient.Stop(color: .secondaryPurple, location: 1.00),
-               ],
-               
-               startPoint: UnitPoint(x: 0.5, y: 0),
-               endPoint: UnitPoint(x: 0.5, y: 1)
-            )
+            Background.bgGradient
          )
          .clipShape(CustomCorners(corners: [.bottomLeft, .bottomRight], radius: 12))
          
@@ -83,7 +75,7 @@ struct RewardsView: View {
                      
                   }, label: {
                      Text("Exchange")
-                        .foregroundStyle(.primaryPurple)
+                        .foregroundStyle(Colors.purple600)
                         .font(.headline)
                         .padding(.horizontal, 24)
                         .padding(.vertical, 8)
@@ -93,20 +85,13 @@ struct RewardsView: View {
                }
                .padding()
                .background(
-                  LinearGradient(
-                     stops: [
-                        Gradient.Stop(color: .primaryPurple, location: 0.00),
-                        Gradient.Stop(color: .secondaryPurple, location: 1.00),
-                     ],
-                     startPoint: UnitPoint(x: 0.5, y: 0),
-                     endPoint: UnitPoint(x: 0.5, y: 1)
-                  )
+                  Background.bgGradient
                )
             }
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .background(Colors.white)
+            .clipShape(RoundedRectangle(cornerRadius: Size.cornerRadius))
             .overlay {
-               RoundedRectangle(cornerRadius: 12)
+               RoundedRectangle(cornerRadius: Size.cornerRadius)
                   .stroke(.black.opacity(0.1))
             }
             .padding()

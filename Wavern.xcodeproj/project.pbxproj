@@ -27,7 +27,24 @@
 		AC8ACA332C243AF20096DA36 /* WaitingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA322C243AF20096DA36 /* WaitingListView.swift */; };
 		AC8ACA352C243AFF0096DA36 /* InterviewedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */; };
 		AC9E3FFB2C2537FD00A3813E /* Talent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E3FFA2C2537FD00A3813E /* Talent.swift */; };
-		ACB09AC52C23D2C60089E205 /* SkillTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC42C23D2C60089E205 /* SkillTagView.swift */; };
+		AC9E40002C253AEE00A3813E /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E3FFF2C253AEE00A3813E /* Buttons.swift */; };
+		AC9E40022C253B3800A3813E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40012C253B3800A3813E /* Colors.swift */; };
+		AC9E40042C253D6300A3813E /* Phrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40032C253D6300A3813E /* Phrases.swift */; };
+		AC9E40062C253DC200A3813E /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40052C253DC200A3813E /* Size.swift */; };
+		AC9E40082C253ED500A3813E /* SkillTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40072C253ED500A3813E /* SkillTag.swift */; };
+		AC9E400A2C254C9F00A3813E /* SuccessFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40092C254C9F00A3813E /* SuccessFeedbackView.swift */; };
+		AC9E400C2C254DFE00A3813E /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E400B2C254DFE00A3813E /* DescriptionView.swift */; };
+		AC9E400F2C254EE400A3813E /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E400E2C254EE400A3813E /* NameView.swift */; };
+		AC9E401E2C25515C00A3813E /* Geist-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC9E401B2C2550AB00A3813E /* Geist-SemiBold.otf */; };
+		AC9E401F2C25516100A3813E /* Geist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC9E401C2C2550AB00A3813E /* Geist-Regular.otf */; };
+		AC9E40202C25516300A3813E /* Geist-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC9E40192C2550AB00A3813E /* Geist-Medium.otf */; };
+		AC9E402F2C2556CB00A3813E /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E402E2C2556CB00A3813E /* Fonts.swift */; };
+		AC9E40322C255C9200A3813E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40312C255C9200A3813E /* HeaderView.swift */; };
+		AC9E40352C255D8300A3813E /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40342C255D8300A3813E /* ChallengeView.swift */; };
+		AC9E40372C255E4600A3813E /* ExploreTalentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40362C255E4600A3813E /* ExploreTalentsView.swift */; };
+		AC9E403B2C25620C00A3813E /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E403A2C25620C00A3813E /* Background.swift */; };
+		AC9E403D2C2562F000A3813E /* CustomNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E403C2C2562F000A3813E /* CustomNavigationLink.swift */; };
+		AC9E40462C256DA300A3813E /* AuthenticationSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40452C256DA300A3813E /* AuthenticationSignIn.swift */; };
 		ACB09AC72C23D70E0089E205 /* PortfolioTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */; };
 		ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3D64E2C228F7E0052C895 /* TalentListView.swift */; };
 		C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FC9F22C118C7600A7001A /* WavernApp.swift */; };
@@ -77,7 +94,25 @@
 		AC8ACA322C243AF20096DA36 /* WaitingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingListView.swift; sourceTree = "<group>"; };
 		AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewedListView.swift; sourceTree = "<group>"; };
 		AC9E3FFA2C2537FD00A3813E /* Talent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent.swift; sourceTree = "<group>"; };
-		ACB09AC42C23D2C60089E205 /* SkillTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTagView.swift; sourceTree = "<group>"; };
+		AC9E3FFF2C253AEE00A3813E /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		AC9E40012C253B3800A3813E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AC9E40032C253D6300A3813E /* Phrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phrases.swift; sourceTree = "<group>"; };
+		AC9E40052C253DC200A3813E /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		AC9E40072C253ED500A3813E /* SkillTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTag.swift; sourceTree = "<group>"; };
+		AC9E40092C254C9F00A3813E /* SuccessFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessFeedbackView.swift; sourceTree = "<group>"; };
+		AC9E400B2C254DFE00A3813E /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		AC9E400E2C254EE400A3813E /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		AC9E40192C2550AB00A3813E /* Geist-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geist-Medium.otf"; sourceTree = "<group>"; };
+		AC9E401B2C2550AB00A3813E /* Geist-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geist-SemiBold.otf"; sourceTree = "<group>"; };
+		AC9E401C2C2550AB00A3813E /* Geist-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geist-Regular.otf"; sourceTree = "<group>"; };
+		AC9E40272C2551B600A3813E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AC9E402E2C2556CB00A3813E /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		AC9E40312C255C9200A3813E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AC9E40342C255D8300A3813E /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		AC9E40362C255E4600A3813E /* ExploreTalentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreTalentsView.swift; sourceTree = "<group>"; };
+		AC9E403A2C25620C00A3813E /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		AC9E403C2C2562F000A3813E /* CustomNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationLink.swift; sourceTree = "<group>"; };
+		AC9E40452C256DA300A3813E /* AuthenticationSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSignIn.swift; sourceTree = "<group>"; };
 		ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTagView.swift; sourceTree = "<group>"; };
 		ACB3D64E2C228F7E0052C895 /* TalentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentListView.swift; sourceTree = "<group>"; };
 		C06FC9EF2C118C7600A7001A /* Wavern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wavern.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,12 +155,6 @@
 		AC0FB31C2C25265000E6047B /* Separated Views */ = {
 			isa = PBXGroup;
 			children = (
-				ACB09AC42C23D2C60089E205 /* SkillTagView.swift */,
-				AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */,
-				ACB3D64E2C228F7E0052C895 /* TalentListView.swift */,
-				AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */,
-				ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */,
-				AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */,
 				AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */,
 				AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */,
 			);
@@ -144,34 +173,23 @@
 		AC11C8892C1812AF00854500 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC9E3FF42C25373300A3813E /* Profile */,
 				AC0FB31C2C25265000E6047B /* Separated Views */,
-				AC11C88A2C1812C300854500 /* LoginView.swift */,
 				AC8ACA302C2435610096DA36 /* InterviewView.swift */,
-				AC11C88C2C1812CA00854500 /* SignUpView.swift */,
-				AC11C88E2C1812D000854500 /* OnboardingView.swift */,
-				AC08174D2C215ABE00ACDE83 /* DashboardView.swift */,
 				AC08174F2C2167E300ACDE83 /* MainView.swift */,
-				AC0817512C21694900ACDE83 /* ProfileView.swift */,
 				AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */,
-				AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */,
-				AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */,
-				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
 				AC8ACA322C243AF20096DA36 /* WaitingListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		AC9E3FF42C25373300A3813E /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		AC9E3FF52C2537BB00A3813E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				AC9E404C2C25710900A3813E /* HR Profile & Benefits */,
+				AC9E404B2C25704C00A3813E /* Sign Up */,
+				AC9E40412C256C9B00A3813E /* Sign In */,
+				AC9E403E2C256B6500A3813E /* Onboarding */,
+				AC9E40302C255C7D00A3813E /* Dashboard */,
 				AC9E3FF62C2537D100A3813E /* Talent */,
 			);
 			path = Features;
@@ -205,6 +223,9 @@
 		AC9E3FF92C2537E500A3813E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */,
+				AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */,
+				AC9E400D2C254E9200A3813E /* UI */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,6 +242,16 @@
 		AC9E3FFD2C25383800A3813E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */,
+				AC9E400B2C254DFE00A3813E /* DescriptionView.swift */,
+				AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */,
+				AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */,
+				ACB3D64E2C228F7E0052C895 /* TalentListView.swift */,
+				ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */,
+				AC9E3FFF2C253AEE00A3813E /* Buttons.swift */,
+				AC9E40072C253ED500A3813E /* SkillTag.swift */,
+				AC9E40092C254C9F00A3813E /* SuccessFeedbackView.swift */,
+				AC9E403C2C2562F000A3813E /* CustomNavigationLink.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -228,8 +259,140 @@
 		AC9E3FFE2C25388600A3813E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				AC9E40012C253B3800A3813E /* Colors.swift */,
+				AC9E40032C253D6300A3813E /* Phrases.swift */,
+				AC9E40052C253DC200A3813E /* Size.swift */,
+				AC9E402E2C2556CB00A3813E /* Fonts.swift */,
+				AC9E403A2C25620C00A3813E /* Background.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		AC9E400D2C254E9200A3813E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E400E2C254EE400A3813E /* NameView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AC9E40142C25509500A3813E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E40192C2550AB00A3813E /* Geist-Medium.otf */,
+				AC9E401C2C2550AB00A3813E /* Geist-Regular.otf */,
+				AC9E401B2C2550AB00A3813E /* Geist-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AC9E40302C255C7D00A3813E /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E40392C255FCD00A3813E /* Model */,
+				AC9E40332C255D6900A3813E /* View */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		AC9E40332C255D6900A3813E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC08174D2C215ABE00ACDE83 /* DashboardView.swift */,
+				AC9E40382C255E7700A3813E /* UI */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC9E40382C255E7700A3813E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E40312C255C9200A3813E /* HeaderView.swift */,
+				AC9E40342C255D8300A3813E /* ChallengeView.swift */,
+				AC9E40362C255E4600A3813E /* ExploreTalentsView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AC9E40392C255FCD00A3813E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC9E403E2C256B6500A3813E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E403F2C256B6D00A3813E /* Model */,
+				AC9E40402C256B7200A3813E /* View */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		AC9E403F2C256B6D00A3813E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC9E40402C256B7200A3813E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC11C88E2C1812D000854500 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC9E40412C256C9B00A3813E /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E40422C256CA800A3813E /* Model */,
+				AC9E40432C256CAD00A3813E /* View */,
+				AC9E40442C256D7B00A3813E /* ViewModel */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		AC9E40422C256CA800A3813E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC9E40432C256CAD00A3813E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC11C88A2C1812C300854500 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC9E40442C256D7B00A3813E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC9E40452C256DA300A3813E /* AuthenticationSignIn.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC9E404B2C25704C00A3813E /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				AC11C88C2C1812CA00854500 /* SignUpView.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		AC9E404C2C25710900A3813E /* HR Profile & Benefits */ = {
+			isa = PBXGroup;
+			children = (
+				AC0817512C21694900ACDE83 /* ProfileView.swift */,
+				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
+			);
+			path = "HR Profile & Benefits";
 			sourceTree = "<group>";
 		};
 		C06FC9E62C118C7600A7001A = {
@@ -255,6 +418,8 @@
 		C06FC9F12C118C7600A7001A /* Wavern */ = {
 			isa = PBXGroup;
 			children = (
+				AC9E40272C2551B600A3813E /* Info.plist */,
+				AC9E40142C25509500A3813E /* Fonts */,
 				AC9E3FFC2C25382C00A3813E /* Shared */,
 				AC9E3FF52C2537BB00A3813E /* Features */,
 				AC11C8862C1809FF00854500 /* Model */,
@@ -397,7 +562,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06FC9FA2C118C7700A7001A /* Preview Assets.xcassets in Resources */,
+				AC9E401E2C25515C00A3813E /* Geist-SemiBold.otf in Resources */,
+				AC9E40202C25516300A3813E /* Geist-Medium.otf in Resources */,
 				C06FC9F72C118C7700A7001A /* Assets.xcassets in Resources */,
+				AC9E401F2C25516100A3813E /* Geist-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,18 +593,32 @@
 				AC61FD672C2295620010CBE8 /* EmploymentTypeView.swift in Sources */,
 				AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */,
 				C06FC9F52C118C7600A7001A /* ContentView.swift in Sources */,
+				AC9E40352C255D8300A3813E /* ChallengeView.swift in Sources */,
+				AC9E403D2C2562F000A3813E /* CustomNavigationLink.swift in Sources */,
+				AC9E40002C253AEE00A3813E /* Buttons.swift in Sources */,
 				AC3CEFB32C251B000088FDB2 /* CompletedChallenge.swift in Sources */,
+				AC9E400F2C254EE400A3813E /* NameView.swift in Sources */,
+				AC9E40462C256DA300A3813E /* AuthenticationSignIn.swift in Sources */,
 				AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */,
+				AC9E40372C255E4600A3813E /* ExploreTalentsView.swift in Sources */,
+				AC9E40042C253D6300A3813E /* Phrases.swift in Sources */,
+				AC9E403B2C25620C00A3813E /* Background.swift in Sources */,
 				AC61FD652C2295310010CBE8 /* CustomCorners.swift in Sources */,
 				AC0817522C21694900ACDE83 /* ProfileView.swift in Sources */,
-				ACB09AC52C23D2C60089E205 /* SkillTagView.swift in Sources */,
+				AC9E40082C253ED500A3813E /* SkillTag.swift in Sources */,
 				AC8ACA312C2435610096DA36 /* InterviewView.swift in Sources */,
+				AC9E400A2C254C9F00A3813E /* SuccessFeedbackView.swift in Sources */,
+				AC9E400C2C254DFE00A3813E /* DescriptionView.swift in Sources */,
+				AC9E40062C253DC200A3813E /* Size.swift in Sources */,
+				AC9E40022C253B3800A3813E /* Colors.swift in Sources */,
 				AC8ACA352C243AFF0096DA36 /* InterviewedListView.swift in Sources */,
 				AC0817502C2167E300ACDE83 /* MainView.swift in Sources */,
 				ACB09AC72C23D70E0089E205 /* PortfolioTagView.swift in Sources */,
+				AC9E402F2C2556CB00A3813E /* Fonts.swift in Sources */,
 				AC61FD6B2C22D0E30010CBE8 /* ResultView.swift in Sources */,
 				AC55B51D2C2310D600AC94A7 /* AllTalentsView.swift in Sources */,
 				AC8ACA2D2C23EF540096DA36 /* BackgroundView.swift in Sources */,
+				AC9E40322C255C9200A3813E /* HeaderView.swift in Sources */,
 				AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */,
 				AC8ACA332C243AF20096DA36 /* WaitingListView.swift in Sources */,
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
@@ -613,6 +795,7 @@
 				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wavern/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -642,6 +825,7 @@
 				DEVELOPMENT_TEAM = ARLGKL6RC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wavern/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

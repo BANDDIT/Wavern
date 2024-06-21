@@ -52,7 +52,7 @@ struct LoginView: View {
                   .frame(maxWidth: .infinity, alignment: .leading)
                
                HStack {
-                  if isPasswordVisible {
+                  if AuthenticationSignIn.isPasswordVisible {
                      TextField(text: $password) {
                         Text("Password")
                      }
@@ -63,9 +63,9 @@ struct LoginView: View {
                   }
                   
                   Button(action: {
-                     isPasswordVisible.toggle()
+                     
                   }) {
-                     Image(systemName: isPasswordVisible ? "eye.slash" : "eye")
+                     Image(systemName: AuthenticationSignIn.isPasswordVisible ? "eye.slash" : "eye")
                         .foregroundColor(.gray)
                   }
                }
@@ -80,14 +80,7 @@ struct LoginView: View {
             // MARK: Button
             VStack{
                NavigationLink(destination: LoginView()) {
-                  Text("Login")
-                     .frame(minWidth: 0, maxWidth: .infinity)
-                     .font(.system(size: 17))
-                     .fontWeight(.semibold)
-                     .padding()
-                     .foregroundColor(areTextFieldsFilled ? .neutral500 : .white)
-                     .background(areTextFieldsFilled ? .neutral300 : .primaryPurple)
-                     .clipShape(RoundedRectangle(cornerRadius: 12))
+                  CustomNavigationLink(bgColor: Colors.neutral300, txtColor: Colors.neutral500, text: "Login")
                }
                .padding(.bottom, 16)
                .disabled(areTextFieldsFilled)

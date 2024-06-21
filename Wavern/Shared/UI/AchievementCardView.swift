@@ -15,12 +15,11 @@ struct AchievementCardView: View {
           
           VStack(alignment: .leading) {
              Text("First Journey")
-                .font(.headline)
-                .foregroundStyle(.white)
+                .font(Fonts.semibold16)
+                .foregroundStyle(Colors.white)
              Text("+100 Points")
-                .font(.caption)
+                .font(Fonts.medium13)
                 .foregroundStyle(.white)
-                .fontWeight(.semibold)
                 .padding(.vertical, 4)
                 .padding(.horizontal, 8)
                 .background(.white.opacity(0.25))

@@ -16,7 +16,7 @@ struct OnboardingView: View {
             ZStack {
                Rectangle()
                   .frame(height: 300)
-                  .foregroundStyle(.white)
+                  .foregroundStyle(Colors.white)
                
                VStack{
                   // MARK: Tiga button diatas
@@ -32,31 +32,18 @@ struct OnboardingView: View {
                   VStack {
                      Text("We Help Hiring Partners Connect with Tech Talents")
                         .multilineTextAlignment(.center)
-                        .font(.title)
-                        .fontWeight(.semibold)
+                        .font(Fonts.semibold24)
                         .padding(.vertical, 16)
                   }
                   
                   // MARK: Button login & sign up
                   VStack {
                      NavigationLink(destination: SignUpView()) {
-                        Text("Get Started")
-                           .frame(minWidth: 0, maxWidth: .infinity)
-                           .font(.system(size: 17))
-                           .fontWeight(.semibold)
-                           .padding()
-                           .foregroundColor(.white)
-                           .background(.primaryPurple)
-                           .clipShape(RoundedRectangle(cornerRadius: 12))
+                        CustomNavigationLink(bgColor: Colors.purple600, txtColor: Colors.white, text: "Get Started")
                      }
                      
                      NavigationLink(destination: LoginView()) {
-                        Text("I already have an account")
-                           .frame(minWidth: 0, maxWidth: .infinity)
-                           .font(.system(size: 17))
-                           .fontWeight(.semibold)
-                           .padding()
-                           .foregroundColor(.primaryPurple)
+                        CustomNavigationLink(bgColor: Colors.white, txtColor: Colors.purple600, text: "I already have an account")
                      }
                   }
                }
@@ -66,14 +53,7 @@ struct OnboardingView: View {
          }
          .ignoresSafeArea()
          .background(
-            LinearGradient(
-               stops: [
-                  Gradient.Stop(color: .primaryPurple, location: 0.00),
-                  Gradient.Stop(color: .secondaryPurple, location: 1.00),
-               ],
-               startPoint: UnitPoint(x: 0.5, y: 0),
-               endPoint: UnitPoint(x: 0.5, y: 1)
-            )
+            Background.bgGradient
          )
       }
    }
