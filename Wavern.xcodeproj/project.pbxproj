@@ -115,6 +115,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0FB31C2C25265000E6047B /* Separated Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */,
+				ACB3D64E2C228F7E0052C895 /* TalentListView.swift */,
+				AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */,
+				ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */,
+				AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */,
+				AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */,
+				AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */,
+			);
+			path = "Separated Views";
+			sourceTree = "<group>";
+		};
 		AC11C8862C1809FF00854500 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,7 @@
 		AC11C8892C1812AF00854500 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC0FB31C2C25265000E6047B /* Separated Views */,
 				AC11C88A2C1812C300854500 /* LoginView.swift */,
 				AC8ACA302C2435610096DA36 /* InterviewView.swift */,
 				AC11C88C2C1812CA00854500 /* SignUpView.swift */,
@@ -134,19 +149,12 @@
 				AC08174D2C215ABE00ACDE83 /* DashboardView.swift */,
 				AC08174F2C2167E300ACDE83 /* MainView.swift */,
 				AC0817512C21694900ACDE83 /* ProfileView.swift */,
-				ACB3D64E2C228F7E0052C895 /* TalentListView.swift */,
-				AC61FD662C2295620010CBE8 /* EmploymentTypeView.swift */,
 				AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */,
 				AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */,
 				AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */,
 				ACB09AC42C23D2C60089E205 /* SkillTagView.swift */,
-				ACB09AC62C23D70E0089E205 /* PortfolioTagView.swift */,
 				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
-				AC8ACA2C2C23EF540096DA36 /* BackgroundView.swift */,
-				AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */,
 				AC8ACA322C243AF20096DA36 /* WaitingListView.swift */,
-				AC8ACA342C243AFF0096DA36 /* InterviewedListView.swift */,
-				AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -48,7 +48,7 @@ struct CompletedChallenge: View {
                }.frame(width:120,height:5).background(.white).cornerRadius(5).padding(10).padding(.bottom,10)
             }.frame(width:UIScreen.screenWidth,height:128).background(.clear)
          }
-      }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+      }.ignoresSafeArea()
    }
 }
 
