@@ -28,6 +28,8 @@
 		C06FCA102C118C7700A7001A /* WavernUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */; };
 		C093CF662C23C9B2000372AA /* TalentsProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093CF652C23C9B2000372AA /* TalentsProfileView.swift */; };
 		C093CF682C23C9ED000372AA /* SkillTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093CF672C23C9ED000372AA /* SkillTagView.swift */; };
+		C093CF6A2C23E96F000372AA /* CompletedChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093CF692C23E96F000372AA /* CompletedChallenge.swift */; };
+		C093CFA22C247C8E000372AA /* CompletedChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C093CFA12C247C8E000372AA /* CompletedChallengeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C093CF652C23C9B2000372AA /* TalentsProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentsProfileView.swift; sourceTree = "<group>"; };
 		C093CF672C23C9ED000372AA /* SkillTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTagView.swift; sourceTree = "<group>"; };
+		C093CF692C23E96F000372AA /* CompletedChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedChallenge.swift; sourceTree = "<group>"; };
+		C093CFA12C247C8E000372AA /* CompletedChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedChallengeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 				AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */,
 				C093CF652C23C9B2000372AA /* TalentsProfileView.swift */,
 				C093CF672C23C9ED000372AA /* SkillTagView.swift */,
+				C093CF692C23E96F000372AA /* CompletedChallenge.swift */,
+				C093CFA12C247C8E000372AA /* CompletedChallengeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +324,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C093CFA22C247C8E000372AA /* CompletedChallengeView.swift in Sources */,
+				C093CF6A2C23E96F000372AA /* CompletedChallenge.swift in Sources */,
 				AC61FD672C2295620010CBE8 /* EmploymentTypeView.swift in Sources */,
 				C06FC9F52C118C7600A7001A /* ContentView.swift in Sources */,
 				C093CF662C23C9B2000372AA /* TalentsProfileView.swift in Sources */,

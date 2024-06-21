@@ -46,17 +46,17 @@ struct TalentsProfileView: View {
                     Text("")
                     
                     HStack{
-                        Image("yoe_symbol")
+                        Image("yoe_symbol").frame(width:15)
                         Text("1-3 YOE").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
                     }
                     
                     HStack{
-                        Image("salary_symbol")
+                        Image("salary_symbol").frame(width:15)
                         Text("Rp5.000.000").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
                     }
                     
                     HStack{
-                        Image("loc_symbol")
+                        Image("loc_symbol").frame(width:15)
                         Text("Willing to Relocate").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
                     }
                 }
@@ -109,7 +109,7 @@ struct TalentsProfileView: View {
                         Button(action:{
                             
                         },label:{
-                            PortofolioTagView(img:"github_logo")
+                            PortofolioTagView(img:"github_logo",doublePadding: 10)
                         })
 
                         
@@ -147,9 +147,16 @@ struct TalentsProfileView: View {
             VStack{
                 Button(action:{
                     withAnimation{
-                        isInvited=true
-                        interviewBtnColor = .neutral300
-                        interviewTxtColor = .neutral500
+                        if(interviewBtnColor != .neutral300){
+                            isInvited=true
+                            interviewBtnColor = .neutral300
+                            interviewTxtColor = .neutral500
+                        }
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                        withAnimation{
+                            isInvited=false
+                        }
                     }
                 },label:{
                     VStack{
@@ -198,16 +205,14 @@ struct TalentsProfileView: View {
 struct PortofolioTagView:View{
     
     var img:String
+    var doublePadding:CGFloat=0
     
     var body : some View{
         VStack{
-            Image(img)
+            Image(img).padding(doublePadding)
         }.frame(width:42,height:42).background(LinearGradient(colors:[.primaryPurple,.secondaryPurple],startPoint:.top,endPoint:.bottom)).cornerRadius(180)
     }
 }
-
-
-
 
 
 #Preview {
