@@ -18,4 +18,14 @@ struct Background {
       startPoint: UnitPoint(x: 0.5, y: 0),
       endPoint: UnitPoint(x: 0.5, y: 1)
    )
+   
+   static let bgHome: LinearGradient =
+   LinearGradient(
+      stops: [
+         Gradient.Stop(color: .white.opacity(0.05), location: 0.00),
+         Gradient.Stop(color: .secondaryPurple, location: 1.00),
+      ],
+      startPoint: UnitPoint(x: 0.5, y: 0),
+      endPoint: UnitPoint(x: 0.5, y: 1)
+   )
 }

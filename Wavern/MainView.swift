@@ -17,47 +17,50 @@ struct MainView: View {
       UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
    }
    
+   let notificationDelegate = NotificationDelegate()
+   
    var body: some View {
-      TabView {
-         NavigationStack{
-            DashboardView()
+      NavigationStack {
+         TabView {
+            VStack{
+               DashboardView()
+            }
+            .tabItem {
+               Text(Phrases.exploreTitle)
+               Image(systemName: Phrases.exploreSymbol)
+            }
+            // TODO: Use enum to handle tag in tabItem
+            .tag(0)
+            
+            VStack{
+               InterviewView()
+            }
+            .tabItem {
+               Text(Phrases.interviewTitle)
+               Image(systemName: Phrases.interviewSymbol)
+            }
+            .tag(1)
+            
+            VStack{
+               ResultView()
+            }
+            .tabItem {
+               Text(Phrases.resultTitle)
+               Image(systemName: Phrases.resultSymbol)
+            }
+            .tag(2)
+            
+            VStack{
+               ProfileView()
+            }
+            .tabItem {
+               Text(Phrases.profileTitle)
+               Image(systemName: Phrases.profileSymbol)
+            }
+            .tag(3)
          }
-         .tabItem {
-            // TODO: Move all constant to 1 file and 1 struct
-            Text(Phrases.exploreTitle)
-            Image(systemName: Phrases.exploreSymbol)
-         }
-         // TODO: Use enum to handle tag in tabItem
-         .tag(0)
-         
-         NavigationStack{
-            InterviewView()
-         }
-         .tabItem {
-            Text(Phrases.interviewTitle)
-            Image(systemName: Phrases.interviewSymbol)
-         }
-         .tag(1)
-         
-         NavigationStack{
-            ResultView()
-         }
-         .tabItem {
-            Text(Phrases.resultTitle)
-            Image(systemName: Phrases.resultSymbol)
-         }
-         .tag(2)
-         
-         NavigationStack{
-            ProfileView()
-         }
-         .tabItem {
-            Text(Phrases.profileTitle)
-            Image(systemName: Phrases.profileSymbol)
-         }
-         .tag(3)
+         .tint(Colors.purple600)
       }
-      .tint(Colors.purple600)
       .navigationBarBackButtonHidden(true)
    }
 }

@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct DashboardView: View {
-   let increments = [150, 250, 350, 450]
-   
    var body: some View {
       ScrollView{
          // MARK: Top Section (Details)
@@ -19,7 +17,7 @@ struct DashboardView: View {
          ChallengeView()
          
          Rectangle()
-            .frame(width: 393, height: 4)
+            .frame(maxWidth: .infinity, maxHeight: 4)
             .foregroundStyle(.neutral)
          
          ExploreTalentsView()
