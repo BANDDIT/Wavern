@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
-   @State var search: String = ""
-   let increments = [100, 200, 300, 400]
+   @StateObject var model = DashboardModel()
    
    var body: some View {
       VStack {
@@ -33,13 +32,13 @@ struct HeaderView: View {
                Image(systemName: "magnifyingglass")
                   .opacity(0.3)
                
-               TextField(text: $search) {
+               TextField(text: $model.search) {
                   Text("Enter Role, Skills, YOE, or Budget")
                }
             }
             .padding()
-            .background(.white)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .background(Colors.white)
+            .clipShape(RoundedRectangle(cornerRadius: Size.cornerRadius))
          }
          .padding(.horizontal)
       }
@@ -49,7 +48,7 @@ struct HeaderView: View {
          ZStack {
             Background.bgGradient
             
-            ForEach(increments, id: \.self) { increment in
+            ForEach(model.increments, id: \.self) { increment in
                Home()
                   .fill(
                      Background.bgHome

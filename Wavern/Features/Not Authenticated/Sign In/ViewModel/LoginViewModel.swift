@@ -8,13 +8,11 @@
 import Foundation
 import SwiftUI
 
-class AuthenticationSignIn: ObservableObject {
-   @Published var email: String = ""
-   @Published var password: String = ""
-   @Published var isPasswordVisible: Bool = false
+struct LoginViewModel {
+   @StateObject var model = LoginModel()
    
    func areTextFieldsFilled() -> Bool {
-      return email.isEmpty || password.isEmpty
+      return model.email.isEmpty || model.password.isEmpty
    }
    
    func navigationLink() -> some View{

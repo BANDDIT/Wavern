@@ -12,8 +12,8 @@ struct Background {
    static let bgGradient: LinearGradient =
    LinearGradient(
       stops: [
-         Gradient.Stop(color: .primaryPurple, location: 0.00),
-         Gradient.Stop(color: .secondaryPurple, location: 1.00),
+         Gradient.Stop(color: Colors.purple600, location: 0.00),
+         Gradient.Stop(color: Colors.purple300, location: 1.00),
       ],
       startPoint: UnitPoint(x: 0.5, y: 0),
       endPoint: UnitPoint(x: 0.5, y: 1)
@@ -22,8 +22,8 @@ struct Background {
    static let bgHome: LinearGradient =
    LinearGradient(
       stops: [
-         Gradient.Stop(color: .white.opacity(0.05), location: 0.00),
-         Gradient.Stop(color: .secondaryPurple, location: 1.00),
+         Gradient.Stop(color: Colors.white.opacity(0.05), location: 0.00),
+         Gradient.Stop(color: Colors.purple300, location: 1.00),
       ],
       startPoint: UnitPoint(x: 0.5, y: 0),
       endPoint: UnitPoint(x: 0.5, y: 1)
