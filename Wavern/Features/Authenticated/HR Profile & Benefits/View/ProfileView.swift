@@ -29,7 +29,15 @@ struct ProfileView: View {
                }
             }
          }
-         .padding()
+         .padding(.vertical)
+         .padding(.leading)
+         
+         Rectangle()
+            .frame(maxWidth: .infinity, maxHeight: 4)
+            .foregroundStyle(Colors.neutral100)
+         
+         AchievementView()
+            .padding(.horizontal)
       }
       .ignoresSafeArea()
       

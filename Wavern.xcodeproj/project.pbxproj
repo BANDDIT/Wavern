@@ -15,6 +15,7 @@
 		AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88C2C1812CA00854500 /* SignUpView.swift */; };
 		AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88E2C1812D000854500 /* OnboardingView.swift */; };
 		AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCAA2C284BBB00ACCB04 /* Destination.swift */; };
+		AC28FCAF2C2877AB00ACCB04 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */; };
 		AC3CEFB32C251B000088FDB2 /* CompletedChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */; };
 		AC55B51D2C2310D600AC94A7 /* AllTalentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */; };
 		AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */; };
@@ -103,6 +104,7 @@
 		AC11C88C2C1812CA00854500 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		AC11C88E2C1812D000854500 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		AC28FCAA2C284BBB00ACCB04 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
 		AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedChallenge.swift; sourceTree = "<group>"; };
 		AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTalentsView.swift; sourceTree = "<group>"; };
 		AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentDetailView.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				AC94B5F72C280DBB0008AEA9 /* ProfileHeaderView.swift */,
 				AC94B5FC2C28230E0008AEA9 /* InterviewedAmount.swift */,
 				AC94B5FE2C282F250008AEA9 /* PointNavigationLink.swift */,
+				AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 				AC94B5F82C280DBB0008AEA9 /* ProfileHeaderView.swift in Sources */,
 				AC9E40322C255C9200A3813E /* HeaderView.swift in Sources */,
 				AC94B5F32C280BB70008AEA9 /* AcceptedApplicants.swift in Sources */,
+				AC28FCAF2C2877AB00ACCB04 /* AchievementView.swift in Sources */,
 				AC94B5EE2C27EF7A0008AEA9 /* TalentViewModel.swift in Sources */,
 				AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */,
 				AC8ACA332C243AF20096DA36 /* StatusView.swift in Sources */,

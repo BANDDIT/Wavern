@@ -29,4 +29,5 @@ struct PointNavigationLink: View {
 
 #Preview {
    PointNavigationLink()
+      .background(.black)
 }
