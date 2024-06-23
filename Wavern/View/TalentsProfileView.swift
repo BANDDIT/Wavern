@@ -40,8 +40,10 @@ struct TalentsProfileView: View {
     @State var isInvited:Bool=false
     
     
-    @State var skills:[String]=["UI/UX Design","Research","Product Thinking","Prototyping","Product Strategy","Interaction Design"]
-    
+    //@State var skills:[String]=["UI/UX Design","Research","Product Thinking","Prototyping","Product Strategy","Interaction Design"]
+    @State var skills:[[String]]=[
+        ["UI/UX Design","Research","Product Thinking"],
+        ["Prototyping","Product Strategy","Interaction Design"]]
     
     var portofolios:[Portofolio]=[
         Portofolio(img:"email_logo",link:"https://www.google.com"),
@@ -90,14 +92,20 @@ struct TalentsProfileView: View {
             HStack{
         
                 VStack(alignment:.leading){
+                    Spacer()
                     Text("Skills").font(.system(size:20,weight:.semibold))
                     
-                    LazyVGrid(columns:[GridItem(.adaptive(minimum:70))]){
+                    
+                    SkillTagView("UI/UX Design")
+                    HStack{
                         ForEach(skills,id:\.self){ skill in
                             SkillTagView("\(skill)")
 
                         }
                     }
+                    
+                    Spacer()
+                    
                     /*
                     HStack{
                         SkillTagView("UI/UX Design")
@@ -197,7 +205,6 @@ struct TalentsProfileView: View {
 }
 
 struct PortofolioTagView:View{
-    
     var img:String
     var edges:Edge.Set = []
     var leftPadding:CGFloat=0
@@ -223,7 +230,6 @@ struct PortofolioTagView:View{
                 }
             }.frame(width:42,height:42).background(LinearGradient(colors:[.primaryPurple,.secondaryPurple],startPoint:.top,endPoint:.bottom)).cornerRadius(180)
         })
-
     }
 }
 

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct CompletedChallenge: View {
     @State var txt:String="ABC"
     

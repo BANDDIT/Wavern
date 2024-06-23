@@ -21,28 +21,12 @@ struct TimeBoxView:View{
     var time:Time
     var color:Color
     
+    @ObservedObject var interviewDateViewModel:InterviewDateViewModel
+    
     var body : some View{
         VStack{
-            Text("\(getHour()) : \(getMinute())").foregroundColor(color).font(.system(size:18,weight:.semibold))
+            Text("\(interviewDateViewModel.getHour(time)) : \(interviewDateViewModel.getMinute(time))").foregroundColor(color).font(.system(size:18,weight:.semibold))
         }.frame(width:109,height:40).background(.neutral).cornerRadius(4)
-    }
-    
-    private func getMinute()->String{
-        if(time.minute<10){
-            return "0\(time.minute)"
-        }
-        else{
-            return "\(time.minute)"
-        }
-    }
-    
-    private func getHour()->String{
-        if(time.hour<10){
-            return "0\(time.hour)"
-        }
-        else{
-            return "\(time.hour)"
-        }
     }
 }
 
@@ -59,14 +43,14 @@ struct TellUsMoreView:View{
             ZStack{
                 ZStack(alignment:.topLeading){
                     TextEditor(text:$interviewDateViewModel.tellUsMore).padding(4).foregroundColor(.black).font(.system(size:14,weight:.regular)).colorMultiply(.neutral).onChange(of:interviewDateViewModel.tellUsMore){
-                        if(interviewDateViewModel.tellUsMore==""){
+                        if(interviewDateViewModel.isInputEmpty()){
                             interviewDateViewModel.tellUs=true
                         }
                     }.onTapGesture{
                         interviewDateViewModel.tellUs=false
                     }
                     
-                    if(interviewDateViewModel.tellUs && interviewDateViewModel.tellUsMore==""){
+                    if(interviewDateViewModel.isNotTyping()){
                         Text("Type Here").foregroundColor(.neutral400).font(.system(size:14,weight:.regular)).padding(.horizontal,8)      .padding(.vertical, 12)
                     }
                 }.frame(width:343,height:147).background(.neutral).cornerRadius(12)
@@ -80,12 +64,14 @@ struct TellUsMoreView:View{
 struct InterviewTimePickerView:View{
     
     @Binding var time:Time
+    @ObservedObject var interviewDateViewModel:InterviewDateViewModel
+
     
     var body : some View{
         HStack{
             Picker("", selection: $time.hour){
                 ForEach(0...23,id:\.self){ i in
-                    if(i<10){
+                    if(interviewDateViewModel.isUnderTen(i)){
                         Text("0\(i)").tag(i)
                     }
                     else{
@@ -97,7 +83,7 @@ struct InterviewTimePickerView:View{
             
             Picker("", selection: $time.minute){
                 ForEach(0...59,id:\.self){ i in
-                    if(i<10){
+                    if(interviewDateViewModel.isUnderTen(i)){
                         Text("0\(i)").tag(i)
                     }
                     else{
@@ -120,7 +106,7 @@ struct InterviewScheduleSection:View{
             Spacer()
             Button(action:{
                 withAnimation{
-                    if (txt=="From"){
+                    if (interviewDateViewModel.isTextEqualsFrom(txt)){
                         interviewDateViewModel.toggleBeginTime()
                     }
                     else{
@@ -128,7 +114,13 @@ struct InterviewScheduleSection:View{
                     }
                 }
             },label:{
-                TimeBoxView(time:time, color:.primaryPurple)
+                if interviewDateViewModel.isTextEqualsFrom(txt){
+                    TimeBoxView(time:time,color:interviewDateViewModel.timeColor,interviewDateViewModel: interviewDateViewModel)
+                }
+                else{
+                    TimeBoxView(time:time,color:interviewDateViewModel.time2Color,interviewDateViewModel: interviewDateViewModel)
+                }
+
 
             })
         }.frame(width:345,height:40)
@@ -145,7 +137,7 @@ struct InterviewSchedule:View{
             
             if(interviewDateViewModel.beginTime){
                 Spacer()
-                InterviewTimePickerView(time:$interviewDateViewModel.time)
+                InterviewTimePickerView(time:$interviewDateViewModel.time, interviewDateViewModel: interviewDateViewModel)
             }
             Spacer()
             
@@ -160,7 +152,7 @@ struct InterviewSchedule:View{
 
             if(interviewDateViewModel.endTime){
                 Spacer()
-                InterviewTimePickerView(time:$interviewDateViewModel.time2)
+                InterviewTimePickerView(time:$interviewDateViewModel.time2,interviewDateViewModel: interviewDateViewModel)
             }
             
             Spacer()
@@ -168,23 +160,6 @@ struct InterviewSchedule:View{
     }
 }
 
-
-struct SendRequestView:View{
-    @ObservedObject var interviewDateViewModel:InterviewDateViewModel
-    var body : some View{
-        VStack{
-            Button(action:{
-
-            },label:{
-                VStack{
-                    Text("Send Request").foregroundColor(.white).font(.system(size:17,weight:.semibold))
-                }.frame(width:361,height:56).background(.primaryPurple).cornerRadius(12)
-            })
-            .padding(16)
-            Spacer()
-        }.frame(width:UIScreen.screenWidth,height:128).background(.white)
-    }
-}
 
 struct InterviewDateLabelView:View{
     var body : some View{
@@ -220,7 +195,19 @@ struct InterviewDateView: View {
  
                 }
                 
-                SendRequestView(interviewDateViewModel: interviewDateViewModel)
+                VStack{
+                    Button(action:{
+
+                    },label:{
+                        
+                        //Ini ganti jadi Button dishared
+                        VStack{
+                            Text("Send Request").foregroundColor(.white).font(.system(size:17,weight:.semibold))
+                        }.frame(width:361,height:56).background(.primaryPurple).cornerRadius(12)
+                    })
+                    .padding(16)
+                    Spacer()
+                }.frame(width:UIScreen.screenWidth,height:128).background(.white)
             }
         }
         .navigationBarBackButtonHidden()

@@ -84,8 +84,7 @@ struct CompletedChallengeView: View {
         ZStack{
             LinearGradient(colors:[.primaryPurple,.secondaryPurple],startPoint:.top,endPoint:.bottom)
             
-            
-            BackgroundView()
+            BackgroundView().opacity(0.3)
             
             VStack{
                 Spacer()
@@ -118,19 +117,12 @@ struct CompletedChallengeView: View {
                         }.frame(width:361,height:56).background(.white).cornerRadius(12)
                     })
                     .padding(16)
-                    
-                    
+                                        
                     Spacer()
-                    /*
-                    VStack{
-                        Text("")
-                    }.frame(width:120,height:5).background(.white).cornerRadius(5).padding(10).padding(.bottom,10)
-                    */
+
                 }.frame(width:UIScreen.screenWidth,height:128).background(.clear)
             }
         }.edgesIgnoringSafeArea(.all)
-
-
     }
 }
 
