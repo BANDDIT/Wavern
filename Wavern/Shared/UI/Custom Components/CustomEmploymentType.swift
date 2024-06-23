@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct EmploymentTypeView:View{
+struct CustomEmploymentType:View{
    let corners: UIRectCorner
    
    enum employmentType{

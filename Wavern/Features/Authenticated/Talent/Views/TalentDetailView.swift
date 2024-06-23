@@ -7,18 +7,9 @@
 
 import SwiftUI
 
-extension UIScreen{
-   static let screenWidth = UIScreen.main.bounds.size.width
-   static let screenHeight = UIScreen.main.bounds.size.height
-   static let screenSize = UIScreen.main.bounds.size
-}
-
 struct TalentDetailView: View {
    @Environment(\.dismiss) var dismiss
-   var timer: Timer = Timer()
-   
    @State var isInvited:Bool=false
-   
    var body: some View {
       VStack{
          ZStack (alignment: .topLeading){
@@ -58,15 +49,15 @@ struct TalentDetailView: View {
             VStack(alignment:.leading){
                Text("Skills").font(Fonts.semibold20)
                HStack{
-                  SkillTag("UI/UX Design")
-                  SkillTag("Research")
-                  SkillTag("Product Thinking")
+                  CustomSkillTag("UI/UX Design")
+                  CustomSkillTag("Research")
+                  CustomSkillTag("Product Thinking")
                }
                
                HStack{
-                  SkillTag("Prototyping")
-                  SkillTag("Product Strategy")
-                  SkillTag("Interaction Design")
+                  CustomSkillTag("Prototyping")
+                  CustomSkillTag("Product Strategy")
+                  CustomSkillTag("Interaction Design")
                   
                }
             }
@@ -81,10 +72,10 @@ struct TalentDetailView: View {
                
                // TODO: change to list or for each
                HStack{
-                  PortofolioTagView(img: "figma_logo")
-                  PortofolioTagView(img: "figma_logo")
-                  PortofolioTagView(img: "figma_logo")
-                  PortofolioTagView(img: "figma_logo")
+                  CustomPortofolioTag(img: "figma_logo")
+                  CustomPortofolioTag(img: "figma_logo")
+                  CustomPortofolioTag(img: "figma_logo")
+                  CustomPortofolioTag(img: "figma_logo")
                }
                
             }.padding(.leading,24)
@@ -96,7 +87,7 @@ struct TalentDetailView: View {
          VStack{
             
             // TODO: Move to 1 file
-            Buttons(text: Phrases.interviewButton, bgColor: Colors.purple600, txtColor: Colors.white)
+            CustomButtons(text: Phrases.interviewButton, bgColor: Colors.purple600, txtColor: Colors.white)
                .padding(.vertical)
             
             Spacer()

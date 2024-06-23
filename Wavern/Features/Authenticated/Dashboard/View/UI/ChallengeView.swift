@@ -23,28 +23,29 @@ struct ChallengeView: View {
                
                VStack(alignment: .leading){
                   Text("First Journey")
-                     .font(.headline)
-                     .foregroundStyle(.white)
+                     .font(Fonts.semibold16)
+                     .foregroundStyle(Colors.white)
+                  
                   Text("Reach out your first talent")
-                     .font(.subheadline)
-                     .foregroundStyle(.white)
+                     .font(Fonts.regular13)
+                     .foregroundStyle(Colors.white)
+                  
                   Text("+100 Points")
-                     .font(.subheadline)
+                     .font(Fonts.medium13)
                      .padding(3)
-                     .padding(.horizontal, 8)
-                     .foregroundStyle(.white)
-                     .background(.white.opacity(0.2))
-                     .clipShape(RoundedRectangle(cornerRadius: 12))
+                     .padding(.horizontal, Size.padding8)
+                     .foregroundStyle(Colors.white)
+                     .background(Colors.white.opacity(0.2))
+                     .clipShape(RoundedRectangle(cornerRadius: Size.cornerRadius))
                }
                
                Spacer()
             }
-            .padding(.horizontal, 21)
+            .padding(.horizontal, Size.padding24)
          }
          .frame(width: 345, height: 112)
       }
-      .padding(.top, 24)
-      .padding(.bottom, 20)
+      .padding(.vertical, Size.padding24)
    }
 }
 

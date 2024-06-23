@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SkillTag: View {
+struct CustomSkillTag: View {
    var text: String
    
    init(_ text: String){
@@ -28,5 +28,5 @@ struct SkillTag: View {
 }
 
 #Preview {
-   SkillTag("Hello")
+   CustomSkillTag("Hello")
 }

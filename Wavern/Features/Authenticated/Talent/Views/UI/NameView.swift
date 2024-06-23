@@ -13,7 +13,7 @@ struct NameView: View {
           Text("Jesslyn Devaline")
              .font(Fonts.semibold20)
           
-          EmploymentTypeView(corners: Size.roundedPartProfile, type: .full_time)
+          CustomEmploymentType(corners: Size.roundedPartProfile, type: .full_time)
        }
        Text("Product Designer")
           .font(Fonts.regular16)

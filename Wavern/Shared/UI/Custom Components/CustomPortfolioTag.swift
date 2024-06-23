@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PortofolioTagView:View{
+struct CustomPortofolioTag:View{
    var img:String
    
    var body : some View{
@@ -27,5 +27,5 @@ struct PortofolioTagView:View{
 }
 
 #Preview{
-   PortofolioTagView(img: "figma")
+   CustomPortofolioTag(img: "figma")
 }

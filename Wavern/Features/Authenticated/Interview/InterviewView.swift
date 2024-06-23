@@ -8,62 +8,35 @@
 import SwiftUI
 
 struct InterviewView: View {
-   @State private var selectedCategory: Int = 1
+   @State private var selectedCategory: Int = 0
    
    var body: some View {
-      VStack(alignment: .leading){
-         Text("Interview")
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .font(.title3)
-            .fontWeight(.semibold)
-            .foregroundStyle(.neutral600)
-            .padding()
-         
-         Divider()
-         
-         VStack {
-            // Category Buttons
-            HStack {
-               Button(action: {
-                  selectedCategory = 1
-               }) {
-                  Text("Waiting for Interview")
-                     .padding()
-                     .frame(maxWidth: .infinity)
-                     .font(.caption)
-                     .fontWeight(.semibold)
-                     .background(selectedCategory == 1 ? .primaryPurple : .neutral)
-                     .foregroundColor(selectedCategory == 1 ? .white : .black.opacity(0.5))
-                     .clipShape(RoundedRectangle(cornerRadius: 12))
-               }
-               
-               Button(action: {
-                  selectedCategory = 2
-               }) {
-                  Text("Interviewed")
-                     .padding()
-                     .font(.caption)
-                     .fontWeight(.semibold)
-                     .frame(maxWidth: .infinity)
-                     .background(selectedCategory == 2 ? .primaryPurple : .neutral)
-                     .foregroundColor(selectedCategory == 2 ? .white : .black.opacity(0.5))
-                     .clipShape(RoundedRectangle(cornerRadius: 12))
-               }
+      ScrollView {
+         VStack(alignment: .leading){
+            Text("Interview")
+               .frame(maxWidth: .infinity, alignment: .leading)
+               .font(.title3)
+               .fontWeight(.semibold)
+               .foregroundStyle(.neutral600)
+               .padding()
+            
+            Divider()
+            
+            VStack {
+               CustomSegmentedPicker(selectedCategory: $selectedCategory)
             }
-            .padding(4)
-            .background(.neutral)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
             .padding()
+            
+            if selectedCategory == 0{
+               WaitingListView()
+            }else{
+               InterviewedListView()
+            }
          }
-         
-         if selectedCategory == 1{
-            WaitingListView()
-         }else{
-            InterviewedListView()
-         }
+         .padding(.top, 60)
       }
-      
-      Spacer()
+      .background(Colors.white)
+      .ignoresSafeArea()
    }
 }
 

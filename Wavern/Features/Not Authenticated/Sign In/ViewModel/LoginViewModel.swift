@@ -9,14 +9,12 @@ import Foundation
 import SwiftUI
 
 struct LoginViewModel {
-   @StateObject var model = LoginModel()
-   
-   func areTextFieldsFilled() -> Bool {
+   func areTextFieldsFilled(model: LoginModel) -> Bool {
       return model.email.isEmpty || model.password.isEmpty
    }
    
-   func navigationLink() -> some View{
-      if areTextFieldsFilled(){
+   func navigationLink(model: LoginModel) -> some View{
+      if areTextFieldsFilled(model: model){
          return CustomNavigationLink(bgColor: Colors.neutral300, txtColor: Colors.neutral500, text: "Login")
       }else{
          return CustomNavigationLink(bgColor: Colors.purple600, txtColor: Colors.white, text: "Login")

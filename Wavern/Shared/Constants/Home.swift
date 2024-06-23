@@ -48,25 +48,3 @@ struct Home: Shape {
       return path
    }
 }
-
-struct BackgroundView: View {
-   var body: some View {
-      Home()
-         .fill(
-            LinearGradient(
-               stops: [
-                  Gradient.Stop(color: .white.opacity(0.2), location: 0.00),
-                  Gradient.Stop(color: .secondaryPurple, location: 1.00),
-               ],
-               startPoint: UnitPoint(x: 0.5, y: 0),
-               endPoint: UnitPoint(x: 0.5, y: 1)
-            )
-         )
-         .frame(width: CGFloat(100), height: CGFloat(100))
-         .zIndex(10)
-   }
-}
-
-#Preview {
-   BackgroundView()
-}

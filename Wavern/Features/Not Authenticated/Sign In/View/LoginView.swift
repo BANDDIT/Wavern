@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+   @StateObject private var model = LoginModel()
+   var viewModel = LoginViewModel()
+   
    var body: some View {
       VStack{
          Spacer()
@@ -18,11 +21,11 @@ struct LoginView: View {
                .frame(maxWidth: .infinity, alignment: .leading)
             
             // MARK: Form
-            LoginForm()
+            LoginForm(model: model)
                .padding(.vertical)
             
             // MARK: Button
-            LoginButton()
+            LoginButton(model: model)
          }
          .padding(.horizontal, Size.padding24)
          

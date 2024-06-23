@@ -22,7 +22,7 @@ struct Background {
    static let bgHome: LinearGradient =
    LinearGradient(
       stops: [
-         Gradient.Stop(color: Colors.white.opacity(0.05), location: 0.00),
+         Gradient.Stop(color: Colors.white, location: 0.00),
          Gradient.Stop(color: Colors.purple300, location: 1.00),
       ],
       startPoint: UnitPoint(x: 0.5, y: 0),

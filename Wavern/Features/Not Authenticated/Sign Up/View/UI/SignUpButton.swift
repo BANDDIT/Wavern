@@ -1,5 +1,5 @@
 //
-//  LoginButton.swift
+//  SignUpButton.swift
 //  Wavern
 //
 //  Created by Paulus Michael on 22/06/24.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct LoginButton: View {
-   @ObservedObject var model: LoginModel
+struct SignUpButton: View {
+   @ObservedObject var model: SignUpModel
    
-   var viewModel = LoginViewModel()
+   var viewModel = SignUpViewModel()
    
    var body: some View {
       VStack{
@@ -21,21 +21,20 @@ struct LoginButton: View {
          .disabled(viewModel.areTextFieldsFilled(model: model))
          
          HStack{
-            Text(Phrases.dontHaveAcc)
+            Text(Phrases.alreadyHaveAcc)
                .font(Fonts.semibold16)
             
             NavigationLink {
-               SignUpView()
+               LoginView()
             } label: {
-               Text(Phrases.signUpTitle)
+               Text(Phrases.loginTitle)
             }
-            .foregroundStyle(Colors.purple600)
+            .foregroundStyle(.primaryPurple)
             .font(Fonts.semibold16)
+            
          }
       }
    }
 }
 
-//#Preview {
-//   LoginButton()
-//}
+//

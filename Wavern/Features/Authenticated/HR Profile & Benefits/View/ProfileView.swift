@@ -20,12 +20,12 @@ struct ProfileView: View {
                
                VStack(alignment: .leading) {
                   Text("Jesslyn Devaline")
-                     .font(.headline)
+                     .font(Fonts.semibold20)
                   
                   Spacer()
                   
                   Text("HR of tiket.com")
-                     .font(.subheadline)
+                     .font(Fonts.regular16)
                }
                .frame(height: 20)
                
@@ -43,14 +43,12 @@ struct ProfileView: View {
             }, label: {
                HStack{
                   Text("Bronze")
-                     .font(.subheadline)
-                     .fontWeight(.semibold)
+                     .font(Fonts.semibold13)
                   
                   Spacer()
                   
                   Text("100 Points")
-                     .font(.subheadline)
-                     .fontWeight(.semibold)
+                     .font(Fonts.semibold13)
                }
                .foregroundStyle(.white)
                .padding()
@@ -62,11 +60,10 @@ struct ProfileView: View {
             HStack{
                VStack{
                   Text("0")
-                     .font(.title3)
-                     .fontWeight(.semibold)
+                     .font(Fonts.semibold20)
                   
                   Text("Interviewed")
-                     .font(.caption)
+                     .font(Fonts.regular10)
                }
                .frame(maxWidth: .infinity)
                
@@ -75,10 +72,9 @@ struct ProfileView: View {
                
                VStack{
                   Text("5")
-                     .font(.title3)
-                     .fontWeight(.semibold)
+                     .font(Fonts.semibold20)
                   Text("Accepted")
-                     .font(.caption)
+                     .font(Fonts.regular10)
                }
                .frame(maxWidth: .infinity)
             }
@@ -90,23 +86,15 @@ struct ProfileView: View {
          .padding()
          .padding(.top, 60)
          .background(
-            LinearGradient(
-               stops: [
-                  Gradient.Stop(color: .primaryPurple, location: 0.00),
-                  Gradient.Stop(color: .secondaryPurple, location: 1.00),
-               ],
-               startPoint: UnitPoint(x: 0.5, y: 0),
-               endPoint: UnitPoint(x: 0.5, y: 1)
-            )
+            Background.bgGradient
          )
          .clipShape(CustomCorners(corners: [.bottomLeft, .bottomRight], radius: 12))
          
          VStack(alignment: .leading) {
             Text("Your Challenge")
-               .font(.title)
-               .fontWeight(.semibold)
+               .font(Fonts.semibold20)
                .foregroundStyle(.neutral600)
-               .padding(.bottom, 16)
+               .padding(.bottom)
             
             ScrollView(.horizontal, showsIndicators: false) {
                HStack{

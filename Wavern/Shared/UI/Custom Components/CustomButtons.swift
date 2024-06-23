@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Buttons: View {
+struct CustomButtons: View {
    var text: String
    var bgColor: Color
    var txtColor: Color
@@ -32,5 +32,5 @@ struct Buttons: View {
 }
 
 #Preview{
-   Buttons(text: "Invite to Interview", bgColor: Colors.purple600, txtColor: Colors.white)
+   CustomButtons(text: "Invite to Interview", bgColor: Colors.purple600, txtColor: Colors.white)
 }

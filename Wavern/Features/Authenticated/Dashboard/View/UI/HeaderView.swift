@@ -14,8 +14,7 @@ struct HeaderView: View {
       VStack {
          HStack{
             Text("Explore")
-               .fontWeight(.semibold)
-               .font(.title)
+               .font(Fonts.semibold32)
                .foregroundStyle(.neutral)
             
             Spacer()
@@ -28,17 +27,7 @@ struct HeaderView: View {
          .padding()
          
          VStack {
-            HStack {
-               Image(systemName: "magnifyingglass")
-                  .opacity(0.3)
-               
-               TextField(text: $model.search) {
-                  Text("Enter Role, Skills, YOE, or Budget")
-               }
-            }
-            .padding()
-            .background(Colors.white)
-            .clipShape(RoundedRectangle(cornerRadius: Size.cornerRadius))
+            SearchTextField(search: $model.search)
          }
          .padding(.horizontal)
       }
@@ -54,6 +43,7 @@ struct HeaderView: View {
                      Background.bgHome
                   )
                   .frame(width: CGFloat(increment), height: CGFloat(increment))
+                  .opacity(0.08)
             }
          }
             .frame(maxWidth: .infinity, maxHeight: 213, alignment: .center)
