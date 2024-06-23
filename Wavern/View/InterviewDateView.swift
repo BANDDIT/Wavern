@@ -26,7 +26,7 @@ struct TimeBoxView:View{
     var body : some View{
         VStack{
             Text("\(interviewDateViewModel.getHour(time)) : \(interviewDateViewModel.getMinute(time))").foregroundColor(color).font(.system(size:18,weight:.semibold))
-        }.frame(width:109,height:40).background(.neutral).cornerRadius(4)
+        }
     }
 }
 
@@ -57,7 +57,7 @@ struct TellUsMoreView:View{
             }.frame(width:345,height:149).background(.neutral400).cornerRadius(12)
 
             Spacer()
-        }.frame(width:UIScreen.screenWidth,height:231).background(.white)
+        }
     }
 }
 
@@ -115,15 +115,15 @@ struct InterviewScheduleSection:View{
                 }
             },label:{
                 if interviewDateViewModel.isTextEqualsFrom(txt){
-                    TimeBoxView(time:time,color:interviewDateViewModel.timeColor,interviewDateViewModel: interviewDateViewModel)
+                    TimeBoxView(time:time,color:interviewDateViewModel.timeColor,interviewDateViewModel: interviewDateViewModel).frame(width:109,height:40).background(.neutral).cornerRadius(4)
                 }
                 else{
-                    TimeBoxView(time:time,color:interviewDateViewModel.time2Color,interviewDateViewModel: interviewDateViewModel)
+                    TimeBoxView(time:time,color:interviewDateViewModel.time2Color,interviewDateViewModel: interviewDateViewModel).frame(width:109,height:40).background(.neutral).cornerRadius(4)
                 }
 
 
             })
-        }.frame(width:345,height:40)
+        }
     }
 }
 
@@ -132,7 +132,7 @@ struct InterviewSchedule:View{
     var body : some View{
         VStack{
             Spacer()
-            InterviewScheduleSection(txt:"From",time:$interviewDateViewModel.time, interviewDateViewModel: interviewDateViewModel)
+            InterviewScheduleSection(txt:"From",time:$interviewDateViewModel.time, interviewDateViewModel: interviewDateViewModel).frame(width:345,height:40)
             
             
             if(interviewDateViewModel.beginTime){
@@ -148,7 +148,7 @@ struct InterviewSchedule:View{
             
             Spacer()
             
-            InterviewScheduleSection(txt:"To",time:$interviewDateViewModel.time2, interviewDateViewModel: interviewDateViewModel)
+            InterviewScheduleSection(txt:"To",time:$interviewDateViewModel.time2, interviewDateViewModel: interviewDateViewModel).frame(width:345,height:40)
 
             if(interviewDateViewModel.endTime){
                 Spacer()
@@ -156,7 +156,7 @@ struct InterviewSchedule:View{
             }
             
             Spacer()
-        }.frame(width:UIScreen.screenWidth,height:169.02+interviewDateViewModel.extraSchedHeight).background(.white)
+        }
     }
 }
 
@@ -189,8 +189,9 @@ struct InterviewDateView: View {
                 ScrollView{
                     VStack(spacing:7){
                         DatePicker("", selection: $interviewDateViewModel.date,displayedComponents:.date)    .datePickerStyle(.graphical).accentColor(.primaryPurple).background(.white)
-                        InterviewSchedule(interviewDateViewModel:interviewDateViewModel)
-                        TellUsMoreView(interviewDateViewModel:interviewDateViewModel)
+                        InterviewSchedule(interviewDateViewModel:interviewDateViewModel).frame(width:UIScreen.screenWidth,height:169.02+interviewDateViewModel.extraSchedHeight).background(.white)
+                        
+                        TellUsMoreView(interviewDateViewModel:interviewDateViewModel).frame(width:UIScreen.screenWidth,height:231).background(.white)
                     }
  
                 }

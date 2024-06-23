@@ -28,6 +28,124 @@ struct Portofolio:Identifiable{
 }
 
 
+struct PortofolioSectionView:View{
+    var portofolios:[Portofolio]
+    
+    var body : some View{
+        HStack{
+            VStack(alignment:.leading){
+                Text("Portofolio Links").font(.system(size:20,weight:.semibold))
+                
+                HStack{
+                    ForEach(portofolios,id:\.id){ portofolio in
+                        PortofolioTagView(img:portofolio.img, link:portofolio.link)
+                    }
+                }
+                
+            }.padding(.leading,24).padding(.top,20).padding(.bottom,20)
+            Spacer()
+            
+        }
+    }
+}
+
+struct SkillsSectionView:View{
+    var skills:[String]
+    
+    var body : some View{
+        HStack{
+            VStack(alignment:.leading){
+                Spacer()
+                Text("Skills").font(.system(size:20,weight:.semibold))
+                
+                FlowLayout{
+                    ForEach(skills,id:\.self){ skill in
+                        SkillTagView("\(skill)")
+                    }
+                }
+                
+                Spacer()
+            }
+            .padding(.leading,24).padding(.top,15).padding(.bottom,15)
+            
+            Spacer()
+        }
+    }
+}
+
+class TalentProfileViewModel:ObservableObject{
+    @Published var interviewBtnColor:Color=Color.primaryPurple
+    @Published var interviewTxtColor:Color=Color.white
+    @Published var isInvited:Bool=false
+    
+    
+    public func isInterviewButtonPurple()->Bool{
+        if interviewBtnColor != .neutral300 {
+            return true
+        }
+        return false
+    }
+    
+    public func inviteTalent(){
+        isInvited = true
+        interviewBtnColor = .neutral300
+        interviewTxtColor = .neutral500
+    }
+    
+    public func removeInviteFeedback(){
+        isInvited = false
+    }
+}
+
+struct InviteFeedbackView:View{
+    var body : some View{
+        HStack{
+            Image(systemName:"checkmark.circle.fill").foregroundColor(.white)
+            Text("")
+            Text("Request Successfully Sent").foregroundColor(.white).font(.system(size:14,weight:.medium))
+        }
+    }
+}
+
+struct TalentSectionView:View{
+    
+    var name:String
+    var employmentType:EmploymentTypeView.employmentType
+    
+    var body : some View{
+        HStack{
+            VStack(alignment:.leading){
+                HStack{
+                    Text("\(name)").font(.system(size:20,weight:.semibold))
+                    EmploymentTypeView(type:employmentType)
+                }
+                Text("Product Designer").font(.system(size:16,weight:.regular)).foregroundColor(.neutral500)
+                
+                
+                Text("")
+                
+                HStack{
+                    Image("yoe_symbol").frame(width:15)
+                    Text("1-3 YOE").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
+                }
+                
+                HStack{
+                    Image("salary_symbol").frame(width:15)
+                    Text("Rp5.000.000").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
+                }
+                
+                HStack{
+                    Image("loc_symbol").frame(width:15)
+                    Text("Willing to Relocate").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
+                }
+            }
+            .padding([.leading,.trailing],24)
+            .padding([.top,.bottom],20)
+            Spacer()
+        }
+    }
+}
+
 struct TalentsProfileView: View {
     @Environment(\.dismiss) private var dismiss
 
@@ -35,15 +153,12 @@ struct TalentsProfileView: View {
     var name:String="Jesslyn Devaline"
     var employmentType:EmploymentTypeView.employmentType = .full_time
     
-    @State var interviewBtnColor:Color=Color.primaryPurple
-    @State var interviewTxtColor:Color=Color.white
-    @State var isInvited:Bool=false
+    @StateObject var talentProfileViewModel:TalentProfileViewModel=TalentProfileViewModel()
     
     
-    //@State var skills:[String]=["UI/UX Design","Research","Product Thinking","Prototyping","Product Strategy","Interaction Design"]
-    @State var skills:[[String]]=[
-        ["UI/UX Design","Research","Product Thinking"],
-        ["Prototyping","Product Strategy","Interaction Design"]]
+    @State var skills:[String]=["UI/UX Design","Research","Product Thinking","Prototyping","Product Strategy"
+    ]
+    
     
     var portofolios:[Portofolio]=[
         Portofolio(img:"email_logo",link:"https://www.google.com"),
@@ -55,133 +170,47 @@ struct TalentsProfileView: View {
     ]
     
     var body: some View {
-        VStack{
+        VStack(spacing:5){
             Image("DummyTalentsProfile")
-            HStack{
-                VStack(alignment:.leading){
-                    HStack{
-                        Text("\(name)").font(.system(size:20,weight:.semibold))
-                        EmploymentTypeView(type:employmentType)
-                    }
-                    Text("Product Designer").font(.system(size:16,weight:.regular)).foregroundColor(.neutral500)
+            
+            ScrollView{
+                VStack(spacing:5){
+                    TalentSectionView(name:name, employmentType:.full_time).frame(width:UIScreen.screenWidth).background(.white)
                     
+                    SkillsSectionView(skills: skills).frame(width:UIScreen.screenWidth).background(.white)
                     
-                    Text("")
-                    
-                    HStack{
-                        Image("yoe_symbol").frame(width:15)
-                        Text("1-3 YOE").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
-                    }
-                    
-                    HStack{
-                        Image("salary_symbol").frame(width:15)
-                        Text("Rp5.000.000").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
-                    }
-                    
-                    HStack{
-                        Image("loc_symbol").frame(width:15)
-                        Text("Willing to Relocate").foregroundColor(.neutral400).font(.system(size:13,weight:.medium))
-                    }
+                    PortofolioSectionView(portofolios:portofolios).frame(width:UIScreen.screenWidth).background(.white)
                 }
-                .padding([.leading,.trailing],24)
-                .padding([.top,.bottom],20)
-                Spacer()
             }
-            .frame(width:UIScreen.screenWidth).background(.white)
             
-            HStack{
-        
-                VStack(alignment:.leading){
-                    Spacer()
-                    Text("Skills").font(.system(size:20,weight:.semibold))
-                    
-                    
-                    SkillTagView("UI/UX Design")
-                    HStack{
-                        ForEach(skills,id:\.self){ skill in
-                            SkillTagView("\(skill)")
-
-                        }
-                    }
-                    
-                    Spacer()
-                    
-                    /*
-                    HStack{
-                        SkillTagView("UI/UX Design")
-                        SkillTagView("Research")
-                        SkillTagView("Product Thinking")
-                    }
-                    
-                    HStack{
-                        SkillTagView("Prototyping")
-                        SkillTagView("Product Strategy")
-                        SkillTagView("Interaction Design")
-
-                    }
-                     */
-                }
-                .padding(.leading,24)
-                Spacer()
-            }.frame(width:UIScreen.screenWidth, height:144).background(.white)
-            
-            
-            HStack{
-                VStack(alignment:.leading){
-                    Text("Portofolio Links").font(.system(size:20,weight:.semibold))
-                    
-                    
-                    HStack{
-                        ForEach(portofolios,id:\.id){ portofolio in
-                            PortofolioTagView(img:portofolio.img, link:portofolio.link)
-                        }
-                    }
-                    
-                }.padding(.leading,24)
-                Spacer()
-                
-            }.frame(width:UIScreen.screenWidth,height:118).background(.white)
-            
-            
-            Spacer()
-
             
             VStack{
                 Button(action:{
                     withAnimation{
-                        if(interviewBtnColor != .neutral300){
-                            isInvited=true
-                            interviewBtnColor = .neutral300
-                            interviewTxtColor = .neutral500
+                        if(talentProfileViewModel.isInterviewButtonPurple()){
+                            talentProfileViewModel.inviteTalent()
                         }
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 3){
                         withAnimation{
-                            isInvited=false
+                            talentProfileViewModel.removeInviteFeedback()
                         }
                     }
                 },label:{
                     VStack{
-                        Text("Invite to Interview").foregroundColor(interviewTxtColor).font(.system(size:17,weight:.semibold))
-                    }.frame(width:361,height:56).background(interviewBtnColor).cornerRadius(12)
+                        Text("Invite to Interview").foregroundColor(talentProfileViewModel.interviewTxtColor).font(.system(size:17,weight:.semibold))
+                    }.frame(width:361,height:56).background(talentProfileViewModel.interviewBtnColor).cornerRadius(12)
                 })
                 .padding(16)
                 Spacer()
                 
-                VStack{
-                    Text("")
-                }.frame(width:120,height:5).background(.black).cornerRadius(5).padding(10).padding(.bottom,10)
+             
             }.frame(width:UIScreen.screenWidth,height:128).background(.white)
         }
         .overlay{
-            if isInvited{
+            if talentProfileViewModel.isInvited{
                 HStack{
-                    HStack{
-                        Image(systemName:"checkmark.circle.fill").foregroundColor(.white)
-                        Text("")
-                        Text("Request Successfully Sent").foregroundColor(.white).font(.system(size:14,weight:.medium))
-                    }
-                    .padding(.leading,16)
+                    InviteFeedbackView().padding(.leading,16)
                     Spacer()
                 }.frame(width:361,height:48).background(.success600).cornerRadius(12).offset(y:260)
             }
@@ -201,6 +230,64 @@ struct TalentsProfileView: View {
                 }
                 .frame(width:UIScreen.screenWidth)
             }
+    }
+}
+
+
+struct FlowLayout: Layout {
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        let sizes = subviews.map { $0.sizeThatFits(.unspecified) }
+
+        var totalHeight: CGFloat = 0
+        var totalWidth: CGFloat = 0
+
+        var lineWidth: CGFloat = 0
+        var lineHeight: CGFloat = 0
+
+        for size in sizes {
+            if lineWidth + size.width > proposal.width ?? 0 {
+                totalHeight += lineHeight
+                lineWidth = size.width
+                lineHeight = size.height
+            } else {
+                lineWidth += size.width
+                lineHeight = max(lineHeight, size.height)
+            }
+
+            totalWidth = max(totalWidth, lineWidth)
+        }
+
+        totalHeight += lineHeight
+
+        return .init(width: totalWidth, height: totalHeight)
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        let sizes = subviews.map { $0.sizeThatFits(.unspecified) }
+
+        var lineX = bounds.minX
+        var lineY = bounds.minY
+        var lineHeight: CGFloat = 0
+
+        for index in subviews.indices {
+            if lineX + sizes[index].width > (proposal.width ?? 0) {
+                lineY += lineHeight
+                lineHeight = 0
+                lineX = bounds.minX
+            }
+
+            subviews[index].place(
+                at: .init(
+                    x: lineX + sizes[index].width / 2,
+                    y: lineY + sizes[index].height / 2
+                ),
+                anchor: .center,
+                proposal: ProposedViewSize(sizes[index])
+            )
+
+            lineHeight = max(lineHeight, sizes[index].height)
+            lineX += sizes[index].width
+        }
     }
 }
 

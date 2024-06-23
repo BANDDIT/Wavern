@@ -20,7 +20,7 @@ struct SkillTagView:View{
         VStack{
             Text(text).foregroundColor(.primaryPurple)
             .font(.system(size:12,weight:.medium)).padding(8)
-        }.frame(height:28).background(.primary100).cornerRadius(82)
+        }.frame(height:28).background(.primary100).cornerRadius(82).padding(.bottom,5).padding(.trailing,5)
     }
 }
 
