@@ -20,6 +20,14 @@ extension UIScreen{
    static let screenSize = UIScreen.main.bounds.size
 }
 
+
+struct Portofolio:Identifiable{
+    var id=UUID()
+    var img:String
+    var link:String
+}
+
+
 struct TalentsProfileView: View {
     @Environment(\.dismiss) private var dismiss
 
@@ -30,6 +38,19 @@ struct TalentsProfileView: View {
     @State var interviewBtnColor:Color=Color.primaryPurple
     @State var interviewTxtColor:Color=Color.white
     @State var isInvited:Bool=false
+    
+    
+    @State var skills:[String]=["UI/UX Design","Research","Product Thinking","Prototyping","Product Strategy","Interaction Design"]
+    
+    
+    var portofolios:[Portofolio]=[
+        Portofolio(img:"email_logo",link:"https://www.google.com"),
+        Portofolio(img:"instagram_logo",link:"https://www.instagram.com"),
+        Portofolio(img:"github_logo",link:"https://www.github.com"),
+        Portofolio(img:"dribble_logo",link:"https://www.dribble.com"),
+        Portofolio(img:"figma_logo",link:"https://www.figma.com"),
+        Portofolio(img:"link_logo",link:"https://www.google.com")
+    ]
     
     var body: some View {
         VStack{
@@ -65,10 +86,19 @@ struct TalentsProfileView: View {
                 Spacer()
             }
             .frame(width:UIScreen.screenWidth).background(.white)
-
+            
             HStack{
+        
                 VStack(alignment:.leading){
                     Text("Skills").font(.system(size:20,weight:.semibold))
+                    
+                    LazyVGrid(columns:[GridItem(.adaptive(minimum:70))]){
+                        ForEach(skills,id:\.self){ skill in
+                            SkillTagView("\(skill)")
+
+                        }
+                    }
+                    /*
                     HStack{
                         SkillTagView("UI/UX Design")
                         SkillTagView("Research")
@@ -81,11 +111,12 @@ struct TalentsProfileView: View {
                         SkillTagView("Interaction Design")
 
                     }
+                     */
                 }
                 .padding(.leading,24)
                 Spacer()
-                
             }.frame(width:UIScreen.screenWidth, height:144).background(.white)
+            
             
             HStack{
                 VStack(alignment:.leading){
@@ -93,46 +124,9 @@ struct TalentsProfileView: View {
                     
                     
                     HStack{
-                        Button(action:{
-                            
-                        },label:{
-                            PortofolioTagView(img:"email_logo")
-                        })
-
-                        Button(action:{
-                            
-                        },label:{
-                            PortofolioTagView(img:"instagram_logo")
-                        })
-
-                        
-                        Button(action:{
-                            
-                        },label:{
-                            PortofolioTagView(img:"github_logo",doublePadding: 10)
-                        })
-
-                        
-                        Button(action:{
-                            
-                        },label:{
-                            PortofolioTagView(img:"dribble_logo")
-                        })
-
-                        
-                        Button(action:{
-                            
-                        },label:{
-                            PortofolioTagView(img:"figma_logo")
-                        })
-
-                        
-                        Button(action:{
-                            
-                        },label:{
-                            PortofolioTagView(img:"link_logo")
-                        })
-
+                        ForEach(portofolios,id:\.id){ portofolio in
+                            PortofolioTagView(img:portofolio.img, link:portofolio.link)
+                        }
                     }
                     
                 }.padding(.leading,24)
@@ -205,12 +199,31 @@ struct TalentsProfileView: View {
 struct PortofolioTagView:View{
     
     var img:String
-    var doublePadding:CGFloat=0
+    var edges:Edge.Set = []
+    var leftPadding:CGFloat=0
+    var rightPadding:CGFloat=0
+    var topPadding:CGFloat=0
+    var bottomPadding:CGFloat=0
     
+    var link:String
+
     var body : some View{
-        VStack{
-            Image(img).padding(doublePadding)
-        }.frame(width:42,height:42).background(LinearGradient(colors:[.primaryPurple,.secondaryPurple],startPoint:.top,endPoint:.bottom)).cornerRadius(180)
+        Button(action:{
+            if let url = URL(string: link) {
+                UIApplication.shared.open(url)
+            }
+        },label:{
+            VStack{
+                if(img=="github_logo"){
+                    Image(img)
+                        .padding(.top,7).padding(.trailing,1)
+                }
+                else{
+                    Image(img).padding(.leading,leftPadding).padding(.trailing,rightPadding).padding(.top,topPadding).padding(.bottom,bottomPadding)
+                }
+            }.frame(width:42,height:42).background(LinearGradient(colors:[.primaryPurple,.secondaryPurple],startPoint:.top,endPoint:.bottom)).cornerRadius(180)
+        })
+
     }
 }
 

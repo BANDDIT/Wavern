@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct CompletedChallengeView: View {
+    
+    init(){
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
+    
     var body: some View {
         ZStack{
             LinearGradient(colors:[.primaryPurple,.secondaryPurple],startPoint:.top,endPoint:.bottom)
             VStack{
                 Spacer()
                 Spacer()
+                
                 VStack{
                     Text("Challenge").font(.system(size:32,weight:.bold)).foregroundColor(.white)
                     Text("Completed 🎉").font(.system(size:32,weight:.bold)).foregroundColor(.white)
@@ -32,7 +38,7 @@ struct CompletedChallengeView: View {
                 
                 Spacer()
                 Spacer()
-                VStack{
+                VStack{                    
                     Button(action:{
                         
                     },label:{
@@ -41,14 +47,19 @@ struct CompletedChallengeView: View {
                         }.frame(width:361,height:56).background(.white).cornerRadius(12)
                     })
                     .padding(16)
-                    Spacer()
                     
+                    
+                    Spacer()
+                    /*
                     VStack{
                         Text("")
                     }.frame(width:120,height:5).background(.white).cornerRadius(5).padding(10).padding(.bottom,10)
+                    */
                 }.frame(width:UIScreen.screenWidth,height:128).background(.clear)
             }
-        }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        }.edgesIgnoringSafeArea(.all)
+
+
     }
 }
 

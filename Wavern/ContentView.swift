@@ -30,7 +30,11 @@ struct ContentView: View {
       //            UNUserNotificationCenter.current().delegate = NotificationDelegate()
       //        }
       
-      OnboardingView()
+      //OnboardingView()
+       //InterviewView()
+       //CompletedChallenge()
+       //TalentsProfileView()
+       CompletedChallengeView()
    }
 }
 

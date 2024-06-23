@@ -14,15 +14,17 @@ struct SkillTagView:View{
         self.text=text
     }
     
+    @State var widthSize:Double=0
+    
     var body : some View{
         VStack{
             Text(text).foregroundColor(.primaryPurple)
-                .font(.system(size:12,weight:.medium)).padding(8)
-        }.background(.primary100).cornerRadius(82)
+            .font(.system(size:12,weight:.medium)).padding(8)
+        }.frame(height:28).background(.primary100).cornerRadius(82)
     }
 }
-/*
+
 #Preview {
-    SkillTagView()
+    SkillTagView("Hello")
 }
-*/
+
