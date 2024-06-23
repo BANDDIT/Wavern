@@ -10,10 +10,8 @@ import SwiftUI
 struct MainView: View {
    init() {
       let tabBarAppearance = UITabBarAppearance()
-      tabBarAppearance.configureWithOpaqueBackground()
       tabBarAppearance.backgroundColor = .white
-      
-      UITabBar.appearance().standardAppearance = tabBarAppearance
+
       UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
    }
    

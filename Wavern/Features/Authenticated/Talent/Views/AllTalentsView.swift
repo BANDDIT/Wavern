@@ -15,7 +15,7 @@ struct AllTalentsView: View {
          ScrollView{
             ForEach(0..<3){_ in
                NavigationLink {
-                  TalentProfileView()
+                  TalentDetailView()
                      .navigationBarBackButtonHidden(true)
                } label: {
                   TalentListView()

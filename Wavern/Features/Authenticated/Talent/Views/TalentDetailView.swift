@@ -10,6 +10,8 @@ import SwiftUI
 struct TalentDetailView: View {
    @Environment(\.dismiss) var dismiss
    @State var isInvited:Bool=false
+   var viewModel = TalentViewModel()
+   
    var body: some View {
       VStack{
          ZStack (alignment: .topLeading){
@@ -87,8 +89,12 @@ struct TalentDetailView: View {
          VStack{
             
             // TODO: Move to 1 file
-            CustomButtons(text: Phrases.interviewButton, bgColor: Colors.purple600, txtColor: Colors.white)
-               .padding(.vertical)
+            CustomButtons(text: Phrases.interviewButton, bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {
+               withAnimation{
+                  viewModel.feedbackPopUp(isInvited: $isInvited)
+               }
+            })
+            .padding()
             
             Spacer()
          }.background(.white)

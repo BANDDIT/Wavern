@@ -19,7 +19,7 @@ struct CustomSegmentedPicker: View {
             }) {
                Text(categories[index])
                   .padding(.vertical)
-                  .foregroundStyle(selectedCategory == index ? .white : .black)
+                  .foregroundStyle(selectedCategory == index ? Colors.white : Colors.neutral500)
                   .frame(maxWidth: .infinity)
                   .background(selectedCategory == index ? Colors.purple600 : Color.clear)
                   .font(Fonts.medium13)
