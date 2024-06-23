@@ -9,33 +9,13 @@ import SwiftUI
 
 struct AllTalentsView: View {
    @Environment(\.dismiss) var dismiss
+   @Binding var path: NavigationPath
    
    var body: some View {
-      VStack {
-         ScrollView{
-            ForEach(0..<3){_ in
-               NavigationLink {
-                  TalentDetailView()
-                     .navigationBarBackButtonHidden(true)
-               } label: {
-                  TalentListView()
-                     .padding()
-                     .background(.white)
-                     .clipShape(RoundedRectangle(cornerRadius: 12))
-                     .overlay {
-                        RoundedRectangle(cornerRadius: 12)
-                           .stroke(.black.opacity(0.1))
-                     }
-               }
-               .foregroundStyle(.black)
-            }
-         }
-         .padding()
-      }
-      .toolbar(content: {
-         ToolbarItem(placement: .topBarLeading, content: {
+      ScrollView{
+         VStack(alignment: .leading) {
             Button(action: {
-               dismiss()
+               path.removeLast()
             }, label: {
                Image(systemName: "arrow.left")
                   .opacity(0.5)
@@ -44,13 +24,34 @@ struct AllTalentsView: View {
                   .font(.headline)
             })
             .foregroundStyle(.black)
-         })
-      })
+            .padding(.horizontal)
+            
+            Divider()
+         }
+         
+         VStack {
+            ForEach(0..<3){_ in
+               TalentListView()
+                  .padding()
+                  .background(.white)
+                  .clipShape(RoundedRectangle(cornerRadius: 12))
+                  .overlay {
+                     RoundedRectangle(cornerRadius: 12)
+                        .stroke(.black.opacity(0.1))
+                  }
+                  .foregroundStyle(.black)
+                  .onTapGesture {
+                     path.append(Destination.talentDetailView)
+                  }
+            }
+         }
+         .padding()
+      }
    }
 }
 
 #Preview {
    NavigationStack {
-      AllTalentsView()
+      AllTalentsView(path: .constant(NavigationPath()))
    }
 }

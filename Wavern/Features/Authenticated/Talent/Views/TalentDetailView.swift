@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct TalentDetailView: View {
-   @Environment(\.dismiss) var dismiss
    @State var isInvited:Bool=false
    var viewModel = TalentViewModel()
+   
+   @Binding var path: NavigationPath
    
    var body: some View {
       VStack{
          ZStack (alignment: .topLeading){
             HStack{
                Button(action:{
-                  dismiss()
+                  path.removeLast()
                },label:{
                   Image(systemName:"arrow.backward").foregroundColor(.white)
                      .imageScale(.large)
@@ -111,6 +112,6 @@ struct TalentDetailView: View {
 
 #Preview {
    NavigationStack {
-      TalentDetailView()
+      TalentDetailView(path: .constant(NavigationPath()))
    }
 }

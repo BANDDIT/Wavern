@@ -11,17 +11,18 @@ struct MainView: View {
    init() {
       let tabBarAppearance = UITabBarAppearance()
       tabBarAppearance.backgroundColor = .white
-
+      
       UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
    }
    
    let notificationDelegate = NotificationDelegate()
+   @State var path: NavigationPath = NavigationPath()
    
    var body: some View {
-      NavigationStack {
+      NavigationStack(path: $path) {
          TabView {
             VStack{
-               DashboardView()
+               DashboardView(path: $path)
             }
             .tabItem {
                Text(Phrases.exploreTitle)
@@ -49,7 +50,7 @@ struct MainView: View {
             .tag(2)
             
             VStack{
-               ProfileView()
+               ProfileView(path: $path)
             }
             .tabItem {
                Text(Phrases.profileTitle)
@@ -58,6 +59,24 @@ struct MainView: View {
             .tag(3)
          }
          .tint(Colors.purple600)
+         .navigationDestination(for: Destination.self) { destination in
+            switch destination{
+            case .allTalentsView:
+               AllTalentsView(path: $path)
+                  .navigationBarBackButtonHidden(true)
+               
+            case .talentDetailView:
+               TalentDetailView(path: $path)
+                  .navigationBarBackButtonHidden(true)
+               
+            case .rewardsView:
+               RewardsView(path: $path)
+                  .navigationBarBackButtonHidden(true)
+               
+            case .completedChallengeView:
+               CompletedChallenge()
+            }
+         }
       }
       .navigationBarBackButtonHidden(true)
    }

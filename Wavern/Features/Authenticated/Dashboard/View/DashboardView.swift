@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DashboardView: View {
+   @Binding var path: NavigationPath
+   
    var body: some View {
       ScrollView{
          // MARK: Top Section (Details)
@@ -20,7 +22,7 @@ struct DashboardView: View {
             .frame(maxWidth: .infinity, maxHeight: 4)
             .foregroundStyle(.neutral)
          
-         ExploreTalentsView()
+         ExploreTalentsView(path: $path)
       }
       .background(Colors.white)
       .ignoresSafeArea()
@@ -29,6 +31,6 @@ struct DashboardView: View {
 
 #Preview {
    NavigationStack {
-      DashboardView()
+      DashboardView(path: .constant(NavigationPath()))
    }
 }
