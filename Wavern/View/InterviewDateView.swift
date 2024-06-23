@@ -1,8 +1,8 @@
 //
-//  InterviewView.swift
+//  InterviewDateView.swift
 //  Wavern
 //
-//  Created by Arrick Russell Adinoto on 22/06/24.
+//  Created by Arrick Russell Adinoto on 23/06/24.
 //
 
 import SwiftUI
@@ -48,7 +48,7 @@ struct TimeBoxView:View{
 
 
 struct TellUsMoreView:View{
-    @ObservedObject var interviewViewModel:InterviewViewModel
+    @ObservedObject var interviewDateViewModel:InterviewDateViewModel
     
     var body : some View{
         VStack(alignment:.leading){
@@ -58,15 +58,15 @@ struct TellUsMoreView:View{
             
             ZStack{
                 ZStack(alignment:.topLeading){
-                    TextEditor(text:$interviewViewModel.tellUsMore).padding(4).foregroundColor(.black).font(.system(size:14,weight:.regular)).colorMultiply(.neutral).onChange(of:interviewViewModel.tellUsMore){
-                        if(interviewViewModel.tellUsMore==""){
-                            interviewViewModel.tellUs=true
+                    TextEditor(text:$interviewDateViewModel.tellUsMore).padding(4).foregroundColor(.black).font(.system(size:14,weight:.regular)).colorMultiply(.neutral).onChange(of:interviewDateViewModel.tellUsMore){
+                        if(interviewDateViewModel.tellUsMore==""){
+                            interviewDateViewModel.tellUs=true
                         }
                     }.onTapGesture{
-                        interviewViewModel.tellUs=false
+                        interviewDateViewModel.tellUs=false
                     }
                     
-                    if(interviewViewModel.tellUs && interviewViewModel.tellUsMore==""){
+                    if(interviewDateViewModel.tellUs && interviewDateViewModel.tellUsMore==""){
                         Text("Type Here").foregroundColor(.neutral400).font(.system(size:14,weight:.regular)).padding(.horizontal,8)      .padding(.vertical, 12)
                     }
                 }.frame(width:343,height:147).background(.neutral).cornerRadius(12)
@@ -112,7 +112,7 @@ struct InterviewTimePickerView:View{
 struct InterviewScheduleSection:View{
     var txt:String
     @Binding var time:Time
-    @ObservedObject var interviewViewModel:InterviewViewModel
+    @ObservedObject var interviewDateViewModel:InterviewDateViewModel
 
     var body : some View{
         HStack{
@@ -121,10 +121,10 @@ struct InterviewScheduleSection:View{
             Button(action:{
                 withAnimation{
                     if (txt=="From"){
-                        interviewViewModel.toggleBeginTime()
+                        interviewDateViewModel.toggleBeginTime()
                     }
                     else{
-                        interviewViewModel.toggleEndTime()
+                        interviewDateViewModel.toggleEndTime()
                     }
                 }
             },label:{
@@ -136,16 +136,16 @@ struct InterviewScheduleSection:View{
 }
 
 struct InterviewSchedule:View{
-    @ObservedObject var interviewViewModel:InterviewViewModel
+    @ObservedObject var interviewDateViewModel:InterviewDateViewModel
     var body : some View{
         VStack{
             Spacer()
-            InterviewScheduleSection(txt:"From",time:$interviewViewModel.time, interviewViewModel: interviewViewModel)
+            InterviewScheduleSection(txt:"From",time:$interviewDateViewModel.time, interviewDateViewModel: interviewDateViewModel)
             
             
-            if(interviewViewModel.beginTime){
+            if(interviewDateViewModel.beginTime){
                 Spacer()
-                InterviewTimePickerView(time:$interviewViewModel.time)
+                InterviewTimePickerView(time:$interviewDateViewModel.time)
             }
             Spacer()
             
@@ -156,21 +156,21 @@ struct InterviewSchedule:View{
             
             Spacer()
             
-            InterviewScheduleSection(txt:"To",time:$interviewViewModel.time2, interviewViewModel: interviewViewModel)
+            InterviewScheduleSection(txt:"To",time:$interviewDateViewModel.time2, interviewDateViewModel: interviewDateViewModel)
 
-            if(interviewViewModel.endTime){
+            if(interviewDateViewModel.endTime){
                 Spacer()
-                InterviewTimePickerView(time:$interviewViewModel.time2)
+                InterviewTimePickerView(time:$interviewDateViewModel.time2)
             }
             
             Spacer()
-        }.frame(width:UIScreen.screenWidth,height:169.02+interviewViewModel.extraSchedHeight).background(.white)
+        }.frame(width:UIScreen.screenWidth,height:169.02+interviewDateViewModel.extraSchedHeight).background(.white)
     }
 }
 
 
 struct SendRequestView:View{
-    @ObservedObject var interviewViewModel:InterviewViewModel
+    @ObservedObject var interviewDateViewModel:InterviewDateViewModel
     var body : some View{
         VStack{
             Button(action:{
@@ -186,7 +186,7 @@ struct SendRequestView:View{
     }
 }
 
-struct InterviewLabelView:View{
+struct InterviewDateLabelView:View{
     var body : some View{
         HStack{
             Image(systemName:"arrow.backward").foregroundColor(.gray).font(.system(size:17,weight:.regular))
@@ -197,10 +197,10 @@ struct InterviewLabelView:View{
 }
 
 
-struct InterviewView: View {
+struct InterviewDateView: View {
     @Environment(\.dismiss) private var dismiss
     
-    @StateObject private var interviewViewModel:InterviewViewModel = InterviewViewModel()
+    @StateObject private var interviewDateViewModel:InterviewDateViewModel = InterviewDateViewModel()
     
     var body: some View {
         ZStack{
@@ -213,14 +213,14 @@ struct InterviewView: View {
                 
                 ScrollView{
                     VStack(spacing:7){
-                        DatePicker("", selection: $interviewViewModel.date,displayedComponents:.date)    .datePickerStyle(.graphical).accentColor(.primaryPurple).background(.white)
-                        InterviewSchedule(interviewViewModel:interviewViewModel)
-                        TellUsMoreView(interviewViewModel:interviewViewModel)
+                        DatePicker("", selection: $interviewDateViewModel.date,displayedComponents:.date)    .datePickerStyle(.graphical).accentColor(.primaryPurple).background(.white)
+                        InterviewSchedule(interviewDateViewModel:interviewDateViewModel)
+                        TellUsMoreView(interviewDateViewModel:interviewDateViewModel)
                     }
  
                 }
                 
-                SendRequestView(interviewViewModel: interviewViewModel)
+                SendRequestView(interviewDateViewModel: interviewDateViewModel)
             }
         }
         .navigationBarBackButtonHidden()
@@ -230,7 +230,7 @@ struct InterviewView: View {
                 Button(action:{
                     dismiss()
                 },label:{
-                    InterviewLabelView()
+                    InterviewDateLabelView()
                 }).padding([.leading,.top],24)
                 Spacer()
             }
@@ -241,6 +241,6 @@ struct InterviewView: View {
 
 #Preview {
     NavigationStack{
-        InterviewView()
+        InterviewDateView()
     }
 }

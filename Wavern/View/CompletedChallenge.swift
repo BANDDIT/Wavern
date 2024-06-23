@@ -14,7 +14,7 @@ struct CompletedChallenge: View {
     
     var body: some View {
         NavigationStack{
-            NavigationLink(destination:InterviewView()){
+            NavigationLink(destination:InterviewDateView()){
                 VStack{
                     Text("Back Home").foregroundColor(.primaryPurple).font(.system(size:17,weight:.semibold))
                 }.frame(width:361,height:56).background(.white).cornerRadius(12)
@@ -33,6 +33,7 @@ struct CompletedChallenge: View {
         }
     }
 }
+
 
 #Preview {
     CompletedChallenge()

@@ -1,14 +1,14 @@
 //
-//  InterviewViewModel.swift
+//  InterviewDateViewModel.swift
 //  Wavern
 //
-//  Created by Arrick Russell Adinoto on 22/06/24.
+//  Created by Arrick Russell Adinoto on 23/06/24.
 //
 
 import Foundation
 import SwiftUI
 
-class InterviewViewModel:ObservableObject{
+class InterviewDateViewModel:ObservableObject{
     @Published var date:Date = Date.now
     
     @Published var time:Time = Time(9,0)
