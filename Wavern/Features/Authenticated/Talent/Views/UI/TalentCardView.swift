@@ -42,7 +42,7 @@ struct TalentCardView: View {
                      .font(Fonts.semibold20)
                   
                   Spacer()
-                  
+            
                   Text("Product Designer")
                      .font(Fonts.regular16)
                      .foregroundStyle(Colors.neutral600)

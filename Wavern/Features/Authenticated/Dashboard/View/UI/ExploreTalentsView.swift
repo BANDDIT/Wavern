@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExploreTalentsView: View {
    @Binding var path: NavigationPath
+    
    
    var body: some View {
       VStack{
@@ -26,7 +27,10 @@ struct ExploreTalentsView: View {
                .font(Fonts.regular14)
          }
          
-         TalentListView()
+         FilterView(roleAction: {}, skillAction: {}, budgetAction: {}, yoeAction: {})
+            .padding(.vertical, 8)
+         
+//          TalentListView()
             .padding()
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 12))

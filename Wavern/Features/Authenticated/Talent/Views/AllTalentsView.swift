@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct AllTalentsView: View {
+    @Environment(ModelData.self) private var modelData
    @Environment(\.dismiss) var dismiss
    @Binding var path: NavigationPath
+    var userList: [Talent]{
+        modelData.talentList
+    }
+    var userSkill:[TalentSkill]{
+        modelData.talentSkill
+    }
    
    var body: some View {
       ScrollView{
@@ -30,8 +37,8 @@ struct AllTalentsView: View {
          }
          
          VStack {
-            ForEach(0..<3){_ in
-               TalentListView()
+             ForEach(Array(zip(userList, userSkill)), id: \.0){user in
+                 TalentListView(user: user.0, skill: user.1)
                   .padding()
                   .background(.white)
                   .clipShape(RoundedRectangle(cornerRadius: 12))
@@ -53,5 +60,6 @@ struct AllTalentsView: View {
 #Preview {
    NavigationStack {
       AllTalentsView(path: .constant(NavigationPath()))
+           .environment(ModelData())
    }
 }

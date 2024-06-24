@@ -8,23 +8,26 @@
 import SwiftUI
 
 struct DescriptionView: View {
+    var userExp: Int
+    var offering: Int
+    var willingToRelocate: String
    var body: some View {
       VStack(alignment: .leading, spacing: 4){
          HStack{
             Image(systemName: "suitcase")
-            Text("1-3 YOE")
+            Text(String(userExp))
                .font(Fonts.medium13)
          }
          
          HStack{
             Image(systemName: "creditcard")
-            Text("Rp5.000.000")
+            Text(String(offering))
                .font(Fonts.medium13)
          }
          
          HStack{
             Image(systemName: "suitcase")
-            Text("Willing to Relocate")
+            Text(willingToRelocate)
                .font(Fonts.medium13)
          }
       }
@@ -33,5 +36,5 @@ struct DescriptionView: View {
 }
 
 #Preview {
-   DescriptionView()
+    DescriptionView(userExp: 3, offering: 5000000, willingToRelocate: "Willing to Relocate")
 }

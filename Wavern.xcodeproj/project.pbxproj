@@ -87,6 +87,13 @@
 		C06FCA042C118C7700A7001A /* WavernTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA032C118C7700A7001A /* WavernTests.swift */; };
 		C06FCA0E2C118C7700A7001A /* WavernUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA0D2C118C7700A7001A /* WavernUITests.swift */; };
 		C06FCA102C118C7700A7001A /* WavernUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */; };
+		E27C61EF2C29794300D6A9C4 /* HR_Table.json in Resources */ = {isa = PBXBuildFile; fileRef = E27C61EE2C29794300D6A9C4 /* HR_Table.json */; };
+		E27C61F32C297A8700D6A9C4 /* User_Table.json in Resources */ = {isa = PBXBuildFile; fileRef = E27C61F22C297A8700D6A9C4 /* User_Table.json */; };
+		E27C61F52C299F1000D6A9C4 /* User_SkillTable.json in Resources */ = {isa = PBXBuildFile; fileRef = E27C61F42C299F1000D6A9C4 /* User_SkillTable.json */; };
+		E27C61F92C29A25E00D6A9C4 /* User_PortofolioTable.json in Resources */ = {isa = PBXBuildFile; fileRef = E27C61F82C29A25E00D6A9C4 /* User_PortofolioTable.json */; };
+		E27C61FB2C29A3AD00D6A9C4 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FA2C29A3AD00D6A9C4 /* FilterView.swift */; };
+		E27C61FD2C29B6A400D6A9C4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */; };
+		E27C61FF2C29C1EB00D6A9C4 /* TalentSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +198,13 @@
 		C06FCA092C118C7700A7001A /* WavernUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WavernUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06FCA0D2C118C7700A7001A /* WavernUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernUITests.swift; sourceTree = "<group>"; };
 		C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E27C61EE2C29794300D6A9C4 /* HR_Table.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HR_Table.json; sourceTree = "<group>"; };
+		E27C61F22C297A8700D6A9C4 /* User_Table.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User_Table.json; sourceTree = "<group>"; };
+		E27C61F42C299F1000D6A9C4 /* User_SkillTable.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User_SkillTable.json; sourceTree = "<group>"; };
+		E27C61F82C29A25E00D6A9C4 /* User_PortofolioTable.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User_PortofolioTable.json; sourceTree = "<group>"; };
+		E27C61FA2C29A3AD00D6A9C4 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentSkill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				AC9E3FFA2C2537FD00A3813E /* Talent.swift */,
+				E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -701,6 +716,7 @@
 				ACD968D42C26C2E100751AF2 /* CustomForm.swift */,
 				ACD968D72C26C40600751AF2 /* CustomPasswordForm.swift */,
 				AC94B5E12C2741A50008AEA9 /* CustomSegmentedPicker.swift */,
+				E27C61FA2C29A3AD00D6A9C4 /* FilterView.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -728,6 +744,7 @@
 		C06FC9F12C118C7600A7001A /* Wavern */ = {
 			isa = PBXGroup;
 			children = (
+				E27C61ED2C2978DA00D6A9C4 /* Dummy Data */,
 				AC28FCA62C284B8F00ACCB04 /* Root */,
 				AC9E3FF52C2537BB00A3813E /* Features */,
 				AC9E3FFC2C25382C00A3813E /* Shared */,
@@ -735,6 +752,7 @@
 				C06FC9F62C118C7700A7001A /* Assets.xcassets */,
 				AC9E40272C2551B600A3813E /* Info.plist */,
 				C06FC9F82C118C7700A7001A /* Preview Content */,
+				E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */,
 			);
 			path = Wavern;
 			sourceTree = "<group>";
@@ -762,6 +780,17 @@
 				C06FCA0F2C118C7700A7001A /* WavernUITestsLaunchTests.swift */,
 			);
 			path = WavernUITests;
+			sourceTree = "<group>";
+		};
+		E27C61ED2C2978DA00D6A9C4 /* Dummy Data */ = {
+			isa = PBXGroup;
+			children = (
+				E27C61EE2C29794300D6A9C4 /* HR_Table.json */,
+				E27C61F22C297A8700D6A9C4 /* User_Table.json */,
+				E27C61F42C299F1000D6A9C4 /* User_SkillTable.json */,
+				E27C61F82C29A25E00D6A9C4 /* User_PortofolioTable.json */,
+			);
+			path = "Dummy Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -869,9 +898,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06FC9FA2C118C7700A7001A /* Preview Assets.xcassets in Resources */,
+				E27C61F52C299F1000D6A9C4 /* User_SkillTable.json in Resources */,
 				AC9E401E2C25515C00A3813E /* Geist-SemiBold.otf in Resources */,
+				E27C61F32C297A8700D6A9C4 /* User_Table.json in Resources */,
+				E27C61F92C29A25E00D6A9C4 /* User_PortofolioTable.json in Resources */,
 				AC9E40202C25516300A3813E /* Geist-Medium.otf in Resources */,
 				C06FC9F72C118C7700A7001A /* Assets.xcassets in Resources */,
+				E27C61EF2C29794300D6A9C4 /* HR_Table.json in Resources */,
 				AC9E401F2C25516100A3813E /* Geist-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -904,11 +937,13 @@
 				AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */,
 				AC61FD672C2295620010CBE8 /* CustomEmploymentType.swift in Sources */,
 				AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */,
+				E27C61FF2C29C1EB00D6A9C4 /* TalentSkill.swift in Sources */,
 				ACD968C62C2690A100751AF2 /* LoginModel.swift in Sources */,
 				AC28FCBD2C29136F00ACCB04 /* TellUsMoreView.swift in Sources */,
 				AC94B5DF2C2706EE0008AEA9 /* SearchTextField.swift in Sources */,
 				AC9E40542C2582FD00A3813E /* SignUpViewModel.swift in Sources */,
 				AC7027CC2C2924F000D42B2D /* TalentProfileView.swift in Sources */,
+				E27C61FB2C29A3AD00D6A9C4 /* FilterView.swift in Sources */,
 				AC9E40352C255D8300A3813E /* ChallengeView.swift in Sources */,
 				AC9E403D2C2562F000A3813E /* CustomNavigationLink.swift in Sources */,
 				AC9E40002C253AEE00A3813E /* CustomButtons.swift in Sources */,
@@ -961,6 +996,7 @@
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
 				AC08174E2C215ABE00ACDE83 /* DashboardView.swift in Sources */,
+				E27C61FD2C29B6A400D6A9C4 /* ModelData.swift in Sources */,
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,
@@ -1132,7 +1168,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wavern/Preview Content\"";
-				DEVELOPMENT_TEAM = ARLGKL6RC3;
+				DEVELOPMENT_TEAM = C7G37T2289;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wavern/Info.plist;
@@ -1162,7 +1198,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wavern/Preview Content\"";
-				DEVELOPMENT_TEAM = ARLGKL6RC3;
+				DEVELOPMENT_TEAM = C7G37T2289;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wavern/Info.plist;

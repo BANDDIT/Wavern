@@ -1,0 +1,213 @@
+[
+  {
+    "HR_Nama": "Amelia Johnson",
+    "HR_Email": "amelia.johnson@example.com",
+    "HR_Password": "password123",
+    "HR_Point": 250,
+    "HR_ReachOut": 5
+  },
+  {
+    "HR_Nama": "Benjamin Clark",
+    "HR_Email": "benjamin.clark@example.com",
+    "HR_Password": "pass456",
+    "HR_Point": 320,
+    "HR_ReachOut": 3
+  },
+  {
+    "HR_Nama": "Charlotte Smith",
+    "HR_Email": "charlotte.smith@example.com",
+    "HR_Password": "mypassword789",
+    "HR_Point": 400,
+    "HR_ReachOut": 7
+  },
+  {
+    "HR_Nama": "Daniel Brown",
+    "HR_Email": "daniel.brown@example.com",
+    "HR_Password": "secretpass",
+    "HR_Point": 150,
+    "HR_ReachOut": 2
+  },
+  {
+    "HR_Nama": "Evelyn Davis",
+    "HR_Email": "evelyn.davis@example.com",
+    "HR_Password": "davis1234",
+    "HR_Point": 290,
+    "HR_ReachOut": 6
+  },
+  {
+    "HR_Nama": "Frederick Evans",
+    "HR_Email": "frederick.evans@example.com",
+    "HR_Password": "freddy456",
+    "HR_Point": 310,
+    "HR_ReachOut": 4
+  },
+  {
+    "HR_Nama": "Grace Green",
+    "HR_Email": "grace.green@example.com",
+    "HR_Password": "grace789",
+    "HR_Point": 330,
+    "HR_ReachOut": 8
+  },
+  {
+    "HR_Nama": "Henry Harris",
+    "HR_Email": "henry.harris@example.com",
+    "HR_Password": "harrispass",
+    "HR_Point": 280,
+    "HR_ReachOut": 5
+  },
+  {
+    "HR_Nama": "Isabella Hill",
+    "HR_Email": "isabella.hill@example.com",
+    "HR_Password": "hill1234",
+    "HR_Point": 350,
+    "HR_ReachOut": 9
+  },
+  {
+    "HR_Nama": "James Jackson",
+    "HR_Email": "james.jackson@example.com",
+    "HR_Password": "jacksonpass",
+    "HR_Point": 270,
+    "HR_ReachOut": 3
+  },
+  {
+    "HR_Nama": "Karen King",
+    "HR_Email": "karen.king@example.com",
+    "HR_Password": "king456",
+    "HR_Point": 400,
+    "HR_ReachOut": 10
+  },
+  {
+    "HR_Nama": "Lucas Lewis",
+    "HR_Email": "lucas.lewis@example.com",
+    "HR_Password": "lewispass",
+    "HR_Point": 200,
+    "HR_ReachOut": 4
+  },
+  {
+    "HR_Nama": "Mia Martinez",
+    "HR_Email": "mia.martinez@example.com",
+    "HR_Password": "martinez123",
+    "HR_Point": 220,
+    "HR_ReachOut": 6
+  },
+  {
+    "HR_Nama": "Nathan Nelson",
+    "HR_Email": "nathan.nelson@example.com",
+    "HR_Password": "nelsonpass",
+    "HR_Point": 370,
+    "HR_ReachOut": 7
+  },
+  {
+    "HR_Nama": "Olivia Ortiz",
+    "HR_Email": "olivia.ortiz@example.com",
+    "HR_Password": "ortiz789",
+    "HR_Point": 410,
+    "HR_ReachOut": 8
+  },
+  {
+    "HR_Nama": "Patrick Perez",
+    "HR_Email": "patrick.perez@example.com",
+    "HR_Password": "perez456",
+    "HR_Point": 300,
+    "HR_ReachOut": 5
+  },
+  {
+    "HR_Nama": "Quinn Quinn",
+    "HR_Email": "quinn.quinn@example.com",
+    "HR_Password": "quinn1234",
+    "HR_Point": 240,
+    "HR_ReachOut": 4
+  },
+  {
+    "HR_Nama": "Rachel Robinson",
+    "HR_Email": "rachel.robinson@example.com",
+    "HR_Password": "robinsonpass",
+    "HR_Point": 350,
+    "HR_ReachOut": 9
+  },
+  {
+    "HR_Nama": "Samuel Scott",
+    "HR_Email": "samuel.scott@example.com",
+    "HR_Password": "scottpass",
+    "HR_Point": 330,
+    "HR_ReachOut": 7
+  },
+  {
+    "HR_Nama": "Taylor Thompson",
+    "HR_Email": "taylor.thompson@example.com",
+    "HR_Password": "thompson456",
+    "HR_Point": 380,
+    "HR_ReachOut": 10
+  },
+  {
+    "HR_Nama": "Uma Underwood",
+    "HR_Email": "uma.underwood@example.com",
+    "HR_Password": "underwood123",
+    "HR_Point": 230,
+    "HR_ReachOut": 5
+  },
+  {
+    "HR_Nama": "Victor Vasquez",
+    "HR_Email": "victor.vasquez@example.com",
+    "HR_Password": "vasquezpass",
+    "HR_Point": 410,
+    "HR_ReachOut": 8
+  },
+  {
+    "HR_Nama": "Wendy White",
+    "HR_Email": "wendy.white@example.com",
+    "HR_Password": "white1234",
+    "HR_Point": 300,
+    "HR_ReachOut": 6
+  },
+  {
+    "HR_Nama": "Xander Xavier",
+    "HR_Email": "xander.xavier@example.com",
+    "HR_Password": "xavierpass",
+    "HR_Point": 290,
+    "HR_ReachOut": 7
+  },
+  {
+    "HR_Nama": "Yasmine Young",
+    "HR_Email": "yasmine.young@example.com",
+    "HR_Password": "young456",
+    "HR_Point": 310,
+    "HR_ReachOut": 9
+  },
+  {
+    "HR_Nama": "Zachary Zimmerman",
+    "HR_Email": "zachary.zimmerman@example.com",
+    "HR_Password": "zimmermanpass",
+    "HR_Point": 320,
+    "HR_ReachOut": 8
+  },
+  {
+    "HR_Nama": "Anna Adams",
+    "HR_Email": "anna.adams@example.com",
+    "HR_Password": "adams123",
+    "HR_Point": 270,
+    "HR_ReachOut": 5
+  },
+  {
+    "HR_Nama": "Brandon Bailey",
+    "HR_Email": "brandon.bailey@example.com",
+    "HR_Password": "bailey456",
+    "HR_Point": 400,
+    "HR_ReachOut": 10
+  },
+  {
+    "HR_Nama": "Catherine Cooper",
+    "HR_Email": "catherine.cooper@example.com",
+    "HR_Password": "cooper789",
+    "HR_Point": 350,
+    "HR_ReachOut": 9
+  },
+  {
+    "HR_Nama": "David Diaz",
+    "HR_Email": "david.diaz@example.com",
+    "HR_Password": "diazpass",
+    "HR_Point": 310,
+    "HR_ReachOut": 8
+  }
+]
+

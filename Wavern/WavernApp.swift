@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct WavernApp: App {
+    @State private var modelData = ModelData()
     var body: some Scene {
-       // TODO: create view model to handle the app state
+        
         WindowGroup {
             OnboardingView()
+                .environment(modelData)
         }
     }
 }

@@ -22,7 +22,7 @@ struct ResultView: View {
          }
          .background(.white)
          
-         TalentListView()
+//          TalentListView()
             .padding()
             .background(.white)
       }
@@ -34,4 +34,5 @@ struct ResultView: View {
 
 #Preview {
    ResultView()
+        .environment(ModelData())
 }

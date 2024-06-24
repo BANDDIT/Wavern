@@ -1,0 +1,263 @@
+[
+  {
+    "User_Nama": "John Doe",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Jane Smith",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Michael Johnson",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Emily Davis",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Daniel Brown",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Olivia Wilson",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "William Martinez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Sophia Garcia",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "James Rodriguez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Amelia Hernandez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Benjamin Lopez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Ella Gonzalez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Alexander Perez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Mia Ramirez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Jacob Torres",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Charlotte Flores",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Liam Rivera",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Ava Perez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Remoteah Washington",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Isabella Sanchez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "William Gonzalez",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Abigail Russell",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Ethan Hughes",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Amelia Carter",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Lucas Howard",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Mia Henderson",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Jackson Price",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Sophia Powell",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  },
+  {
+    "User_Nama": "Logan Edwards",
+    "Skill1": "UI/UX Design",
+    "Skill2": "Research",
+    "Skill3": "Product Thinking",
+    "Skill4": "Prototyping",
+    "Skill5": "Product Strategy",
+    "Skill6": "Interaction Design"
+  }
+]
