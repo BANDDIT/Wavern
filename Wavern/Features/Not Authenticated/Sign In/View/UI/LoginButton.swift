@@ -14,7 +14,7 @@ struct LoginButton: View {
    
    var body: some View {
       VStack{
-         NavigationLink(destination: LoginView()) {
+          NavigationLink(destination: DashboardView(path: .constant(NavigationPath()))) {
             viewModel.navigationLink(model: model)
          }
          .padding(.bottom)

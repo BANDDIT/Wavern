@@ -94,6 +94,7 @@
 		E27C61FB2C29A3AD00D6A9C4 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FA2C29A3AD00D6A9C4 /* FilterView.swift */; };
 		E27C61FD2C29B6A400D6A9C4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */; };
 		E27C61FF2C29C1EB00D6A9C4 /* TalentSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */; };
+		F10F44A12C29EA3A0062F2FE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F44A02C29EA3A0062F2FE /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +206,7 @@
 		E27C61FA2C29A3AD00D6A9C4 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentSkill.swift; sourceTree = "<group>"; };
+		F10F44A02C29EA3A0062F2FE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				AC94B5F92C2822C40008AEA9 /* HR.swift */,
+				F10F44A02C29EA3A0062F2FE /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -964,6 +967,7 @@
 				AC94B5EC2C27EDC10008AEA9 /* InterviewViewModel.swift in Sources */,
 				AC9E403B2C25620C00A3813E /* Background.swift in Sources */,
 				AC61FD652C2295310010CBE8 /* CustomCorners.swift in Sources */,
+				F10F44A12C29EA3A0062F2FE /* UserModel.swift in Sources */,
 				AC0817522C21694900ACDE83 /* ProfileView.swift in Sources */,
 				AC9E40082C253ED500A3813E /* CustomSkillTag.swift in Sources */,
 				AC8ACA312C2435610096DA36 /* InterviewView.swift in Sources */,
