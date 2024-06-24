@@ -17,7 +17,7 @@ struct TalentListView: View {
                .resizable()
                .frame(width: 104, height: 140)
             
-            EmploymentTypeView(corners: corners, type: .full_time)
+            CustomEmploymentType(corners: corners, type: .full_time)
          }
          .clipShape(RoundedRectangle(cornerRadius: 12))
          
@@ -37,9 +37,9 @@ struct TalentListView: View {
             .padding(.vertical, 4)
             
             HStack{
-               SkillTag("UI/UX Designer")
-               SkillTag("Research")
-               SkillTag("5+")
+               CustomSkillTag("UI/UX Designer")
+               CustomSkillTag("Research")
+               CustomSkillTag("5+")
             }
          }
          
