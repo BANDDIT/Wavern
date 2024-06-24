@@ -9,40 +9,39 @@ import SwiftUI
 
 struct TalentProfileView: View {
     @Binding var path: NavigationPath
+    @Binding var progress: Double // Bind to the progress state
     @State var isInvited: Bool = false
-    @EnvironmentObject var user: UserModel
-
+    var viewModel = TalentViewModel()
+    
     var body: some View {
         VStack(alignment: .center) {
             TalentCardView(path: $path)
-
+            
             VStack(alignment: .leading) {
                 SkillsView()
                     .padding()
-
+                
                 Rectangle()
                     .frame(maxWidth: .infinity, maxHeight: 4)
                     .foregroundStyle(Colors.neutral100)
-
+                
                 PortfolioViews()
                     .padding([.horizontal, .bottom])
-
+                
                 Divider()
                     .padding(.bottom, 8)
-
+                
                 HStack {
                     CustomButtons(text: "Save Profile", bgColor: Colors.white, txtColor: Colors.purple600, height: 56, action: {})
                         .overlay {
                             RoundedRectangle(cornerRadius: 12)
                                 .stroke(Colors.purple600, lineWidth: 1)
                         }
-
+                    
                     CustomButtons(text: "Invite to Interview", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {
                         withAnimation {
-                            isInvited = true
-                            user.points += 100
-                            user.isChallengeCompleted = true
-                            user.interviewedCount += 1
+                            viewModel.feedbackPopUp(isInvited: $isInvited)
+                            progress = 1.0 // Update progress to full when talent is reached out to
                         }
                     })
                 }
@@ -52,11 +51,8 @@ struct TalentProfileView: View {
             .background(Colors.white)
         }
         .overlay(content: {
-            if user.isChallengeCompleted {
-                CompletedChallenge()
-                    .onTapGesture {
-                        user.isChallengeCompleted = false
-                    }
+            if isInvited {
+                SuccessFeedbackView()
             }
         })
         .background(Background.bgGradient)
@@ -64,6 +60,5 @@ struct TalentProfileView: View {
 }
 
 #Preview {
-    TalentProfileView(path: .constant(NavigationPath()))
-        .environmentObject(UserModel())
+    TalentProfileView(path: .constant(NavigationPath()), progress: .constant(0.0))
 }
