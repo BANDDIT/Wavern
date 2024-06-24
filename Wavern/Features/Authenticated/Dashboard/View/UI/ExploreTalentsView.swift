@@ -42,6 +42,11 @@ struct ExploreTalentsView: View {
             .onTapGesture {
                path.append(Destination.talentDetailView)
             }
+          
+          NavigationStack(){
+             AllTalentsView(path: .constant(NavigationPath()))
+                  .environment(ModelData())
+          }
       }
       .padding(.horizontal, 21)
       .padding(.top, 16)
