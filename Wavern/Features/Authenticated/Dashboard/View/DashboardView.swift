@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DashboardView: View {
    @Binding var path: NavigationPath
+   @State var showModal: Bool = false
    
    var body: some View {
       ScrollView{
@@ -26,6 +27,11 @@ struct DashboardView: View {
       }
       .background(Colors.white)
       .ignoresSafeArea()
+      .sheet(isPresented: $showModal, content: {
+         VStack {
+            Text("Hello")
+         }
+      })
    }
 }
 

@@ -34,6 +34,10 @@
 		AC7027CE2C293B0E00D42B2D /* TalentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027CD2C293B0E00D42B2D /* TalentCardView.swift */; };
 		AC7027D02C293B5800D42B2D /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027CF2C293B5800D42B2D /* SkillsView.swift */; };
 		AC7027D22C293B7800D42B2D /* PortfolioViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027D12C293B7800D42B2D /* PortfolioViews.swift */; };
+		AC7027D42C294DFC00D42B2D /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027D32C294DFC00D42B2D /* FilterView.swift */; };
+		AC7027D72C2953A200D42B2D /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027D62C2953A200D42B2D /* DashboardViewModel.swift */; };
+		AC7027D92C295EA500D42B2D /* RoleModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027D82C295EA500D42B2D /* RoleModalView.swift */; };
+		AC7027DB2C29678700D42B2D /* SuccessfulExchangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027DA2C29678700D42B2D /* SuccessfulExchangeView.swift */; };
 		AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */; };
 		AC8ACA2D2C23EF540096DA36 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2C2C23EF540096DA36 /* Home.swift */; };
 		AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */; };
@@ -134,6 +138,10 @@
 		AC7027CD2C293B0E00D42B2D /* TalentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentCardView.swift; sourceTree = "<group>"; };
 		AC7027CF2C293B5800D42B2D /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		AC7027D12C293B7800D42B2D /* PortfolioViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViews.swift; sourceTree = "<group>"; };
+		AC7027D32C294DFC00D42B2D /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		AC7027D62C2953A200D42B2D /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		AC7027D82C295EA500D42B2D /* RoleModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModalView.swift; sourceTree = "<group>"; };
+		AC7027DA2C29678700D42B2D /* SuccessfulExchangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulExchangeView.swift; sourceTree = "<group>"; };
 		AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
 		AC8ACA2C2C23EF540096DA36 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
@@ -298,6 +306,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		AC7027D52C29539500D42B2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC7027D62C2953A200D42B2D /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AC94B5E02C2708CE0008AEA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +321,7 @@
 				AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */,
 				AC0817512C21694900ACDE83 /* ProfileView.swift */,
 				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
+				AC7027DA2C29678700D42B2D /* SuccessfulExchangeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -492,6 +509,7 @@
 		AC9E40302C255C7D00A3813E /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				AC7027D52C29539500D42B2D /* ViewModel */,
 				AC9E40392C255FCD00A3813E /* Model */,
 				AC9E40332C255D6900A3813E /* View */,
 			);
@@ -514,6 +532,7 @@
 				AC9E40342C255D8300A3813E /* ChallengeView.swift */,
 				AC9E40362C255E4600A3813E /* ExploreTalentsView.swift */,
 				AC94B5DE2C2706EE0008AEA9 /* SearchTextField.swift */,
+				AC7027D82C295EA500D42B2D /* RoleModalView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -701,6 +720,7 @@
 				ACD968D42C26C2E100751AF2 /* CustomForm.swift */,
 				ACD968D72C26C40600751AF2 /* CustomPasswordForm.swift */,
 				AC94B5E12C2741A50008AEA9 /* CustomSegmentedPicker.swift */,
+				AC7027D32C294DFC00D42B2D /* FilterView.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -909,6 +929,7 @@
 				AC94B5DF2C2706EE0008AEA9 /* SearchTextField.swift in Sources */,
 				AC9E40542C2582FD00A3813E /* SignUpViewModel.swift in Sources */,
 				AC7027CC2C2924F000D42B2D /* TalentProfileView.swift in Sources */,
+				AC7027D42C294DFC00D42B2D /* FilterView.swift in Sources */,
 				AC9E40352C255D8300A3813E /* ChallengeView.swift in Sources */,
 				AC9E403D2C2562F000A3813E /* CustomNavigationLink.swift in Sources */,
 				AC9E40002C253AEE00A3813E /* CustomButtons.swift in Sources */,
@@ -955,14 +976,17 @@
 				AC28FCAF2C2877AB00ACCB04 /* AchievementView.swift in Sources */,
 				AC94B5EE2C27EF7A0008AEA9 /* TalentViewModel.swift in Sources */,
 				AC28FCBB2C29135C00ACCB04 /* InterviewTimePickerView.swift in Sources */,
+				AC7027D72C2953A200D42B2D /* DashboardViewModel.swift in Sources */,
 				AC8ACA332C243AF20096DA36 /* StatusView.swift in Sources */,
 				AC28FCB92C29133E00ACCB04 /* InterviewScheduleSection.swift in Sources */,
 				ACD968CD2C26955400751AF2 /* LoginButton.swift in Sources */,
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
+				AC7027D92C295EA500D42B2D /* RoleModalView.swift in Sources */,
 				AC08174E2C215ABE00ACDE83 /* DashboardView.swift in Sources */,
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
+				AC7027DB2C29678700D42B2D /* SuccessfulExchangeView.swift in Sources */,
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,
 				AC7027D02C293B5800D42B2D /* SkillsView.swift in Sources */,
 				C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */,

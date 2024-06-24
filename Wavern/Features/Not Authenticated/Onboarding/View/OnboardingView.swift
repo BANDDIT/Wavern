@@ -34,6 +34,7 @@ struct OnboardingView: View {
                         .multilineTextAlignment(.center)
                         .font(Fonts.semibold24)
                         .padding(.vertical, 16)
+                        .foregroundStyle(.black)
                   }
                   
                   // MARK: Button login & sign up

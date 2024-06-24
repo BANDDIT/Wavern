@@ -17,6 +17,7 @@ struct SignUpView: View {
          VStack{
             Text(Phrases.signUpTitle)
                .font(Fonts.semibold24)
+               .foregroundStyle(.black)
                .frame(maxWidth: .infinity, alignment: .leading)
             
             // MARK: Form
@@ -30,6 +31,7 @@ struct SignUpView: View {
          
          Spacer()
       }
+      .background(.white)
    }
 }
 

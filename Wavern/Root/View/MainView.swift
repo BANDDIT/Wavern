@@ -17,16 +17,22 @@ struct MainView: View {
    
    let notificationDelegate = NotificationDelegate()
    @State var path: NavigationPath = NavigationPath()
+   @State var selection = 0
    
    var body: some View {
       NavigationStack(path: $path) {
-         TabView {
+         TabView(selection: $selection) {
             VStack{
                DashboardView(path: $path)
             }
             .tabItem {
                Text(Phrases.exploreTitle)
-               Image(systemName: Phrases.exploreSymbol)
+               
+               if selection == 0{
+                  Image("home_active")
+               }else{
+                  Image("home")
+               }
             }
             // TODO: Use enum to handle tag in tabItem
             .tag(0)
@@ -36,7 +42,11 @@ struct MainView: View {
             }
             .tabItem {
                Text(Phrases.interviewTitle)
-               Image(systemName: Phrases.interviewSymbol)
+               if selection == 1{
+                  Image("invite_active")
+               }else{
+                  Image("invite")
+               }
             }
             .tag(1)
             
@@ -45,7 +55,11 @@ struct MainView: View {
             }
             .tabItem {
                Text(Phrases.resultTitle)
-               Image(systemName: Phrases.resultSymbol)
+               if selection == 2{
+                  Image("accepted_active")
+               }else{
+                  Image("accepted")
+               }
             }
             .tag(2)
             
@@ -54,7 +68,11 @@ struct MainView: View {
             }
             .tabItem {
                Text(Phrases.profileTitle)
-               Image(systemName: Phrases.profileSymbol)
+               if selection == 3{
+                  Image("medal_active")
+               }else{
+                  Image("medal")
+               }
             }
             .tag(3)
          }

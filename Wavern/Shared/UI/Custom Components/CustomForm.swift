@@ -15,6 +15,7 @@ struct CustomForm: View {
       VStack {
          Text(textTitle)
             .font(Fonts.semibold14)
+            .foregroundStyle(.black)
             .frame(maxWidth: .infinity, alignment: .leading)
          
          TextField(text: $textValue) {

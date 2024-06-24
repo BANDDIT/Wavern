@@ -26,6 +26,9 @@ struct ExploreTalentsView: View {
                .font(Fonts.regular14)
          }
          
+         FilterView(roleAction: {}, skillAction: {}, budgetAction: {}, yoeAction: {})
+            .padding(.vertical, 8)
+         
          TalentListView()
             .padding()
             .background(.white)

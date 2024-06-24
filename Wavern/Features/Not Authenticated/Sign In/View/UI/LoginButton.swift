@@ -23,6 +23,7 @@ struct LoginButton: View {
          HStack{
             Text(Phrases.dontHaveAcc)
                .font(Fonts.semibold16)
+               .foregroundStyle(.black)
             
             NavigationLink {
                SignUpView()

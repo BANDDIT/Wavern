@@ -18,6 +18,7 @@ struct LoginView: View {
          VStack{
             Text(Phrases.loginTitle)
                .font(Fonts.semibold24)
+               .foregroundStyle(.black)
                .frame(maxWidth: .infinity, alignment: .leading)
             
             // MARK: Form
@@ -31,6 +32,7 @@ struct LoginView: View {
          
          Spacer()
       }
+      .background(.white)
    }
 }
 

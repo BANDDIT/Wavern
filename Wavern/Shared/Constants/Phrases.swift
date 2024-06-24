@@ -11,12 +11,12 @@ struct Phrases {
    static let exploreTitle = "Explore"
    static let interviewTitle = "Interview"
    static let resultTitle = "Result"
-   static let profileTitle = "Profile"
+   static let profileTitle = "Challenge"
    
    static let exploreSymbol = "safari"
    static let interviewSymbol = "arrowtriangle.forward"
    static let resultSymbol = "doc"
-   static let profileSymbol = "person"
+   static let profileSymbol = "medal"
    
    static let loginTitle = "Login"
    static let signUpTitle = "Sign Up"
