@@ -66,7 +66,7 @@ struct MainView: View {
                   .navigationBarBackButtonHidden(true)
                
             case .talentDetailView:
-               TalentDetailView(path: $path)
+               TalentProfileView(path: $path)
                   .navigationBarBackButtonHidden(true)
                
             case .rewardsView:

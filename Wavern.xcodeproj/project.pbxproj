@@ -16,12 +16,24 @@
 		AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88E2C1812D000854500 /* OnboardingView.swift */; };
 		AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCAA2C284BBB00ACCB04 /* Destination.swift */; };
 		AC28FCAF2C2877AB00ACCB04 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */; };
+		AC28FCB12C29105C00ACCB04 /* InterviewDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCB02C29105C00ACCB04 /* InterviewDateView.swift */; };
+		AC28FCB32C2911C500ACCB04 /* InterviewDateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCB22C2911C500ACCB04 /* InterviewDateViewModel.swift */; };
+		AC28FCB52C2912A100ACCB04 /* InterviewDateLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCB42C2912A100ACCB04 /* InterviewDateLabelView.swift */; };
+		AC28FCB72C2912C100ACCB04 /* InterviewSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCB62C2912C100ACCB04 /* InterviewSchedule.swift */; };
+		AC28FCB92C29133E00ACCB04 /* InterviewScheduleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCB82C29133E00ACCB04 /* InterviewScheduleSection.swift */; };
+		AC28FCBB2C29135C00ACCB04 /* InterviewTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCBA2C29135C00ACCB04 /* InterviewTimePickerView.swift */; };
+		AC28FCBD2C29136F00ACCB04 /* TellUsMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCBC2C29136F00ACCB04 /* TellUsMoreView.swift */; };
+		AC28FCBF2C2913D500ACCB04 /* TimeBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCBE2C2913D500ACCB04 /* TimeBoxView.swift */; };
+		AC28FCC12C2913FB00ACCB04 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCC02C2913FB00ACCB04 /* Time.swift */; };
 		AC3CEFB32C251B000088FDB2 /* CompletedChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */; };
 		AC55B51D2C2310D600AC94A7 /* AllTalentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */; };
-		AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */; };
 		AC61FD652C2295310010CBE8 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD642C2295310010CBE8 /* CustomCorners.swift */; };
 		AC61FD672C2295620010CBE8 /* CustomEmploymentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD662C2295620010CBE8 /* CustomEmploymentType.swift */; };
 		AC61FD6B2C22D0E30010CBE8 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */; };
+		AC7027CC2C2924F000D42B2D /* TalentProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027CB2C2924F000D42B2D /* TalentProfileView.swift */; };
+		AC7027CE2C293B0E00D42B2D /* TalentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027CD2C293B0E00D42B2D /* TalentCardView.swift */; };
+		AC7027D02C293B5800D42B2D /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027CF2C293B5800D42B2D /* SkillsView.swift */; };
+		AC7027D22C293B7800D42B2D /* PortfolioViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027D12C293B7800D42B2D /* PortfolioViews.swift */; };
 		AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */; };
 		AC8ACA2D2C23EF540096DA36 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2C2C23EF540096DA36 /* Home.swift */; };
 		AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */; };
@@ -47,7 +59,6 @@
 		AC9E40082C253ED500A3813E /* CustomSkillTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40072C253ED500A3813E /* CustomSkillTag.swift */; };
 		AC9E400A2C254C9F00A3813E /* SuccessFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40092C254C9F00A3813E /* SuccessFeedbackView.swift */; };
 		AC9E400C2C254DFE00A3813E /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E400B2C254DFE00A3813E /* DescriptionView.swift */; };
-		AC9E400F2C254EE400A3813E /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E400E2C254EE400A3813E /* NameView.swift */; };
 		AC9E401E2C25515C00A3813E /* Geist-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC9E401B2C2550AB00A3813E /* Geist-SemiBold.otf */; };
 		AC9E401F2C25516100A3813E /* Geist-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC9E401C2C2550AB00A3813E /* Geist-Regular.otf */; };
 		AC9E40202C25516300A3813E /* Geist-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC9E40192C2550AB00A3813E /* Geist-Medium.otf */; };
@@ -105,12 +116,24 @@
 		AC11C88E2C1812D000854500 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		AC28FCAA2C284BBB00ACCB04 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
+		AC28FCB02C29105C00ACCB04 /* InterviewDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewDateView.swift; sourceTree = "<group>"; };
+		AC28FCB22C2911C500ACCB04 /* InterviewDateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewDateViewModel.swift; sourceTree = "<group>"; };
+		AC28FCB42C2912A100ACCB04 /* InterviewDateLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewDateLabelView.swift; sourceTree = "<group>"; };
+		AC28FCB62C2912C100ACCB04 /* InterviewSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewSchedule.swift; sourceTree = "<group>"; };
+		AC28FCB82C29133E00ACCB04 /* InterviewScheduleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewScheduleSection.swift; sourceTree = "<group>"; };
+		AC28FCBA2C29135C00ACCB04 /* InterviewTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewTimePickerView.swift; sourceTree = "<group>"; };
+		AC28FCBC2C29136F00ACCB04 /* TellUsMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TellUsMoreView.swift; sourceTree = "<group>"; };
+		AC28FCBE2C2913D500ACCB04 /* TimeBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBoxView.swift; sourceTree = "<group>"; };
+		AC28FCC02C2913FB00ACCB04 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedChallenge.swift; sourceTree = "<group>"; };
 		AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTalentsView.swift; sourceTree = "<group>"; };
-		AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentDetailView.swift; sourceTree = "<group>"; };
 		AC61FD642C2295310010CBE8 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
 		AC61FD662C2295620010CBE8 /* CustomEmploymentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmploymentType.swift; sourceTree = "<group>"; };
 		AC61FD6A2C22D0E30010CBE8 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		AC7027CB2C2924F000D42B2D /* TalentProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentProfileView.swift; sourceTree = "<group>"; };
+		AC7027CD2C293B0E00D42B2D /* TalentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentCardView.swift; sourceTree = "<group>"; };
+		AC7027CF2C293B5800D42B2D /* SkillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
+		AC7027D12C293B7800D42B2D /* PortfolioViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViews.swift; sourceTree = "<group>"; };
 		AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
 		AC8ACA2C2C23EF540096DA36 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
@@ -136,7 +159,6 @@
 		AC9E40072C253ED500A3813E /* CustomSkillTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSkillTag.swift; sourceTree = "<group>"; };
 		AC9E40092C254C9F00A3813E /* SuccessFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessFeedbackView.swift; sourceTree = "<group>"; };
 		AC9E400B2C254DFE00A3813E /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
-		AC9E400E2C254EE400A3813E /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
 		AC9E40192C2550AB00A3813E /* Geist-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geist-Medium.otf"; sourceTree = "<group>"; };
 		AC9E401B2C2550AB00A3813E /* Geist-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geist-SemiBold.otf"; sourceTree = "<group>"; };
 		AC9E401C2C2550AB00A3813E /* Geist-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geist-Regular.otf"; sourceTree = "<group>"; };
@@ -229,6 +251,53 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AC7027C62C29239100D42B2D /* Interview Date */ = {
+			isa = PBXGroup;
+			children = (
+				AC7027C92C2923D900D42B2D /* Model */,
+				AC7027C82C2923D400D42B2D /* View */,
+				AC7027C72C2923CE00D42B2D /* ViewModel */,
+			);
+			path = "Interview Date";
+			sourceTree = "<group>";
+		};
+		AC7027C72C2923CE00D42B2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC28FCB22C2911C500ACCB04 /* InterviewDateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AC7027C82C2923D400D42B2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC28FCB02C29105C00ACCB04 /* InterviewDateView.swift */,
+				AC7027CA2C2923F200D42B2D /* UI */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC7027C92C2923D900D42B2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC7027CA2C2923F200D42B2D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AC28FCB42C2912A100ACCB04 /* InterviewDateLabelView.swift */,
+				AC28FCB62C2912C100ACCB04 /* InterviewSchedule.swift */,
+				AC28FCB82C29133E00ACCB04 /* InterviewScheduleSection.swift */,
+				AC28FCBA2C29135C00ACCB04 /* InterviewTimePickerView.swift */,
+				AC28FCBC2C29136F00ACCB04 /* TellUsMoreView.swift */,
+				AC28FCBE2C2913D500ACCB04 /* TimeBoxView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		AC94B5E02C2708CE0008AEA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +323,7 @@
 			children = (
 				AC94B5E62C27D83F0008AEA9 /* Interviewee.swift */,
 				AC94B5E82C27DA370008AEA9 /* InterviewModel.swift */,
+				AC28FCC02C2913FB00ACCB04 /* Time.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,8 +426,8 @@
 			isa = PBXGroup;
 			children = (
 				AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */,
-				AC55B51E2C23130400AC94A7 /* TalentDetailView.swift */,
 				AC9E400D2C254E9200A3813E /* UI */,
+				AC7027CB2C2924F000D42B2D /* TalentProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,7 +472,9 @@
 		AC9E400D2C254E9200A3813E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				AC9E400E2C254EE400A3813E /* NameView.swift */,
+				AC7027CD2C293B0E00D42B2D /* TalentCardView.swift */,
+				AC7027CF2C293B5800D42B2D /* SkillsView.swift */,
+				AC7027D12C293B7800D42B2D /* PortfolioViews.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -583,6 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				AC9E404E2C2575AA00A3813E /* Result */,
+				AC7027C62C29239100D42B2D /* Interview Date */,
 				AC9E404D2C2575A200A3813E /* Interview */,
 				AC9E404C2C25710900A3813E /* HR Profile & Benefits */,
 				AC9E40302C255C7D00A3813E /* Dashboard */,
@@ -826,19 +899,25 @@
 			files = (
 				ACD968C42C268FB100751AF2 /* DashboardModel.swift in Sources */,
 				AC94B5E72C27D83F0008AEA9 /* Interviewee.swift in Sources */,
+				AC28FCC12C2913FB00ACCB04 /* Time.swift in Sources */,
+				AC7027D22C293B7800D42B2D /* PortfolioViews.swift in Sources */,
 				AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */,
 				AC61FD672C2295620010CBE8 /* CustomEmploymentType.swift in Sources */,
 				AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */,
 				ACD968C62C2690A100751AF2 /* LoginModel.swift in Sources */,
+				AC28FCBD2C29136F00ACCB04 /* TellUsMoreView.swift in Sources */,
 				AC94B5DF2C2706EE0008AEA9 /* SearchTextField.swift in Sources */,
 				AC9E40542C2582FD00A3813E /* SignUpViewModel.swift in Sources */,
+				AC7027CC2C2924F000D42B2D /* TalentProfileView.swift in Sources */,
 				AC9E40352C255D8300A3813E /* ChallengeView.swift in Sources */,
 				AC9E403D2C2562F000A3813E /* CustomNavigationLink.swift in Sources */,
 				AC9E40002C253AEE00A3813E /* CustomButtons.swift in Sources */,
 				AC94B5FD2C28230E0008AEA9 /* InterviewedAmount.swift in Sources */,
+				AC28FCB12C29105C00ACCB04 /* InterviewDateView.swift in Sources */,
 				AC3CEFB32C251B000088FDB2 /* CompletedChallenge.swift in Sources */,
+				AC28FCB72C2912C100ACCB04 /* InterviewSchedule.swift in Sources */,
+				AC7027CE2C293B0E00D42B2D /* TalentCardView.swift in Sources */,
 				AC94B5E22C2741A50008AEA9 /* CustomSegmentedPicker.swift in Sources */,
-				AC9E400F2C254EE400A3813E /* NameView.swift in Sources */,
 				AC9E40462C256DA300A3813E /* LoginViewModel.swift in Sources */,
 				AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */,
 				ACD968D32C26C15900751AF2 /* SignUpModel.swift in Sources */,
@@ -865,15 +944,19 @@
 				ACB09AC72C23D70E0089E205 /* CustomPortfolioTag.swift in Sources */,
 				AC9E402F2C2556CB00A3813E /* Fonts.swift in Sources */,
 				AC61FD6B2C22D0E30010CBE8 /* ResultView.swift in Sources */,
+				AC28FCBF2C2913D500ACCB04 /* TimeBoxView.swift in Sources */,
 				AC55B51D2C2310D600AC94A7 /* AllTalentsView.swift in Sources */,
 				AC8ACA2D2C23EF540096DA36 /* Home.swift in Sources */,
 				AC94B5F82C280DBB0008AEA9 /* ProfileHeaderView.swift in Sources */,
+				AC28FCB52C2912A100ACCB04 /* InterviewDateLabelView.swift in Sources */,
 				AC9E40322C255C9200A3813E /* HeaderView.swift in Sources */,
+				AC28FCB32C2911C500ACCB04 /* InterviewDateViewModel.swift in Sources */,
 				AC94B5F32C280BB70008AEA9 /* AcceptedApplicants.swift in Sources */,
 				AC28FCAF2C2877AB00ACCB04 /* AchievementView.swift in Sources */,
 				AC94B5EE2C27EF7A0008AEA9 /* TalentViewModel.swift in Sources */,
-				AC55B51F2C23130500AC94A7 /* TalentDetailView.swift in Sources */,
+				AC28FCBB2C29135C00ACCB04 /* InterviewTimePickerView.swift in Sources */,
 				AC8ACA332C243AF20096DA36 /* StatusView.swift in Sources */,
+				AC28FCB92C29133E00ACCB04 /* InterviewScheduleSection.swift in Sources */,
 				ACD968CD2C26955400751AF2 /* LoginButton.swift in Sources */,
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
@@ -881,6 +964,7 @@
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,
+				AC7027D02C293B5800D42B2D /* SkillsView.swift in Sources */,
 				C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */,
 				AC9E3FFB2C2537FD00A3813E /* Talent.swift in Sources */,
 				ACD968D82C26C40600751AF2 /* CustomPasswordForm.swift in Sources */,

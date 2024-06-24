@@ -24,6 +24,9 @@ struct Colors {
    static let blue100 = Color.info100
    static let blue600 = Color.info600
    
+   static let yellow100 = Color.yellow100
+   static let yellow600 = Color.yellow600
+   
    static let red100 = Color.error100
    static let red600 = Color.error600
    
