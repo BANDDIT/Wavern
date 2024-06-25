@@ -20,6 +20,7 @@
 		AC2392DC2C2AB2BB004CC38D /* AchievementToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392DB2C2AB2BB004CC38D /* AchievementToolbarView.swift */; };
 		AC2392DE2C2AB2C8004CC38D /* YourAchievementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392DD2C2AB2C8004CC38D /* YourAchievementViewModel.swift */; };
 		AC2392E02C2AB41A004CC38D /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392DF2C2AB41A004CC38D /* Achievement.swift */; };
+		AC2392E22C2AFEE7004CC38D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392E12C2AFEE7004CC38D /* UserModel.swift */; };
 		AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCAA2C284BBB00ACCB04 /* Destination.swift */; };
 		AC28FCAF2C2877AB00ACCB04 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */; };
 		AC28FCB12C29105C00ACCB04 /* InterviewDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCB02C29105C00ACCB04 /* InterviewDateView.swift */; };
@@ -140,6 +141,7 @@
 		AC2392DB2C2AB2BB004CC38D /* AchievementToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementToolbarView.swift; sourceTree = "<group>"; };
 		AC2392DD2C2AB2C8004CC38D /* YourAchievementViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourAchievementViewModel.swift; sourceTree = "<group>"; };
 		AC2392DF2C2AB41A004CC38D /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		AC2392E12C2AFEE7004CC38D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		AC28FCAA2C284BBB00ACCB04 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
 		AC28FCB02C29105C00ACCB04 /* InterviewDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewDateView.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 		AC94B5FB2C2822CB0008AEA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC2392E12C2AFEE7004CC38D /* UserModel.swift */,
 				AC2392DF2C2AB41A004CC38D /* Achievement.swift */,
 				AC94B5F92C2822C40008AEA9 /* HR.swift */,
 			);
@@ -1048,6 +1051,7 @@
 				AC2392D62C2A9F7C004CC38D /* SkillFilterView.swift in Sources */,
 				E27C62012C2A5DA300D6A9C4 /* TalentLabelView.swift in Sources */,
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
+				AC2392E22C2AFEE7004CC38D /* UserModel.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,
 				AC7027D02C293B5800D42B2D /* SkillsView.swift in Sources */,

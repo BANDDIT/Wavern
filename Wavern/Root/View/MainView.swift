@@ -17,15 +17,18 @@ struct MainView: View {
    
    let notificationDelegate = NotificationDelegate()
    @State var path: NavigationPath = NavigationPath()
-   @State var user: Talent?
+   @State var talent: Talent?
    @State var skill: TalentSkill?
    @State var link: TalentPortofolio?
+   @State var isShow: Bool = false
+   @State var progress: Double = 0.0
+   @StateObject var user = UserModel()
    
    var body: some View {
       NavigationStack(path: $path) {
          TabView {
             VStack{
-               DashboardView(path: $path, talent: $user, skill: $skill, link: $link)
+               DashboardView(path: $path, progress: $progress, talent: $talent, skill: $skill, link: $link)
                   .padding(.bottom, 2)
             }
             .tabItem {
@@ -57,6 +60,7 @@ struct MainView: View {
             VStack{
                ProfileView(path: $path)
                   .padding(.bottom, 2)
+                  .environmentObject(user)
             }
             .tabItem {
                Text(Phrases.profileTitle)
@@ -68,25 +72,27 @@ struct MainView: View {
          .navigationDestination(for: Destination.self) { destination in
             switch destination{
             case .allTalentsView:
-               AllTalentsView(path: $path, talent: $user, skill: $skill)
+               AllTalentsView(path: $path, talent: $talent, skill: $skill)
                   .navigationBarBackButtonHidden(true)
                   .environment(ModelData())
                
             case .talentDetailView:
-               TalentProfileView(path: $path, talent: $user, skill: $skill, link: $link)
+               TalentProfileView(path: $path, talent: $talent, skill: $skill, link: $link)
                   .environment(ModelData())
                   .navigationBarBackButtonHidden(true)
                
             case .rewardsView:
                RewardsView(path: $path)
                   .navigationBarBackButtonHidden(true)
+                  .environmentObject(user)
                
             case .completedChallengeView:
-               CompletedChallenge()
+               CompletedChallenge(path: $path, isShow: $isShow, title1: "Challenge", title2: "Completed", btnText: "Done")
                
             case .interviewDateView:
-               InterviewDateView()
+               InterviewDateView(path: $path, progress: $progress)
                   .navigationBarBackButtonHidden(true)
+                  .environmentObject(user)
             }
          }
       }
