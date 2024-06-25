@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InterviewDateView: View {
-   @Environment(\.dismiss) private var dismiss
+   @Binding var path: NavigationPath
    
    @StateObject private var interviewDateViewModel:InterviewDateViewModel = InterviewDateViewModel()
    
@@ -16,7 +16,7 @@ struct InterviewDateView: View {
       VStack(spacing:5){
          HStack{
             Button(action:{
-               dismiss()
+               path.removeLast()
             },label:{
                InterviewDateLabelView()
             }).padding([.leading,.top],24)
@@ -45,7 +45,6 @@ struct InterviewDateView: View {
                
                TellUsMoreView(interviewDateViewModel:interviewDateViewModel).frame(height:231).background(.white)
             }
-            
          }
          
          VStack{
@@ -62,6 +61,6 @@ struct InterviewDateView: View {
 
 #Preview {
    NavigationStack{
-      InterviewDateView()
+      InterviewDateView(path: .constant(NavigationPath()))
    }
 }

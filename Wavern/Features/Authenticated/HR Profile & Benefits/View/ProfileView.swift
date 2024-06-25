@@ -36,7 +36,7 @@ struct ProfileView: View {
             .frame(maxWidth: .infinity, maxHeight: 4)
             .foregroundStyle(Colors.neutral100)
          
-         AchievementView()
+         AchievementView(path: $path)
             .padding(.horizontal)
       }
       .ignoresSafeArea()

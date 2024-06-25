@@ -38,9 +38,10 @@ struct TalentProfileView: View {
                   }
                
                CustomButtons(text: "Invite to Interview", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {
-                  withAnimation{
-                     viewModel.feedbackPopUp(isInvited: $isInvited)
-                  }
+//                  withAnimation{
+//                     viewModel.feedbackPopUp(isInvited: $isInvited)
+//                  }
+                  path.append(Destination.interviewDateView)
                })
             }
             .padding(.horizontal)

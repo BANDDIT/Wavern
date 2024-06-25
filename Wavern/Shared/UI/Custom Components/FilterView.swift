@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct FilterView: View {
-   var roleAction: () -> Void
-   var skillAction: () -> Void
-   var budgetAction: () -> Void
-   var yoeAction: () -> Void
+   @State private var isRoleModalPresented = false
+   @State private var isSkillModalPresented = false
+   @State private var isBudgetModalPresented = false
+   @State private var isYoeModalPresented = false
    
    var body: some View {
       ScrollView(.horizontal, showsIndicators: false) {
          HStack{
-            Button(action: {roleAction()}, label: {
+            Button(action: {}, label: {
                HStack(alignment: .center) {
                   Image("filter")
                }
@@ -28,68 +28,32 @@ struct FilterView: View {
                .foregroundStyle(.black)
             })
             
-            Button(action: {roleAction()}, label: {
-               HStack {
-                  Text("Role")
-                     .padding(.horizontal, 8)
-                     .font(Fonts.medium13)
-                  
-                  Image(systemName: "chevron.down")
-               }
-               .padding([.vertical, .trailing], 12)
-               .overlay {
-                  RoundedRectangle(cornerRadius: 12)
-                     .stroke(.black, lineWidth: 0.2)
-               }
-               .foregroundStyle(.black)
+            FilterButton(text: "Role", action: {
+               isRoleModalPresented.toggle()
+            })
+            .sheet(isPresented: $isRoleModalPresented, content: {
+               RoleModalView()
             })
             
-            Button(action: {skillAction()}, label: {
-               HStack {
-                  Text("Skills")
-                     .padding(.horizontal, 8)
-                     .font(Fonts.medium13)
-                  
-                  Image(systemName: "chevron.down")
-               }
-               .padding([.vertical, .trailing], 12)
-               .overlay {
-                  RoundedRectangle(cornerRadius: 12)
-                     .stroke(.black, lineWidth: 0.2)
-               }
-               .foregroundStyle(.black)
+            FilterButton(text: "Skills", action: {
+               isSkillModalPresented.toggle()
+            })
+            .sheet(isPresented: $isSkillModalPresented, content: {
+               SkillModalView()
             })
             
-            Button(action: {budgetAction()}, label: {
-               HStack {
-                  Text("Budget")
-                     .padding(.horizontal, 8)
-                     .font(Fonts.medium13)
-                  
-                  Image(systemName: "chevron.down")
-               }
-               .padding([.vertical, .trailing], 12)
-               .overlay {
-                  RoundedRectangle(cornerRadius: 12)
-                     .stroke(.black, lineWidth: 0.2)
-               }
-               .foregroundStyle(.black)
+            FilterButton(text: "Budget", action: {
+               isBudgetModalPresented.toggle()
+            })
+            .sheet(isPresented: $isBudgetModalPresented, content: {
+               BudgetModalView()
             })
             
-            Button(action: {yoeAction()}, label: {
-               HStack {
-                  Text("YOE")
-                     .padding(.horizontal, 8)
-                     .font(Fonts.medium13)
-                  
-                  Image(systemName: "chevron.down")
-               }
-               .padding([.vertical, .trailing], 12)
-               .overlay {
-                  RoundedRectangle(cornerRadius: 12)
-                     .stroke(.black, lineWidth: 0.2)
-               }
-               .foregroundStyle(.black)
+            FilterButton(text: "YOE", action: {
+               isYoeModalPresented.toggle()
+            })
+            .sheet(isPresented: $isYoeModalPresented, content: {
+               YOEModalView()
             })
          }
       }
@@ -97,5 +61,5 @@ struct FilterView: View {
 }
 
 #Preview {
-   FilterView(roleAction: {}, skillAction: {}, budgetAction: {}, yoeAction: {})
+   FilterView()
 }

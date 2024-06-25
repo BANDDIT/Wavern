@@ -93,6 +93,12 @@ struct MainView: View {
                
             case .completedChallengeView:
                CompletedChallenge()
+               
+            case .interviewDateView:
+               InterviewDateView(path: $path)
+               
+            case .yourAchievementView:
+               YourAchievementView(path: $path)
             }
          }
       }

@@ -12,4 +12,6 @@ enum Destination: Hashable {
    case talentDetailView
    case rewardsView
    case completedChallengeView
+   case interviewDateView
+   case yourAchievementView
 }

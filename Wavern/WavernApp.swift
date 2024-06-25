@@ -12,7 +12,7 @@ struct WavernApp: App {
     var body: some Scene {
        // TODO: create view model to handle the app state
         WindowGroup {
-            OnboardingView()
+            MainView()
         }
     }
 }

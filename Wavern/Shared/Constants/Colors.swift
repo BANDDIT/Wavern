@@ -17,7 +17,9 @@ struct Colors {
    static let green600 = Color.success600
    
    static let neutral100 = Color.neutral
+   static let neutral200 = Color.neutral200
    static let neutral300 = Color.neutral300
+   static let neutral400 = Color.neutral400
    static let neutral500 = Color.neutral500
    static let neutral600 = Color.neutral600
    

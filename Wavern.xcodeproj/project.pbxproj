@@ -38,6 +38,16 @@
 		AC7027D72C2953A200D42B2D /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027D62C2953A200D42B2D /* DashboardViewModel.swift */; };
 		AC7027D92C295EA500D42B2D /* RoleModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027D82C295EA500D42B2D /* RoleModalView.swift */; };
 		AC7027DB2C29678700D42B2D /* SuccessfulExchangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027DA2C29678700D42B2D /* SuccessfulExchangeView.swift */; };
+		AC7027DD2C29AE8B00D42B2D /* CustomCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027DC2C29AE8B00D42B2D /* CustomCheckbox.swift */; };
+		AC7027DF2C29C13100D42B2D /* SkillModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027DE2C29C13100D42B2D /* SkillModalView.swift */; };
+		AC7027E12C29C1D900D42B2D /* BudgetModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027E02C29C1D900D42B2D /* BudgetModalView.swift */; };
+		AC7027E32C29C1FC00D42B2D /* YOEModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027E22C29C1FC00D42B2D /* YOEModalView.swift */; };
+		AC7027E52C2A3C2500D42B2D /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027E42C2A3C2500D42B2D /* FilterButton.swift */; };
+		AC7027E72C2A3F2B00D42B2D /* YourAchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027E62C2A3F2B00D42B2D /* YourAchievementView.swift */; };
+		AC7027E92C2A3F3C00D42B2D /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027E82C2A3F3C00D42B2D /* Achievement.swift */; };
+		AC7027EC2C2A3F7D00D42B2D /* YourAchievementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027EB2C2A3F7D00D42B2D /* YourAchievementViewModel.swift */; };
+		AC7027EE2C2A3FCF00D42B2D /* YourAchievementItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027ED2C2A3FCF00D42B2D /* YourAchievementItem.swift */; };
+		AC7027F02C2A405400D42B2D /* AchievementToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7027EF2C2A405400D42B2D /* AchievementToolbarView.swift */; };
 		AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */; };
 		AC8ACA2D2C23EF540096DA36 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2C2C23EF540096DA36 /* Home.swift */; };
 		AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */; };
@@ -142,6 +152,16 @@
 		AC7027D62C2953A200D42B2D /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		AC7027D82C295EA500D42B2D /* RoleModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModalView.swift; sourceTree = "<group>"; };
 		AC7027DA2C29678700D42B2D /* SuccessfulExchangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulExchangeView.swift; sourceTree = "<group>"; };
+		AC7027DC2C29AE8B00D42B2D /* CustomCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckbox.swift; sourceTree = "<group>"; };
+		AC7027DE2C29C13100D42B2D /* SkillModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModalView.swift; sourceTree = "<group>"; };
+		AC7027E02C29C1D900D42B2D /* BudgetModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModalView.swift; sourceTree = "<group>"; };
+		AC7027E22C29C1FC00D42B2D /* YOEModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOEModalView.swift; sourceTree = "<group>"; };
+		AC7027E42C2A3C2500D42B2D /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		AC7027E62C2A3F2B00D42B2D /* YourAchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAchievementView.swift; sourceTree = "<group>"; };
+		AC7027E82C2A3F3C00D42B2D /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		AC7027EB2C2A3F7D00D42B2D /* YourAchievementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAchievementViewModel.swift; sourceTree = "<group>"; };
+		AC7027ED2C2A3FCF00D42B2D /* YourAchievementItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourAchievementItem.swift; sourceTree = "<group>"; };
+		AC7027EF2C2A405400D42B2D /* AchievementToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementToolbarView.swift; sourceTree = "<group>"; };
 		AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
 		AC8ACA2C2C23EF540096DA36 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		AC8ACA2E2C241CF40096DA36 /* AchievementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCardView.swift; sourceTree = "<group>"; };
@@ -314,6 +334,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AC7027EA2C2A3F6600D42B2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC7027EB2C2A3F7D00D42B2D /* YourAchievementViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AC94B5E02C2708CE0008AEA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +350,7 @@
 				AC0817512C21694900ACDE83 /* ProfileView.swift */,
 				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
 				AC7027DA2C29678700D42B2D /* SuccessfulExchangeView.swift */,
+				AC7027E62C2A3F2B00D42B2D /* YourAchievementView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +421,8 @@
 				AC94B5FC2C28230E0008AEA9 /* InterviewedAmount.swift */,
 				AC94B5FE2C282F250008AEA9 /* PointNavigationLink.swift */,
 				AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */,
+				AC7027ED2C2A3FCF00D42B2D /* YourAchievementItem.swift */,
+				AC7027EF2C2A405400D42B2D /* AchievementToolbarView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -400,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				AC94B5F92C2822C40008AEA9 /* HR.swift */,
+				AC7027E82C2A3F3C00D42B2D /* Achievement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,8 +475,8 @@
 			isa = PBXGroup;
 			children = (
 				AC55B51C2C2310D600AC94A7 /* AllTalentsView.swift */,
-				AC9E400D2C254E9200A3813E /* UI */,
 				AC7027CB2C2924F000D42B2D /* TalentProfileView.swift */,
+				AC9E400D2C254E9200A3813E /* UI */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -533,6 +565,10 @@
 				AC9E40362C255E4600A3813E /* ExploreTalentsView.swift */,
 				AC94B5DE2C2706EE0008AEA9 /* SearchTextField.swift */,
 				AC7027D82C295EA500D42B2D /* RoleModalView.swift */,
+				AC7027DE2C29C13100D42B2D /* SkillModalView.swift */,
+				AC7027E02C29C1D900D42B2D /* BudgetModalView.swift */,
+				AC7027E22C29C1FC00D42B2D /* YOEModalView.swift */,
+				AC7027E42C2A3C2500D42B2D /* FilterButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -617,6 +653,7 @@
 		AC9E404C2C25710900A3813E /* HR Profile & Benefits */ = {
 			isa = PBXGroup;
 			children = (
+				AC7027EA2C2A3F6600D42B2D /* ViewModel */,
 				AC94B5FB2C2822CB0008AEA9 /* Model */,
 				AC94B5E02C2708CE0008AEA9 /* View */,
 			);
@@ -721,6 +758,7 @@
 				ACD968D72C26C40600751AF2 /* CustomPasswordForm.swift */,
 				AC94B5E12C2741A50008AEA9 /* CustomSegmentedPicker.swift */,
 				AC7027D32C294DFC00D42B2D /* FilterView.swift */,
+				AC7027DC2C29AE8B00D42B2D /* CustomCheckbox.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -918,15 +956,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD968C42C268FB100751AF2 /* DashboardModel.swift in Sources */,
+				AC7027E52C2A3C2500D42B2D /* FilterButton.swift in Sources */,
+				AC7027F02C2A405400D42B2D /* AchievementToolbarView.swift in Sources */,
 				AC94B5E72C27D83F0008AEA9 /* Interviewee.swift in Sources */,
 				AC28FCC12C2913FB00ACCB04 /* Time.swift in Sources */,
 				AC7027D22C293B7800D42B2D /* PortfolioViews.swift in Sources */,
+				AC7027EC2C2A3F7D00D42B2D /* YourAchievementViewModel.swift in Sources */,
 				AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */,
 				AC61FD672C2295620010CBE8 /* CustomEmploymentType.swift in Sources */,
 				AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */,
+				AC7027EE2C2A3FCF00D42B2D /* YourAchievementItem.swift in Sources */,
 				ACD968C62C2690A100751AF2 /* LoginModel.swift in Sources */,
 				AC28FCBD2C29136F00ACCB04 /* TellUsMoreView.swift in Sources */,
 				AC94B5DF2C2706EE0008AEA9 /* SearchTextField.swift in Sources */,
+				AC7027DF2C29C13100D42B2D /* SkillModalView.swift in Sources */,
 				AC9E40542C2582FD00A3813E /* SignUpViewModel.swift in Sources */,
 				AC7027CC2C2924F000D42B2D /* TalentProfileView.swift in Sources */,
 				AC7027D42C294DFC00D42B2D /* FilterView.swift in Sources */,
@@ -934,6 +977,7 @@
 				AC9E403D2C2562F000A3813E /* CustomNavigationLink.swift in Sources */,
 				AC9E40002C253AEE00A3813E /* CustomButtons.swift in Sources */,
 				AC94B5FD2C28230E0008AEA9 /* InterviewedAmount.swift in Sources */,
+				AC7027E32C29C1FC00D42B2D /* YOEModalView.swift in Sources */,
 				AC28FCB12C29105C00ACCB04 /* InterviewDateView.swift in Sources */,
 				AC3CEFB32C251B000088FDB2 /* CompletedChallenge.swift in Sources */,
 				AC28FCB72C2912C100ACCB04 /* InterviewSchedule.swift in Sources */,
@@ -943,6 +987,7 @@
 				AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */,
 				ACD968D32C26C15900751AF2 /* SignUpModel.swift in Sources */,
 				AC9E40372C255E4600A3813E /* ExploreTalentsView.swift in Sources */,
+				AC7027E92C2A3F3C00D42B2D /* Achievement.swift in Sources */,
 				AC94B5FA2C2822C40008AEA9 /* HR.swift in Sources */,
 				AC94B5FF2C282F250008AEA9 /* PointNavigationLink.swift in Sources */,
 				AC94B5E92C27DA370008AEA9 /* InterviewModel.swift in Sources */,
@@ -979,11 +1024,13 @@
 				AC7027D72C2953A200D42B2D /* DashboardViewModel.swift in Sources */,
 				AC8ACA332C243AF20096DA36 /* StatusView.swift in Sources */,
 				AC28FCB92C29133E00ACCB04 /* InterviewScheduleSection.swift in Sources */,
+				AC7027E12C29C1D900D42B2D /* BudgetModalView.swift in Sources */,
 				ACD968CD2C26955400751AF2 /* LoginButton.swift in Sources */,
 				AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */,
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
 				AC7027D92C295EA500D42B2D /* RoleModalView.swift in Sources */,
 				AC08174E2C215ABE00ACDE83 /* DashboardView.swift in Sources */,
+				AC7027E72C2A3F2B00D42B2D /* YourAchievementView.swift in Sources */,
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
 				AC7027DB2C29678700D42B2D /* SuccessfulExchangeView.swift in Sources */,
@@ -991,6 +1038,7 @@
 				AC7027D02C293B5800D42B2D /* SkillsView.swift in Sources */,
 				C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */,
 				AC9E3FFB2C2537FD00A3813E /* Talent.swift in Sources */,
+				AC7027DD2C29AE8B00D42B2D /* CustomCheckbox.swift in Sources */,
 				ACD968D82C26C40600751AF2 /* CustomPasswordForm.swift in Sources */,
 				ACD968DA2C26C6EE00751AF2 /* SignUpButton.swift in Sources */,
 			);
