@@ -100,6 +100,7 @@
 		E27C62072C2A830200D6A9C4 /* SkillModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C62062C2A830200D6A9C4 /* SkillModalView.swift */; };
 		E27C62092C2A831300D6A9C4 /* BudgetModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C62082C2A831300D6A9C4 /* BudgetModalView.swift */; };
 		E27C620B2C2A832600D6A9C4 /* YOEModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C620A2C2A832600D6A9C4 /* YOEModalView.swift */; };
+		E27C620F2C2A924B00D6A9C4 /* TalentPortofolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C620E2C2A924B00D6A9C4 /* TalentPortofolio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +218,7 @@
 		E27C62062C2A830200D6A9C4 /* SkillModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModalView.swift; sourceTree = "<group>"; };
 		E27C62082C2A831300D6A9C4 /* BudgetModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModalView.swift; sourceTree = "<group>"; };
 		E27C620A2C2A832600D6A9C4 /* YOEModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOEModalView.swift; sourceTree = "<group>"; };
+		E27C620E2C2A924B00D6A9C4 /* TalentPortofolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentPortofolio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +439,7 @@
 			children = (
 				AC9E3FFA2C2537FD00A3813E /* Talent.swift */,
 				E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */,
+				E27C620E2C2A924B00D6A9C4 /* TalentPortofolio.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -996,6 +999,7 @@
 				AC8ACA352C243AFF0096DA36 /* InterviewedListView.swift in Sources */,
 				AC0817502C2167E300ACDE83 /* MainView.swift in Sources */,
 				ACD968D02C26C13800751AF2 /* SignUpForm.swift in Sources */,
+				E27C620F2C2A924B00D6A9C4 /* TalentPortofolio.swift in Sources */,
 				ACD968CB2C2692CF00751AF2 /* LoginForm.swift in Sources */,
 				ACB09AC72C23D70E0089E205 /* CustomPortfolioTag.swift in Sources */,
 				AC9E402F2C2556CB00A3813E /* Fonts.swift in Sources */,

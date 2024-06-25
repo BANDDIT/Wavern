@@ -9,10 +9,15 @@ import SwiftUI
 
 struct CustomPortofolioTag:View{
    var img:String
+    @Environment(ModelData.self) private var modelData
+    var portofolio: TalentPortofolio
+
    
    var body : some View{
       Button(action: {
-         
+          Link(destination: /*@START_MENU_TOKEN@*/URL(string: "https://www.apple.com")!/*@END_MENU_TOKEN@*/, label: {
+              /*@START_MENU_TOKEN@*/Text("Link")/*@END_MENU_TOKEN@*/
+          })
       }, label: {
          Image(img)
             .frame(width:42,height:42)
@@ -27,5 +32,5 @@ struct CustomPortofolioTag:View{
 }
 
 #Preview{
-   CustomPortofolioTag(img: "figma")
+    CustomPortofolioTag(img: "figma", portofolio: <#TalentPortofolio#>)
 }

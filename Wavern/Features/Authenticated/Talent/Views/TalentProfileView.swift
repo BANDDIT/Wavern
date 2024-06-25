@@ -14,8 +14,6 @@ struct TalentProfileView: View {
     @Binding var talent: Talent?
     @Binding var skill: TalentSkill?
     
-    
-    
     var viewModel = TalentViewModel()
     
     var body: some View {
