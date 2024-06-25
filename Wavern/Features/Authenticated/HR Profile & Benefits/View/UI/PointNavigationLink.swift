@@ -9,14 +9,14 @@ import SwiftUI
 
 struct PointNavigationLink: View {
     @EnvironmentObject var user: UserModel
-
+    
     var body: some View {
         HStack {
             Text("Bronze")
                 .font(Fonts.semibold13)
-
+            
             Spacer()
-
+            
             Text("\(user.points) Points")
                 .font(Fonts.semibold13)
         }

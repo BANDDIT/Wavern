@@ -9,8 +9,9 @@ import SwiftUI
 
 struct TalentProfileView: View {
     @Binding var path: NavigationPath
-    @Binding var progress: Double // Bind to the progress state
+    @Binding var progress: Double
     @State var isInvited: Bool = false
+    @EnvironmentObject var user: UserModel
     var viewModel = TalentViewModel()
     
     var body: some View {
@@ -40,8 +41,16 @@ struct TalentProfileView: View {
                     
                     CustomButtons(text: "Invite to Interview", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {
                         withAnimation {
-                            viewModel.feedbackPopUp(isInvited: $isInvited)
-                            progress = 1.0 // Update progress to full when talent is reached out to
+                            if !user.isChallengeCompleted {
+                                viewModel.feedbackPopUp(isInvited: $isInvited)
+                                progress = 1.0 // Update progress to full when talent is reached out to
+                                user.points += 100 // Add points
+                                user.isChallengeCompleted = true // Mark the challenge as completed
+                                path.append(Destination.completedChallengeView) // Navigate to CompletedChallenge
+                            } else {
+                                // Show feedback that challenge is already completed
+                                viewModel.feedbackPopUp(isInvited: $isInvited)
+                            }
                         }
                     })
                 }
@@ -61,4 +70,5 @@ struct TalentProfileView: View {
 
 #Preview {
     TalentProfileView(path: .constant(NavigationPath()), progress: .constant(0.0))
+        .environmentObject(UserModel())
 }

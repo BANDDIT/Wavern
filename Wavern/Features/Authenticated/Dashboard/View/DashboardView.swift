@@ -36,3 +36,4 @@ struct DashboardView: View {
         DashboardView(path: .constant(NavigationPath()), progress: .constant(0.5))
     }
 }
+

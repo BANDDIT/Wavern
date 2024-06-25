@@ -24,9 +24,9 @@ struct ProfileView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         // Use a ForEach for dynamic content
-                        AchievementCardView()
-                        AchievementCardView()
-                        AchievementCardView()
+                        AchievementCardView(points: 100, title: "First Journey", desc: "Reach out your first talent")
+                        AchievementCardView(points: 100, title: "First Journey", desc: "Reach out your first talent")
+                        AchievementCardView(points: 100, title: "First Journey", desc: "Reach out your first talent")
                     }
                 }
             }

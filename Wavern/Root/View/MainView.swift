@@ -18,6 +18,8 @@ struct MainView: View {
     let notificationDelegate = NotificationDelegate()
     @State var path: NavigationPath = NavigationPath()
     @State var progress: Double = 0.0 // State for progress tracking
+    @StateObject var user = UserModel() // Instantiate the user model
+    @State var isShow:Bool = false
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -51,7 +53,7 @@ struct MainView: View {
                 
                 VStack {
                     ProfileView(path: $path)
-                      .environmentObject(UserModel())
+                      .environmentObject(user) // Pass the user model to ProfileView
                 }
                 .tabItem {
                     Text(Phrases.profileTitle)
@@ -68,15 +70,20 @@ struct MainView: View {
                         .environment(ModelData())
                     
                 case .talentDetailView:
-                    TalentProfileView(path: $path, progress: $progress) // Pass the progress state here
+                    TalentProfileView(path: $path, progress: $progress)
                         .navigationBarBackButtonHidden(true)
+                        .environmentObject(user) // Pass the user model
                     
                 case .rewardsView:
                     RewardsView(path: $path)
                         .navigationBarBackButtonHidden(true)
+                        .environmentObject(user) // Pass the user model
                     
                 case .completedChallengeView:
-                    CompletedChallenge()
+                    //CompletedChallenge(path: $path)
+                        //.environmentObject(user) // Pass the user model
+                    CompletedChallenge(path: .constant(NavigationPath()),isShow:$isShow, title1:"Challenge",title2:"Completed",btnText:"Back to Home")
+                        .environmentObject(user)
                 }
             }
         }

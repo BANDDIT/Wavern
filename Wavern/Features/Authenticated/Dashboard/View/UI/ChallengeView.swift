@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChallengeView: View {
     @Binding var progress: Double // Bind to the progress state
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Your Challenge")
@@ -31,8 +31,6 @@ struct ChallengeView: View {
                         Text("Reach out your first talent")
                             .font(Fonts.regular13)
                             .foregroundStyle(Colors.white)
-                        
-                        // Remove +100 Points text as requested
                         
                         // Progress bar
                         ProgressView(value: progress)

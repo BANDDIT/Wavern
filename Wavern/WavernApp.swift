@@ -16,7 +16,6 @@ struct WavernApp: App {
         WindowGroup {
             OnboardingView()
                 .environment(modelData)
-            OnboardingView()
                 .environmentObject(user)
         }
     }
