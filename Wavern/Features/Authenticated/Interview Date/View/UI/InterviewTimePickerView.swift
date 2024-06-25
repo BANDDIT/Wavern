@@ -37,7 +37,3 @@ struct InterviewTimePickerView:View{
       }
    }
 }
-
-//#Preview {
-//    InterviewTimePickerView()
-//}

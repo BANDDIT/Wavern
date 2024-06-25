@@ -42,13 +42,9 @@ struct TalentProfileView: View {
                     CustomButtons(text: "Invite to Interview", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {
                         withAnimation {
                             if !user.isChallengeCompleted {
-                                viewModel.feedbackPopUp(isInvited: $isInvited)
-                                progress = 1.0 // Update progress to full when talent is reached out to
-                                user.points += 100 // Add points
-                                user.isChallengeCompleted = true // Mark the challenge as completed
-                                path.append(Destination.completedChallengeView) // Navigate to CompletedChallenge
+                                // Navigate to InterviewDateView
+                                path.append(Destination.interviewDateView)
                             } else {
-                                // Show feedback that challenge is already completed
                                 viewModel.feedbackPopUp(isInvited: $isInvited)
                             }
                         }
@@ -65,10 +61,24 @@ struct TalentProfileView: View {
             }
         })
         .background(Background.bgGradient)
+        .navigationDestination(for: Destination.self) { destination in
+            switch destination {
+            case .interviewDateView:
+                InterviewDateView(path: $path, progress: $progress)
+                    .environmentObject(user)
+            case .completedChallengeView:
+                CompletedChallenge(path: .constant(NavigationPath()), isShow: .constant(true), title1: "Challenge", title2: "Completed", btnText: "Back to Home")
+                    .environmentObject(user)
+            default:
+                EmptyView()
+            }
+        }
     }
 }
 
 #Preview {
-    TalentProfileView(path: .constant(NavigationPath()), progress: .constant(0.0))
-        .environmentObject(UserModel())
+    NavigationStack {
+        TalentProfileView(path: .constant(NavigationPath()), progress: .constant(0.0))
+            .environmentObject(UserModel())
+    }
 }

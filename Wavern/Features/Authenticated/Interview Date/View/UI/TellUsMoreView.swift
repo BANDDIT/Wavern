@@ -37,6 +37,4 @@ struct TellUsMoreView:View{
    }
 }
 
-//#Preview {
-//    TellUsMoreView()
-//}
+

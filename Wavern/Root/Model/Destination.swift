@@ -7,9 +7,10 @@
 
 import Foundation
 
-enum Destination: Hashable {
-   case allTalentsView
-   case talentDetailView
-   case rewardsView
-   case completedChallengeView
+enum Destination {
+    case allTalentsView
+    case talentDetailView
+    case rewardsView
+    case completedChallengeView
+    case interviewDateView 
 }

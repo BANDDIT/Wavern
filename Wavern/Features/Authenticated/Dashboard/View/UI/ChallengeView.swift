@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChallengeView: View {
-    @Binding var progress: Double // Bind to the progress state
+    @Binding var progress: Double
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,7 +32,6 @@ struct ChallengeView: View {
                             .font(Fonts.regular13)
                             .foregroundStyle(Colors.white)
                         
-                        // Progress bar
                         ProgressView(value: progress)
                             .progressViewStyle(LinearProgressViewStyle(tint: .white))
                             .padding(.top, 5)

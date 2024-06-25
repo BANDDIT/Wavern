@@ -18,13 +18,11 @@ struct Home: Shape {
       let roofBottomLeft = CGPoint(x: rect.minX, y: roofHeight)
       let roofBottomRight = CGPoint(x: rect.maxX, y: roofHeight)
       
-      // Define the house base
       let baseTopLeft = CGPoint(x: rect.minX, y: roofHeight)
       let baseTopRight = CGPoint(x: rect.maxX, y: roofHeight)
       let baseBottomLeft = CGPoint(x: rect.minX, y: rect.maxY)
       let baseBottomRight = CGPoint(x: rect.maxX, y: rect.maxY)
       
-      // Draw the roof with rounded top
       path.move(to: roofBottomLeft)
       
       path.addLine(to: CGPoint(x: roofTop.x - cornerRadius, y: roofTop.y + cornerRadius))
@@ -32,9 +30,7 @@ struct Home: Shape {
       path.addQuadCurve(to: CGPoint(x: roofTop.x + cornerRadius, y: roofTop.y + cornerRadius), control: roofTop)
       
       path.addLine(to: roofBottomRight)
-      
-      // Draw the house base with rounded corners
-      
+            
       path.addLine(to: CGPoint(x: baseBottomRight.x, y: baseBottomRight.y - cornerRadius))
       
       path.addArc(center: CGPoint(x: baseBottomRight.x - cornerRadius, y: baseBottomRight.y - cornerRadius), radius: cornerRadius, startAngle: .degrees(0), endAngle: .degrees(90), clockwise: false)

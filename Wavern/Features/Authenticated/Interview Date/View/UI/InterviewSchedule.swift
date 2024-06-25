@@ -21,7 +21,6 @@ struct InterviewSchedule:View{
          }
          Spacer()
          
-         //Horizontal Line
          VStack{
             Text("")
          }.frame(width:345,height:1.02).background(.neutral300)

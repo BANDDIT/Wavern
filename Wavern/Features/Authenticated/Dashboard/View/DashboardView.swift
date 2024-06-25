@@ -9,16 +9,12 @@ import SwiftUI
 
 struct DashboardView: View {
     @Binding var path: NavigationPath
-    @Binding var progress: Double // Bind to the progress state
+    @Binding var progress: Double
     
     var body: some View {
         ScrollView {
-            // MARK: Top Section (Details)
             HeaderView()
-            
-            // MARK: Challenge Box & Talents List
-            ChallengeView(progress: $progress) // Pass the progress binding
-            
+            ChallengeView(progress: $progress)
             Rectangle()
                 .frame(maxWidth: .infinity, maxHeight: 4)
                 .foregroundStyle(.neutral)

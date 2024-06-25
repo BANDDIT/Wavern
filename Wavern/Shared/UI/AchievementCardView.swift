@@ -89,9 +89,4 @@ struct AchievementCardView: View {
       }.frame(width:158,height:230)
    }
 }
-/*
-#Preview {
-    AchievementCardView(points:100,title:"Halo",desc:"Hello World")
 
-}
-*/

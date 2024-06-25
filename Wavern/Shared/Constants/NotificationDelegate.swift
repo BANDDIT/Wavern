@@ -12,7 +12,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
       completionHandler([.banner, .sound])
    }
    
-   // Function to request notification permission
    func requestNotificationPermission() {
       UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
          if granted {
@@ -23,20 +22,16 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
       }
    }
    
-   // Function to schedule a notification
    func scheduleNotification() {
       let content = UNMutableNotificationContent()
       content.title = "Hello!"
       content.body = "This is a test notification."
       content.sound = .default
       
-      // Trigger the notification to fire in 5 seconds
       let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
       
-      // Create the request
       let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
       
-      // Schedule the notification
       UNUserNotificationCenter.current().add(request) { error in
          if let error = error {
             print("Error scheduling notification: \(error.localizedDescription)")

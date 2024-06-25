@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AllTalentsView: View {
    @Environment(ModelData.self) private var modelData
-//   @Environment(\.dismiss) var dismiss
    @Binding var path: NavigationPath
    var userList: [Talent]{
       modelData.talentList

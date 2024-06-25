@@ -22,7 +22,6 @@ struct ResultView: View {
          }
          .background(.white)
          
-//          TalentListView()
             .padding()
             .background(.white)
       }

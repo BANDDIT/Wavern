@@ -14,7 +14,8 @@ struct CompletedChallenge: View {
 
     @EnvironmentObject var user: UserModel
     
-    
+    @Environment(\.dismiss) private var dimsiss
+
     var title1:String
     var title2:String
     var btnText:String
@@ -62,7 +63,7 @@ struct CompletedChallenge: View {
                             .cornerRadius(51)
                     }
                     else{
-                        Text("\(points) Points")
+                        Text("+\(points) Points")
                             .foregroundColor(.white)
                             .font(.system(size: 17, weight: .semibold))
                             .frame(width: 117, height: 40)
@@ -76,13 +77,14 @@ struct CompletedChallenge: View {
                 Spacer()
                 VStack {
                     Button(action: {
-                        if title1 == "Challenge"{
-                            path.removeLast(path.count) // Remove all the views in the stack to go back to the main view
-                        }
-                        else{
+                        if title1 == "Exchange"{
                             withAnimation{
                                 isShow = false
                             }
+                        }
+                        else{
+                            //path.removeLast(path.count)
+                            dimsiss()
                         }
                     }, label: {
                         VStack {
@@ -97,7 +99,7 @@ struct CompletedChallenge: View {
                     }.frame(width: 120, height: 5).background(.white).cornerRadius(5).padding(10).padding(.bottom, 10)
                 }.frame(maxWidth: .infinity, maxHeight: 128).background(.clear)
             }
-        }.ignoresSafeArea()
+        }.ignoresSafeArea().navigationBarBackButtonHidden(true)
     }
 }
 /*

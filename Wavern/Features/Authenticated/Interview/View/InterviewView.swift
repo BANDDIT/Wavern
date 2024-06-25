@@ -32,7 +32,6 @@ struct InterviewView: View {
             }
             .background(.white)
             
-            // MARK: Nanti pake foreach/list
             viewModel.screenView(model: model)
          }
       }

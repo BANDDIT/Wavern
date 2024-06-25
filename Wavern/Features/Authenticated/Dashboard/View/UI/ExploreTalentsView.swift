@@ -37,8 +37,6 @@ struct ExploreTalentsView: View {
          
          FilterView(roleAction: {}, skillAction: {}, budgetAction: {}, yoeAction: {})
             .padding(.vertical, 8)
-         
-         //          TalentListView()
             .padding()
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 12))

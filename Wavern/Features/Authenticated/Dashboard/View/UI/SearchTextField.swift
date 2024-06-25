@@ -25,6 +25,3 @@ struct SearchTextField: View {
    }
 }
 
-//#Preview {
-//   SearchTextField()
-//}

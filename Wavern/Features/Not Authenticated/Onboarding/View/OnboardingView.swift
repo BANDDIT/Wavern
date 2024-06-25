@@ -19,7 +19,6 @@ struct OnboardingView: View {
                   .foregroundStyle(Colors.white)
                
                VStack{
-                  // MARK: Tiga button diatas
                   HStack{
                      ForEach(0..<3){ _ in
                         Circle()
@@ -28,7 +27,6 @@ struct OnboardingView: View {
                      }
                   }
                   
-                  // MARK: Title
                   VStack {
                      Text("We Help Hiring Partners Connect with Tech Talents")
                         .multilineTextAlignment(.center)
@@ -36,7 +34,6 @@ struct OnboardingView: View {
                         .padding(.vertical, 16)
                   }
                   
-                  // MARK: Button login & sign up
                   VStack {
                      NavigationLink(destination: SignUpView()) {
                         CustomNavigationLink(bgColor: Colors.purple600, txtColor: Colors.white, text: "Get Started")

@@ -20,6 +20,3 @@ struct TimeBoxView:View{
    }
 }
 
-//#Preview {
-//    TimeBoxView()
-//}

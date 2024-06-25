@@ -17,15 +17,15 @@ struct MainView: View {
     
     let notificationDelegate = NotificationDelegate()
     @State var path: NavigationPath = NavigationPath()
-    @State var progress: Double = 0.0 // State for progress tracking
-    @StateObject var user = UserModel() // Instantiate the user model
-    @State var isShow:Bool = false
-    
+    @State var progress: Double = 0.0
+    @StateObject var user = UserModel()
+    @State var isShow: Bool = false
+
     var body: some View {
         NavigationStack(path: $path) {
             TabView {
                 VStack {
-                    DashboardView(path: $path, progress: $progress) // Pass the progress state here
+                    DashboardView(path: $path, progress: $progress)
                 }
                 .tabItem {
                     Text(Phrases.exploreTitle)
@@ -53,7 +53,7 @@ struct MainView: View {
                 
                 VStack {
                     ProfileView(path: $path)
-                      .environmentObject(user) // Pass the user model to ProfileView
+                      .environmentObject(user)
                 }
                 .tabItem {
                     Text(Phrases.profileTitle)
@@ -72,17 +72,19 @@ struct MainView: View {
                 case .talentDetailView:
                     TalentProfileView(path: $path, progress: $progress)
                         .navigationBarBackButtonHidden(true)
-                        .environmentObject(user) // Pass the user model
+                        .environmentObject(user)
                     
                 case .rewardsView:
                     RewardsView(path: $path)
                         .navigationBarBackButtonHidden(true)
-                        .environmentObject(user) // Pass the user model
+                        .environmentObject(user)
                     
                 case .completedChallengeView:
-                    //CompletedChallenge(path: $path)
-                        //.environmentObject(user) // Pass the user model
-                    CompletedChallenge(path: .constant(NavigationPath()),isShow:$isShow, title1:"Challenge",title2:"Completed",btnText:"Back to Home")
+                    CompletedChallenge(path: .constant(NavigationPath()), isShow: $isShow, title1: "Challenge", title2: "Completed", btnText: "Back to Home")
+                        .environmentObject(user)
+
+                case .interviewDateView:
+                    InterviewDateView(path: $path, progress: $progress)
                         .environmentObject(user)
                 }
             }

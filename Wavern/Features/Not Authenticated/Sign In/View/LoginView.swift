@@ -20,11 +20,9 @@ struct LoginView: View {
                .font(Fonts.semibold24)
                .frame(maxWidth: .infinity, alignment: .leading)
             
-            // MARK: Form
             LoginForm(model: model)
                .padding(.vertical)
             
-            // MARK: Button
             LoginButton(model: model)
          }
          .padding(.horizontal, Size.padding24)

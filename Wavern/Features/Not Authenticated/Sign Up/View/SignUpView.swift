@@ -19,11 +19,9 @@ struct SignUpView: View {
                .font(Fonts.semibold24)
                .frame(maxWidth: .infinity, alignment: .leading)
             
-            // MARK: Form
             SignUpForm(model: model)
                .padding(.vertical)
             
-            // MARK: Button
             SignUpButton(model: model)
          }
          .padding(.horizontal, Size.padding24)

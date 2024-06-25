@@ -15,10 +15,6 @@ struct TalentListView: View {
     var skill: TalentSkill
     
     var body: some View {
-//        NavigationStack {
-//            NavigationLink {
-//                TalentProfileView(path: navi)
-//            } label: {
                 HStack{
                     ZStack(alignment: .topLeading){
                         Image("DummyTalentsProfile")

@@ -38,7 +38,3 @@ struct InterviewScheduleSection:View{
       }
    }
 }
-
-//#Preview {
-//    InterviewScheduleSection()
-//}
