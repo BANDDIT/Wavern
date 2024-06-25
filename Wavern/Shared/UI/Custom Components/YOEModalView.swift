@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct YOEModalView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+   @State var yoe: String = ""
+   
+   var body: some View {
+      VStack(alignment: .leading) {
+         Text("Years of Experience")
+            .font(Fonts.semibold20)
+         TextField(text: $yoe) {
+            Text("Input")
+               .font(Fonts.regular13)
+         }
+         .padding()
+         .background(Colors.neutral100)
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+      }
+      .padding()
+      .frame(width: UIScreen.main.bounds.width, alignment: .leading)
+   }
 }
 
 #Preview {
-    YOEModalView()
+   YOEModalView()
 }

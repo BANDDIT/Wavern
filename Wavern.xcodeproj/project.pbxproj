@@ -14,6 +14,12 @@
 		AC11C88B2C1812C300854500 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88A2C1812C300854500 /* LoginView.swift */; };
 		AC11C88D2C1812CA00854500 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88C2C1812CA00854500 /* SignUpView.swift */; };
 		AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC11C88E2C1812D000854500 /* OnboardingView.swift */; };
+		AC2392D62C2A9F7C004CC38D /* SkillFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392D52C2A9F7C004CC38D /* SkillFilterView.swift */; };
+		AC2392D82C2AB28B004CC38D /* SuccessfulExchangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392D72C2AB28B004CC38D /* SuccessfulExchangeView.swift */; };
+		AC2392DA2C2AB2B3004CC38D /* YourAchievementItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392D92C2AB2B3004CC38D /* YourAchievementItem.swift */; };
+		AC2392DC2C2AB2BB004CC38D /* AchievementToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392DB2C2AB2BB004CC38D /* AchievementToolbarView.swift */; };
+		AC2392DE2C2AB2C8004CC38D /* YourAchievementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392DD2C2AB2C8004CC38D /* YourAchievementViewModel.swift */; };
+		AC2392E02C2AB41A004CC38D /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2392DF2C2AB41A004CC38D /* Achievement.swift */; };
 		AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCAA2C284BBB00ACCB04 /* Destination.swift */; };
 		AC28FCAF2C2877AB00ACCB04 /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */; };
 		AC28FCB12C29105C00ACCB04 /* InterviewDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28FCB02C29105C00ACCB04 /* InterviewDateView.swift */; };
@@ -128,6 +134,12 @@
 		AC11C88A2C1812C300854500 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AC11C88C2C1812CA00854500 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		AC11C88E2C1812D000854500 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		AC2392D52C2A9F7C004CC38D /* SkillFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillFilterView.swift; sourceTree = "<group>"; };
+		AC2392D72C2AB28B004CC38D /* SuccessfulExchangeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessfulExchangeView.swift; sourceTree = "<group>"; };
+		AC2392D92C2AB2B3004CC38D /* YourAchievementItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourAchievementItem.swift; sourceTree = "<group>"; };
+		AC2392DB2C2AB2BB004CC38D /* AchievementToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementToolbarView.swift; sourceTree = "<group>"; };
+		AC2392DD2C2AB2C8004CC38D /* YourAchievementViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourAchievementViewModel.swift; sourceTree = "<group>"; };
+		AC2392DF2C2AB41A004CC38D /* Achievement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		AC28FCAA2C284BBB00ACCB04 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
 		AC28FCB02C29105C00ACCB04 /* InterviewDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewDateView.swift; sourceTree = "<group>"; };
@@ -331,6 +343,7 @@
 			children = (
 				AC94B5F42C280D830008AEA9 /* UI */,
 				AC3CEFB22C251B000088FDB2 /* CompletedChallenge.swift */,
+				AC2392D72C2AB28B004CC38D /* SuccessfulExchangeView.swift */,
 				AC0817512C21694900ACDE83 /* ProfileView.swift */,
 				AC8ACA2A2C23E9DE0096DA36 /* RewardsView.swift */,
 			);
@@ -403,6 +416,8 @@
 				AC94B5FC2C28230E0008AEA9 /* InterviewedAmount.swift */,
 				AC94B5FE2C282F250008AEA9 /* PointNavigationLink.swift */,
 				AC28FCAE2C2877AB00ACCB04 /* AchievementView.swift */,
+				AC2392D92C2AB2B3004CC38D /* YourAchievementItem.swift */,
+				AC2392DB2C2AB2BB004CC38D /* AchievementToolbarView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -410,6 +425,7 @@
 		AC94B5FB2C2822CB0008AEA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC2392DF2C2AB41A004CC38D /* Achievement.swift */,
 				AC94B5F92C2822C40008AEA9 /* HR.swift */,
 			);
 			path = Model;
@@ -629,6 +645,7 @@
 		AC9E404C2C25710900A3813E /* HR Profile & Benefits */ = {
 			isa = PBXGroup;
 			children = (
+				AC2392DD2C2AB2C8004CC38D /* YourAchievementViewModel.swift */,
 				AC94B5FB2C2822CB0008AEA9 /* Model */,
 				AC94B5E02C2708CE0008AEA9 /* View */,
 			);
@@ -736,6 +753,7 @@
 				E27C62022C2A813B00D6A9C4 /* RoleModalView.swift */,
 				E27C62042C2A82EC00D6A9C4 /* CustomCheckbox.swift */,
 				E27C62062C2A830200D6A9C4 /* SkillModalView.swift */,
+				AC2392D52C2A9F7C004CC38D /* SkillFilterView.swift */,
 				E27C62082C2A831300D6A9C4 /* BudgetModalView.swift */,
 				E27C620A2C2A832600D6A9C4 /* YOEModalView.swift */,
 			);
@@ -953,13 +971,16 @@
 			files = (
 				ACD968C42C268FB100751AF2 /* DashboardModel.swift in Sources */,
 				AC94B5E72C27D83F0008AEA9 /* Interviewee.swift in Sources */,
+				AC2392DC2C2AB2BB004CC38D /* AchievementToolbarView.swift in Sources */,
 				AC28FCC12C2913FB00ACCB04 /* Time.swift in Sources */,
 				AC7027D22C293B7800D42B2D /* PortfolioViews.swift in Sources */,
+				AC2392E02C2AB41A004CC38D /* Achievement.swift in Sources */,
 				AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */,
 				AC61FD672C2295620010CBE8 /* CustomEmploymentType.swift in Sources */,
 				AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */,
 				E27C61FF2C29C1EB00D6A9C4 /* TalentSkill.swift in Sources */,
 				ACD968C62C2690A100751AF2 /* LoginModel.swift in Sources */,
+				AC2392DA2C2AB2B3004CC38D /* YourAchievementItem.swift in Sources */,
 				AC28FCBD2C29136F00ACCB04 /* TellUsMoreView.swift in Sources */,
 				AC94B5DF2C2706EE0008AEA9 /* SearchTextField.swift in Sources */,
 				AC9E40542C2582FD00A3813E /* SignUpViewModel.swift in Sources */,
@@ -980,6 +1001,7 @@
 				AC8ACA2F2C241CF40096DA36 /* AchievementCardView.swift in Sources */,
 				ACD968D32C26C15900751AF2 /* SignUpModel.swift in Sources */,
 				AC9E40372C255E4600A3813E /* ExploreTalentsView.swift in Sources */,
+				AC2392D82C2AB28B004CC38D /* SuccessfulExchangeView.swift in Sources */,
 				AC94B5FA2C2822C40008AEA9 /* HR.swift in Sources */,
 				E27C62052C2A82EC00D6A9C4 /* CustomCheckbox.swift in Sources */,
 				AC94B5FF2C282F250008AEA9 /* PointNavigationLink.swift in Sources */,
@@ -1023,6 +1045,7 @@
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
 				AC08174E2C215ABE00ACDE83 /* DashboardView.swift in Sources */,
 				E27C61FD2C29B6A400D6A9C4 /* ModelData.swift in Sources */,
+				AC2392D62C2A9F7C004CC38D /* SkillFilterView.swift in Sources */,
 				E27C62012C2A5DA300D6A9C4 /* TalentLabelView.swift in Sources */,
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
@@ -1030,6 +1053,7 @@
 				AC7027D02C293B5800D42B2D /* SkillsView.swift in Sources */,
 				C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */,
 				E27C620B2C2A832600D6A9C4 /* YOEModalView.swift in Sources */,
+				AC2392DE2C2AB2C8004CC38D /* YourAchievementViewModel.swift in Sources */,
 				AC9E3FFB2C2537FD00A3813E /* Talent.swift in Sources */,
 				ACD968D82C26C40600751AF2 /* CustomPasswordForm.swift in Sources */,
 				ACD968DA2C26C6EE00751AF2 /* SignUpButton.swift in Sources */,

@@ -9,16 +9,11 @@ import SwiftUI
 
 struct CustomPortofolioTag:View{
    var img:String
-    @Environment(ModelData.self) private var modelData
-    var portofolio: TalentPortofolio
+//    @Environment(ModelData.self) private var modelData
+//    var portofolio: TalentPortofolio
 
-   
    var body : some View{
-      Button(action: {
-          Link(destination: /*@START_MENU_TOKEN@*/URL(string: "https://www.apple.com")!/*@END_MENU_TOKEN@*/, label: {
-              /*@START_MENU_TOKEN@*/Text("Link")/*@END_MENU_TOKEN@*/
-          })
-      }, label: {
+      Button(action: {}, label: {
          Image(img)
             .frame(width:42,height:42)
             .background(
@@ -26,11 +21,12 @@ struct CustomPortofolioTag:View{
                   colors:[.primaryPurple,.secondaryPurple],
                   startPoint:.top,
                   endPoint:.bottom)
-            ).clipShape(Circle())
+            )
+            .clipShape(Circle())
       })
    }
 }
 
 #Preview{
-    CustomPortofolioTag(img: "figma", portofolio: <#TalentPortofolio#>)
+    CustomPortofolioTag(img: "figma")
 }

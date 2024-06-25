@@ -23,6 +23,7 @@ struct TalentListView: View {
             ZStack(alignment: .topLeading){
                 Image("DummyTalentsProfile")
                     .resizable()
+                    .scaledToFill()
                     .frame(width: 104, height: 140)
                 
                 CustomEmploymentType(corners: corners, type: .full_time)

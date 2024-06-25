@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct PortfolioViews: View {
+   var img: String
+   var url: URL
    var body: some View {
       VStack(alignment: .leading) {
-//         Text("Portfolio Links")
-//            .font(Fonts.semibold16)
-//            .padding(.vertical)
-         
          HStack{
-            CustomPortofolioTag(img: "figma_logo")
+            Link(destination: url, label: {
+               Image(img)
+                  .frame(width:42,height:42)
+                  .background(
+                     Background.bgGradient
+                  )
+                  .clipShape(Circle())
+            })
          }
       }
    }
 }
 
 #Preview {
-   PortfolioViews()
+   PortfolioViews(img: "figma_logo", url: URL(string: "https://www.apple.com")!)
 }

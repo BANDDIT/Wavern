@@ -17,24 +17,26 @@ struct MainView: View {
    
    let notificationDelegate = NotificationDelegate()
    @State var path: NavigationPath = NavigationPath()
-    @State var user: Talent?
-    @State var skill: TalentSkill?
+   @State var user: Talent?
+   @State var skill: TalentSkill?
+   @State var link: TalentPortofolio?
    
    var body: some View {
       NavigationStack(path: $path) {
          TabView {
             VStack{
-               DashboardView(path: $path, talent: $user, skill: $skill)
+               DashboardView(path: $path, talent: $user, skill: $skill, link: $link)
+                  .padding(.bottom, 2)
             }
             .tabItem {
                Text(Phrases.exploreTitle)
                Image(systemName: Phrases.exploreSymbol)
             }
-            // TODO: Use enum to handle tag in tabItem
             .tag(0)
             
             VStack{
                InterviewView()
+                  .padding(.bottom, 2)
             }
             .tabItem {
                Text(Phrases.interviewTitle)
@@ -44,6 +46,7 @@ struct MainView: View {
             
             VStack{
                ResultView()
+                  .padding(.bottom, 2)
             }
             .tabItem {
                Text(Phrases.resultTitle)
@@ -53,6 +56,7 @@ struct MainView: View {
             
             VStack{
                ProfileView(path: $path)
+                  .padding(.bottom, 2)
             }
             .tabItem {
                Text(Phrases.profileTitle)
@@ -64,13 +68,13 @@ struct MainView: View {
          .navigationDestination(for: Destination.self) { destination in
             switch destination{
             case .allTalentsView:
-                AllTalentsView(path: $path, talent: $user, skill: $skill)
+               AllTalentsView(path: $path, talent: $user, skill: $skill)
                   .navigationBarBackButtonHidden(true)
                   .environment(ModelData())
                
             case .talentDetailView:
-                TalentProfileView(path: $path, talent: $user, skill: $skill)
-                .environment(ModelData())
+               TalentProfileView(path: $path, talent: $user, skill: $skill, link: $link)
+                  .environment(ModelData())
                   .navigationBarBackButtonHidden(true)
                
             case .rewardsView:
@@ -79,6 +83,10 @@ struct MainView: View {
                
             case .completedChallengeView:
                CompletedChallenge()
+               
+            case .interviewDateView:
+               InterviewDateView()
+                  .navigationBarBackButtonHidden(true)
             }
          }
       }
@@ -87,5 +95,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+   MainView()
 }

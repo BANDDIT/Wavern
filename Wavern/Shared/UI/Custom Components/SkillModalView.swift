@@ -15,20 +15,23 @@ struct SkillModalView: View {
             .foregroundStyle(.black)
             .padding(.vertical)
          
-         HStack{
-            Text("UX Research")
-               .font(Fonts.medium12)
-            
-            Image(systemName: "plus")
-               .imageScale(.small)
+         let columns = [
+            GridItem(.flexible(), spacing: 1),
+            GridItem(.flexible(), spacing: 2),
+            GridItem(.flexible(), spacing: 1)
+         ]
+         
+         LazyVGrid(columns: columns) {
+            SkillFilterView()
+            SkillFilterView()
+            SkillFilterView()
+            SkillFilterView()
+            SkillFilterView()
+            SkillFilterView()
          }
-         .padding(12)
-         .foregroundStyle(Colors.neutral600)
-         .clipShape(RoundedRectangle(cornerRadius: 25))
-         .overlay{
-            RoundedRectangle(cornerRadius: 25)
-               .stroke(Colors.neutral200, lineWidth: 1)
-         }
+         .padding(.bottom)
+         
+         CustomButtons(text: "Save", bgColor: Colors.purple600, txtColor: Colors.white, height: 44, action: {})
       }
       .padding()
       .frame(width: UIScreen.main.bounds.width, alignment: .leading)

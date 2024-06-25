@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct BudgetModalView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+   @State var budget: String = ""
+   
+   var body: some View {
+      VStack(alignment: .leading) {
+         Text("Budget")
+            .font(Fonts.semibold20)
+         TextField(text: $budget) {
+            Text("Input")
+               .font(Fonts.regular13)
+         }
+         .padding()
+         .background(Colors.neutral100)
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+      }
+      .padding()
+      .frame(width: UIScreen.main.bounds.width, alignment: .leading)
+   }
 }
 
 #Preview {
-    BudgetModalView()
+   BudgetModalView()
 }

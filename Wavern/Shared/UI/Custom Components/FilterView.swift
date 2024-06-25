@@ -16,18 +16,6 @@ struct FilterView: View {
    var body: some View {
       ScrollView(.horizontal, showsIndicators: false) {
          HStack{
-            Button(action: {}, label: {
-               HStack(alignment: .center) {
-                  Image("filter")
-               }
-               .padding(8)
-               .overlay {
-                  RoundedRectangle(cornerRadius: 12)
-                     .stroke(.black, lineWidth: 0.2)
-               }
-               .foregroundStyle(.black)
-            })
-            
             Button(action: {
                isRoleModalPresented.toggle()
             }, label: {
