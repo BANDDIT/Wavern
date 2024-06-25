@@ -9,7 +9,9 @@ import SwiftUI
 
 struct TalentCardView: View {
    @Binding var path: NavigationPath
-   
+    @Environment(ModelData.self) private var modelData
+    var user: Talent
+
    var body: some View {
       VStack(alignment: .center){
          Image(systemName: "arrow.left")
@@ -38,12 +40,12 @@ struct TalentCardView: View {
                   .frame(width: 56, height: 56)
                
                VStack(alignment: .leading) {
-                  Text("Jesslyn Devaline")
+                  Text(user.User_Nama)
                      .font(Fonts.semibold20)
                   
                   Spacer()
             
-                  Text("Product Designer")
+                  Text(user.Role)
                      .font(Fonts.regular16)
                      .foregroundStyle(Colors.neutral600)
                }
@@ -55,7 +57,7 @@ struct TalentCardView: View {
             }
             .padding()
             
-            Text("Hi! I am Jesslyn, a product designer with 2+ years of experience! I am experienced in research, prototyping, and product strategy.")
+             Text(user.User_Description)
                .font(Fonts.regular14)
                .foregroundStyle(Colors.neutral500)
                .padding([.horizontal])
@@ -65,7 +67,7 @@ struct TalentCardView: View {
                   Image(systemName: "suitcase")
                      .imageScale(.small)
                   
-                  Text("1-3 YOE")
+                   Text("\(user.Experience)")
                      .font(Fonts.regular13)
                }
                
@@ -76,7 +78,7 @@ struct TalentCardView: View {
                   Image(systemName: "creditcard")
                      .imageScale(.small)
                   
-                  Text("Rp. 5.000.000")
+                   Text("\(user.Offering)")
                      .font(Fonts.regular13)
                }
                
@@ -86,7 +88,7 @@ struct TalentCardView: View {
                HStack{
                   //                     Image(systemName: "")
                   //                     .imageScale(.small)
-                  Text("Relocate")
+                   Text(user.Willing_To_relocate)
                      .font(Fonts.regular13)
                }
             }
@@ -109,5 +111,14 @@ struct TalentCardView: View {
 }
 
 #Preview {
-   TalentCardView(path: .constant(NavigationPath()))
+    TalentCardView(path: .constant(NavigationPath()), user: Talent(
+        User_Nama: "justin",
+        User_Email: "justinmail",
+        User_Password: "password",
+        User_Description: "desc",
+        Role: "role", Experience: 1,
+        Offering: 1000,
+        Willing_To_relocate: "yes",
+        Interview_Count: 1
+    )).environment(ModelData())
 }

@@ -10,15 +10,45 @@ import SwiftUI
 struct TalentProfileView: View {
    @Binding var path: NavigationPath
    @State var isInvited: Bool = false
+    @Environment(ModelData.self) private var modelData
+    var user: Talent
+    var skill: TalentSkill
    var viewModel = TalentViewModel()
    
    var body: some View {
       VStack(alignment: .center){
-         TalentCardView(path: $path)
+          TalentCardView(path: $path, user: Talent(
+            User_Nama: "justin",
+            User_Email: "justinmail",
+            User_Password: "password",
+            User_Description: "desc",
+            Role: "role", Experience: 1,
+            Offering: 1000,
+            Willing_To_relocate: "yes",
+            Interview_Count: 1
+        ))
          
          VStack(alignment: .leading){
-            SkillsView()
-            .padding()
+//            SkillsView()
+//            .padding()
+             
+             VStack(alignment: .leading) {
+                 Text("Skills")
+                     .font(Fonts.semibold16)
+                     .padding(.vertical, 8)
+                 
+                 HStack{
+                     CustomSkillTag(skill.Skill1)
+                     CustomSkillTag(skill.Skill2)
+                     CustomSkillTag(skill.Skill3)
+                 }
+                 
+                 HStack{
+                     CustomSkillTag(skill.Skill4)
+                     CustomSkillTag(skill.Skill5)
+                     CustomSkillTag(skill.Skill6)
+                 }
+             }
             
             Rectangle()
                .frame(maxWidth: .infinity, maxHeight: 4)
@@ -60,5 +90,14 @@ struct TalentProfileView: View {
 
 
 #Preview {
-   TalentProfileView(path: .constant(NavigationPath()))
+    TalentProfileView(path: .constant(NavigationPath()), user: Talent(
+        User_Nama: "justin",
+        User_Email: "justinmail",
+        User_Password: "password",
+        User_Description: "desc",
+        Role: "role", Experience: 1,
+        Offering: 1000,
+        Willing_To_relocate: "yes",
+        Interview_Count: 1
+    ), skill: TalentSkill(User_Nama: "justin", Skill1: "skill1", Skill2: "skill1", Skill3: "skill1", Skill4: "skill1", Skill5: "skill1", Skill6: "skill1")).environment(ModelData())
 }

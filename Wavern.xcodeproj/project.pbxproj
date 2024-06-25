@@ -94,6 +94,7 @@
 		E27C61FB2C29A3AD00D6A9C4 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FA2C29A3AD00D6A9C4 /* FilterView.swift */; };
 		E27C61FD2C29B6A400D6A9C4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */; };
 		E27C61FF2C29C1EB00D6A9C4 /* TalentSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */; };
+		E27C62012C2A5DA300D6A9C4 /* TalentLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C62002C2A5DA300D6A9C4 /* TalentLabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +206,7 @@
 		E27C61FA2C29A3AD00D6A9C4 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentSkill.swift; sourceTree = "<group>"; };
+		E27C62002C2A5DA300D6A9C4 /* TalentLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentLabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +492,7 @@
 				AC7027CD2C293B0E00D42B2D /* TalentCardView.swift */,
 				AC7027CF2C293B5800D42B2D /* SkillsView.swift */,
 				AC7027D12C293B7800D42B2D /* PortfolioViews.swift */,
+				E27C62002C2A5DA300D6A9C4 /* TalentLabelView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -997,6 +1000,7 @@
 				AC11C8882C180A0A00854500 /* NotificationDelegate.swift in Sources */,
 				AC08174E2C215ABE00ACDE83 /* DashboardView.swift in Sources */,
 				E27C61FD2C29B6A400D6A9C4 /* ModelData.swift in Sources */,
+				E27C62012C2A5DA300D6A9C4 /* TalentLabelView.swift in Sources */,
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,

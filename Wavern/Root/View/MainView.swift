@@ -64,9 +64,20 @@ struct MainView: View {
             case .allTalentsView:
                AllTalentsView(path: $path)
                   .navigationBarBackButtonHidden(true)
+                  .environment(ModelData())
                
             case .talentDetailView:
-               TalentProfileView(path: $path)
+                TalentProfileView(path: $path, user: Talent(
+                    User_Nama: "justin",
+                    User_Email: "justinmail",
+                    User_Password: "password",
+                    User_Description: "desc",
+                    Role: "role", Experience: 1,
+                    Offering: 1000,
+                    Willing_To_relocate: "yes",
+                    Interview_Count: 1
+                ), skill: TalentSkill(User_Nama: "justin", Skill1: "skill1", Skill2: "skill1", Skill3: "skill1", Skill4: "skill1", Skill5: "skill1", Skill6: "skill1"))
+                .environment(ModelData())
                   .navigationBarBackButtonHidden(true)
                
             case .rewardsView:
@@ -83,5 +94,5 @@ struct MainView: View {
 }
 
 #Preview {
-   MainView()
+    MainView()
 }

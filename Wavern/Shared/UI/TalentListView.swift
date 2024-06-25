@@ -15,52 +15,52 @@ struct TalentListView: View {
     var skill: TalentSkill
     
     var body: some View {
-        NavigationStack {
-//            NavigationLink {
-//                TalentProfileView(path: navi)
-//            } label: {
-                HStack{
-                    ZStack(alignment: .topLeading){
-                        Image("DummyTalentsProfile")
-                            .resizable()
-                            .frame(width: 104, height: 140)
-                        
-                        CustomEmploymentType(corners: corners, type: .full_time)
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+        //        NavigationStack {
+        //            NavigationLink {
+        //                TalentProfileView(path: navi)
+        //            } label: {
+        HStack{
+            ZStack(alignment: .topLeading){
+                Image("DummyTalentsProfile")
+                    .resizable()
+                    .frame(width: 104, height: 140)
+                
+                CustomEmploymentType(corners: corners, type: .full_time)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            
+            VStack(alignment: .leading){
+                VStack(alignment: .leading) {
+                    Text(user.User_Nama)
+                        .font(Fonts.semibold16)
                     
-                    VStack(alignment: .leading){
-                        VStack(alignment: .leading) {
-                            Text(user.User_Nama)
-                                .font(Fonts.semibold16)
-                            
-                            Text(user.Role)
-                                .font(Fonts.regular14)
-                                .opacity(0.5)
-                        }
-                        
-                        VStack(alignment: .leading) {
-                            DescriptionView(userExp: user.Experience, offering: user.Offering, willingToRelocate: user.Willing_To_relocate)
-                        }
-                        .padding(.vertical, 4)
-                        
-                        ScrollView(.horizontal){
-                            HStack{
-                                CustomSkillTag(skill.Skill1)
-                                CustomSkillTag(skill.Skill2)
-                                CustomSkillTag(skill.Skill3)
-                                CustomSkillTag(skill.Skill4)
-                                CustomSkillTag(skill.Skill5)
-                                CustomSkillTag(skill.Skill6)
-                            }
-                        }
-                    }
-                    
-                    Spacer()
+                    Text(user.Role)
+                        .font(Fonts.regular14)
+                        .opacity(0.5)
                 }
-//            }
+                
+                VStack(alignment: .leading) {
+                    DescriptionView(userExp: user.Experience, offering: user.Offering, willingToRelocate: user.Willing_To_relocate)
+                }
+                .padding(.vertical, 4)
+                
+                ScrollView(.horizontal){
+                    HStack{
+                        CustomSkillTag(skill.Skill1)
+                        CustomSkillTag(skill.Skill2)
+                        CustomSkillTag(skill.Skill3)
+                        CustomSkillTag(skill.Skill4)
+                        CustomSkillTag(skill.Skill5)
+                        CustomSkillTag(skill.Skill6)
+                    }
+                }
+            }
+            
+            Spacer()
         }
+        //            }
     }
+    //    }
 }
 
 #Preview {
