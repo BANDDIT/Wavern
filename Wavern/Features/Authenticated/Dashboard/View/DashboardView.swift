@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DashboardView: View {
    @Binding var path: NavigationPath
-   
+    @Binding var talent: Talent?
+    @Binding var skill: TalentSkill?
    var body: some View {
       ScrollView{
          // MARK: Top Section (Details)
@@ -22,7 +23,7 @@ struct DashboardView: View {
             .frame(maxWidth: .infinity, maxHeight: 4)
             .foregroundStyle(.neutral)
          
-         ExploreTalentsView(path: $path)
+         ExploreTalentsView(path: $path, talent: $talent, skill: $skill)
               .environment(ModelData())
       }
       .background(Colors.white)
@@ -32,6 +33,6 @@ struct DashboardView: View {
 
 #Preview {
    NavigationStack {
-      DashboardView(path: .constant(NavigationPath()))
+       DashboardView(path: .constant(NavigationPath()), talent: .constant(Talent(User_Nama: "Hello", User_Email: "Hello", User_Password: "Hello", User_Description: "Hello", Role: "Hello", Experience: 1, Offering: 1, Willing_To_relocate: "Hello", Interview_Count: 1)), skill:.constant( TalentSkill(User_Nama: "Hello", Skill1: "Hello", Skill2: "Hello", Skill3: "Hello", Skill4: "Hello", Skill5: "Hello", Skill6: "Hello")))
    }
 }

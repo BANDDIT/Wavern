@@ -17,12 +17,14 @@ struct MainView: View {
    
    let notificationDelegate = NotificationDelegate()
    @State var path: NavigationPath = NavigationPath()
+    @State var user: Talent?
+    @State var skill: TalentSkill?
    
    var body: some View {
       NavigationStack(path: $path) {
          TabView {
             VStack{
-               DashboardView(path: $path)
+               DashboardView(path: $path, talent: $user, skill: $skill)
             }
             .tabItem {
                Text(Phrases.exploreTitle)
@@ -62,21 +64,12 @@ struct MainView: View {
          .navigationDestination(for: Destination.self) { destination in
             switch destination{
             case .allTalentsView:
-               AllTalentsView(path: $path)
+                AllTalentsView(path: $path, talent: $user, skill: $skill)
                   .navigationBarBackButtonHidden(true)
                   .environment(ModelData())
                
             case .talentDetailView:
-                TalentProfileView(path: $path, user: Talent(
-                    User_Nama: "justin",
-                    User_Email: "justinmail",
-                    User_Password: "password",
-                    User_Description: "desc",
-                    Role: "role", Experience: 1,
-                    Offering: 1000,
-                    Willing_To_relocate: "yes",
-                    Interview_Count: 1
-                ), skill: TalentSkill(User_Nama: "justin", Skill1: "skill1", Skill2: "skill1", Skill3: "skill1", Skill4: "skill1", Skill5: "skill1", Skill6: "skill1"))
+                TalentProfileView(path: $path, talent: $user, skill: $skill)
                 .environment(ModelData())
                   .navigationBarBackButtonHidden(true)
                

@@ -95,6 +95,11 @@
 		E27C61FD2C29B6A400D6A9C4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */; };
 		E27C61FF2C29C1EB00D6A9C4 /* TalentSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */; };
 		E27C62012C2A5DA300D6A9C4 /* TalentLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C62002C2A5DA300D6A9C4 /* TalentLabelView.swift */; };
+		E27C62032C2A813B00D6A9C4 /* RoleModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C62022C2A813B00D6A9C4 /* RoleModalView.swift */; };
+		E27C62052C2A82EC00D6A9C4 /* CustomCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C62042C2A82EC00D6A9C4 /* CustomCheckbox.swift */; };
+		E27C62072C2A830200D6A9C4 /* SkillModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C62062C2A830200D6A9C4 /* SkillModalView.swift */; };
+		E27C62092C2A831300D6A9C4 /* BudgetModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C62082C2A831300D6A9C4 /* BudgetModalView.swift */; };
+		E27C620B2C2A832600D6A9C4 /* YOEModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27C620A2C2A832600D6A9C4 /* YOEModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +212,11 @@
 		E27C61FC2C29B6A400D6A9C4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		E27C61FE2C29C1EB00D6A9C4 /* TalentSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentSkill.swift; sourceTree = "<group>"; };
 		E27C62002C2A5DA300D6A9C4 /* TalentLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentLabelView.swift; sourceTree = "<group>"; };
+		E27C62022C2A813B00D6A9C4 /* RoleModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleModalView.swift; sourceTree = "<group>"; };
+		E27C62042C2A82EC00D6A9C4 /* CustomCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckbox.swift; sourceTree = "<group>"; };
+		E27C62062C2A830200D6A9C4 /* SkillModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModalView.swift; sourceTree = "<group>"; };
+		E27C62082C2A831300D6A9C4 /* BudgetModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModalView.swift; sourceTree = "<group>"; };
+		E27C620A2C2A832600D6A9C4 /* YOEModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YOEModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -720,6 +730,11 @@
 				ACD968D72C26C40600751AF2 /* CustomPasswordForm.swift */,
 				AC94B5E12C2741A50008AEA9 /* CustomSegmentedPicker.swift */,
 				E27C61FA2C29A3AD00D6A9C4 /* FilterView.swift */,
+				E27C62022C2A813B00D6A9C4 /* RoleModalView.swift */,
+				E27C62042C2A82EC00D6A9C4 /* CustomCheckbox.swift */,
+				E27C62062C2A830200D6A9C4 /* SkillModalView.swift */,
+				E27C62082C2A831300D6A9C4 /* BudgetModalView.swift */,
+				E27C620A2C2A832600D6A9C4 /* YOEModalView.swift */,
 			);
 			path = "Custom Components";
 			sourceTree = "<group>";
@@ -950,9 +965,11 @@
 				AC9E40352C255D8300A3813E /* ChallengeView.swift in Sources */,
 				AC9E403D2C2562F000A3813E /* CustomNavigationLink.swift in Sources */,
 				AC9E40002C253AEE00A3813E /* CustomButtons.swift in Sources */,
+				E27C62072C2A830200D6A9C4 /* SkillModalView.swift in Sources */,
 				AC94B5FD2C28230E0008AEA9 /* InterviewedAmount.swift in Sources */,
 				AC28FCB12C29105C00ACCB04 /* InterviewDateView.swift in Sources */,
 				AC3CEFB32C251B000088FDB2 /* CompletedChallenge.swift in Sources */,
+				E27C62032C2A813B00D6A9C4 /* RoleModalView.swift in Sources */,
 				AC28FCB72C2912C100ACCB04 /* InterviewSchedule.swift in Sources */,
 				AC7027CE2C293B0E00D42B2D /* TalentCardView.swift in Sources */,
 				AC94B5E22C2741A50008AEA9 /* CustomSegmentedPicker.swift in Sources */,
@@ -961,6 +978,7 @@
 				ACD968D32C26C15900751AF2 /* SignUpModel.swift in Sources */,
 				AC9E40372C255E4600A3813E /* ExploreTalentsView.swift in Sources */,
 				AC94B5FA2C2822C40008AEA9 /* HR.swift in Sources */,
+				E27C62052C2A82EC00D6A9C4 /* CustomCheckbox.swift in Sources */,
 				AC94B5FF2C282F250008AEA9 /* PointNavigationLink.swift in Sources */,
 				AC94B5E92C27DA370008AEA9 /* InterviewModel.swift in Sources */,
 				AC9E40042C253D6300A3813E /* Phrases.swift in Sources */,
@@ -981,6 +999,7 @@
 				ACD968CB2C2692CF00751AF2 /* LoginForm.swift in Sources */,
 				ACB09AC72C23D70E0089E205 /* CustomPortfolioTag.swift in Sources */,
 				AC9E402F2C2556CB00A3813E /* Fonts.swift in Sources */,
+				E27C62092C2A831300D6A9C4 /* BudgetModalView.swift in Sources */,
 				AC61FD6B2C22D0E30010CBE8 /* ResultView.swift in Sources */,
 				AC28FCBF2C2913D500ACCB04 /* TimeBoxView.swift in Sources */,
 				AC55B51D2C2310D600AC94A7 /* AllTalentsView.swift in Sources */,
@@ -1006,6 +1025,7 @@
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,
 				AC7027D02C293B5800D42B2D /* SkillsView.swift in Sources */,
 				C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */,
+				E27C620B2C2A832600D6A9C4 /* YOEModalView.swift in Sources */,
 				AC9E3FFB2C2537FD00A3813E /* Talent.swift in Sources */,
 				ACD968D82C26C40600751AF2 /* CustomPasswordForm.swift in Sources */,
 				ACD968DA2C26C6EE00751AF2 /* SignUpButton.swift in Sources */,

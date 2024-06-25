@@ -10,6 +10,9 @@ import SwiftUI
 struct ExploreTalentsView: View {
     @Binding var path: NavigationPath
     @Environment(ModelData.self) private var modelData
+    @Binding var talent: Talent?
+    @Binding var skill: TalentSkill?
+    
     var userList: [Talent]{
         modelData.talentList
     }
@@ -33,7 +36,7 @@ struct ExploreTalentsView: View {
                     .font(Fonts.regular14)
             }
             
-            FilterView(roleAction: {}, skillAction: {}, budgetAction: {}, yoeAction: {})
+//            FilterView
                 .padding(.vertical, 8)
             
             //          TalentListView()
@@ -60,6 +63,9 @@ struct ExploreTalentsView: View {
                     }
                     .foregroundStyle(.black)
                     .onTapGesture {
+                        talent = user.0
+                        skill = user.1
+                        
                         path.append(Destination.talentDetailView)
                     }
             }
@@ -71,7 +77,7 @@ struct ExploreTalentsView: View {
 
 #Preview {
     ScrollView {
-        ExploreTalentsView(path: .constant(NavigationPath()))
+        ExploreTalentsView(path: .constant(NavigationPath()), talent: .constant(Talent(User_Nama: "Hello", User_Email: "Hello", User_Password: "Hello", User_Description: "Hello", Role: "Hello", Experience: 1, Offering: 1, Willing_To_relocate: "Hello", Interview_Count: 1)), skill: .constant(TalentSkill(User_Nama: "H", Skill1: "H", Skill2: "H", Skill3: "H", Skill4: "H", Skill5: "H", Skill6: "H")))
             .environment(ModelData())
     }
 }

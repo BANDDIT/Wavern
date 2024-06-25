@@ -11,6 +11,9 @@ struct AllTalentsView: View {
     @Environment(ModelData.self) private var modelData
     @Environment(\.dismiss) var dismiss
     @Binding var path: NavigationPath
+    @State private var color: Color = .red
+    @Binding var talent: Talent?
+    @Binding var skill: TalentSkill?
     var userList: [Talent]{
         modelData.talentList
     }
@@ -34,6 +37,8 @@ struct AllTalentsView: View {
                         }
                         .foregroundStyle(.black)
                         .onTapGesture {
+                            talent = user.0
+                            skill = user.1
                             path.append(Destination.talentDetailView)
                         }
                 }
@@ -45,7 +50,7 @@ struct AllTalentsView: View {
 
 #Preview {
     NavigationStack {
-        AllTalentsView(path: .constant(NavigationPath()))
+        AllTalentsView(path: .constant(NavigationPath()), talent: .constant(Talent(User_Nama: "Hello", User_Email: "Hello", User_Password: "Hello", User_Description: "Hello", Role: "Hello", Experience: 1, Offering: 1, Willing_To_relocate: "Hello", Interview_Count: 1)), skill: .constant(TalentSkill(User_Nama: "H", Skill1: "H", Skill2: "H", Skill3: "H", Skill4: "H", Skill5: "H", Skill6: "H")))
             .environment(ModelData())
     }
 }

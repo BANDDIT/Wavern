@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct FilterView: View {
-   var roleAction: () -> Void
-   var skillAction: () -> Void
-   var budgetAction: () -> Void
-   var yoeAction: () -> Void
+   @State private var isRoleModalPresented = false
+   @State private var isSkillModalPresented = false
+   @State private var isBudgetModalPresented = false
+   @State private var isYoeModalPresented = false
    
    var body: some View {
       ScrollView(.horizontal, showsIndicators: false) {
          HStack{
-            Button(action: {roleAction()}, label: {
+            Button(action: {}, label: {
                HStack(alignment: .center) {
                   Image("filter")
                }
@@ -28,7 +28,9 @@ struct FilterView: View {
                .foregroundStyle(.black)
             })
             
-            Button(action: {roleAction()}, label: {
+            Button(action: {
+               isRoleModalPresented.toggle()
+            }, label: {
                HStack {
                   Text("Role")
                      .padding(.horizontal, 8)
@@ -43,8 +45,13 @@ struct FilterView: View {
                }
                .foregroundStyle(.black)
             })
+            .sheet(isPresented: $isRoleModalPresented, content: {
+               RoleModalView()
+            })
             
-            Button(action: {skillAction()}, label: {
+            Button(action: {
+               isSkillModalPresented.toggle()
+            }, label: {
                HStack {
                   Text("Skills")
                      .padding(.horizontal, 8)
@@ -59,8 +66,13 @@ struct FilterView: View {
                }
                .foregroundStyle(.black)
             })
+            .sheet(isPresented: $isSkillModalPresented, content: {
+               SkillModalView()
+            })
             
-            Button(action: {budgetAction()}, label: {
+            Button(action: {
+               isBudgetModalPresented.toggle()
+            }, label: {
                HStack {
                   Text("Budget")
                      .padding(.horizontal, 8)
@@ -75,8 +87,13 @@ struct FilterView: View {
                }
                .foregroundStyle(.black)
             })
+            .sheet(isPresented: $isBudgetModalPresented, content: {
+               BudgetModalView()
+            })
             
-            Button(action: {yoeAction()}, label: {
+            Button(action: {
+               isYoeModalPresented.toggle()
+            }, label: {
                HStack {
                   Text("YOE")
                      .padding(.horizontal, 8)
@@ -91,11 +108,14 @@ struct FilterView: View {
                }
                .foregroundStyle(.black)
             })
+            .sheet(isPresented: $isYoeModalPresented, content: {
+               YOEModalView()
+            })
          }
       }
    }
 }
 
 #Preview {
-   FilterView(roleAction: {}, skillAction: {}, budgetAction: {}, yoeAction: {})
+   FilterView()
 }
