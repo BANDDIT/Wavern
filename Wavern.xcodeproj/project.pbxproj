@@ -70,6 +70,7 @@
 		AC9E403D2C2562F000A3813E /* CustomNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E403C2C2562F000A3813E /* CustomNavigationLink.swift */; };
 		AC9E40462C256DA300A3813E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40452C256DA300A3813E /* LoginViewModel.swift */; };
 		AC9E40542C2582FD00A3813E /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E40532C2582FD00A3813E /* SignUpViewModel.swift */; };
+		ACA0694F2C2A58D000729838 /* TalentLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0694E2C2A58D000729838 /* TalentLabelView.swift */; };
 		ACB09AC72C23D70E0089E205 /* CustomPortfolioTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB09AC62C23D70E0089E205 /* CustomPortfolioTag.swift */; };
 		ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB3D64E2C228F7E0052C895 /* TalentListView.swift */; };
 		ACD968C42C268FB100751AF2 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD968C32C268FB100751AF2 /* DashboardModel.swift */; };
@@ -179,6 +180,7 @@
 		AC9E403C2C2562F000A3813E /* CustomNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationLink.swift; sourceTree = "<group>"; };
 		AC9E40452C256DA300A3813E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AC9E40532C2582FD00A3813E /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		ACA0694E2C2A58D000729838 /* TalentLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentLabelView.swift; sourceTree = "<group>"; };
 		ACB09AC62C23D70E0089E205 /* CustomPortfolioTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPortfolioTag.swift; sourceTree = "<group>"; };
 		ACB3D64E2C228F7E0052C895 /* TalentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentListView.swift; sourceTree = "<group>"; };
 		ACD968C32C268FB100751AF2 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
@@ -532,6 +534,7 @@
 				AC9E40342C255D8300A3813E /* ChallengeView.swift */,
 				AC9E40362C255E4600A3813E /* ExploreTalentsView.swift */,
 				AC94B5DE2C2706EE0008AEA9 /* SearchTextField.swift */,
+				ACA0694E2C2A58D000729838 /* TalentLabelView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -939,6 +942,7 @@
 				AC7027D22C293B7800D42B2D /* PortfolioViews.swift in Sources */,
 				AC28FCAB2C284BBB00ACCB04 /* Destination.swift in Sources */,
 				AC61FD672C2295620010CBE8 /* CustomEmploymentType.swift in Sources */,
+				ACA0694F2C2A58D000729838 /* TalentLabelView.swift in Sources */,
 				AC8ACA2B2C23E9DE0096DA36 /* RewardsView.swift in Sources */,
 				E27C61FF2C29C1EB00D6A9C4 /* TalentSkill.swift in Sources */,
 				ACD968C62C2690A100751AF2 /* LoginModel.swift in Sources */,

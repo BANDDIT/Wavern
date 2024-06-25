@@ -51,6 +51,7 @@ struct MainView: View {
                 
                 VStack {
                     ProfileView(path: $path)
+                      .environmentObject(UserModel())
                 }
                 .tabItem {
                     Text(Phrases.profileTitle)
@@ -64,6 +65,7 @@ struct MainView: View {
                 case .allTalentsView:
                     AllTalentsView(path: $path)
                         .navigationBarBackButtonHidden(true)
+                        .environment(ModelData())
                     
                 case .talentDetailView:
                     TalentProfileView(path: $path, progress: $progress) // Pass the progress state here

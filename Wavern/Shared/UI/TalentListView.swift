@@ -15,7 +15,7 @@ struct TalentListView: View {
     var skill: TalentSkill
     
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
 //            NavigationLink {
 //                TalentProfileView(path: navi)
 //            } label: {
@@ -60,7 +60,7 @@ struct TalentListView: View {
                 }
 //            }
         }
-    }
+//    }
 }
 
 #Preview {

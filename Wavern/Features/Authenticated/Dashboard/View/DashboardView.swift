@@ -24,6 +24,7 @@ struct DashboardView: View {
                 .foregroundStyle(.neutral)
             
             ExploreTalentsView(path: $path)
+              .environment(ModelData())
         }
         .background(Colors.white)
         .ignoresSafeArea()

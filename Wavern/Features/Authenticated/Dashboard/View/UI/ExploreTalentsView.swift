@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ExploreTalentsView: View {
    @Binding var path: NavigationPath
-    
+   
+   @Environment(ModelData.self) private var modelData
+   
+   var userList: [Talent]{
+      modelData.talentList
+   }
+   var userSkill:[TalentSkill]{
+      modelData.talentSkill
+   }
    
    var body: some View {
       VStack{
@@ -30,7 +38,7 @@ struct ExploreTalentsView: View {
          FilterView(roleAction: {}, skillAction: {}, budgetAction: {}, yoeAction: {})
             .padding(.vertical, 8)
          
-//          TalentListView()
+         //          TalentListView()
             .padding()
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 12))
@@ -42,11 +50,21 @@ struct ExploreTalentsView: View {
             .onTapGesture {
                path.append(Destination.talentDetailView)
             }
-          
-          NavigationStack(){
-             AllTalentsView(path: .constant(NavigationPath()))
-                  .environment(ModelData())
-          }
+         
+         ForEach(Array(zip(userList, userSkill)), id: \.0){user in
+            TalentListView(user: user.0, skill: user.1)
+               .padding()
+               .background(.white)
+               .clipShape(RoundedRectangle(cornerRadius: 12))
+               .overlay {
+                  RoundedRectangle(cornerRadius: 12)
+                     .stroke(.black.opacity(0.1))
+               }
+               .foregroundStyle(.black)
+               .onTapGesture {
+                  path.append(Destination.talentDetailView)
+               }
+         }
       }
       .padding(.horizontal, 21)
       .padding(.top, 16)
@@ -54,5 +72,8 @@ struct ExploreTalentsView: View {
 }
 
 #Preview {
-   ExploreTalentsView(path: .constant(NavigationPath()))
+   ScrollView {
+      ExploreTalentsView(path: .constant(NavigationPath()))
+         .environment(ModelData())
+   }
 }
