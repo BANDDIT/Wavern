@@ -92,6 +92,7 @@
 		ACD968D82C26C40600751AF2 /* CustomPasswordForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD968D72C26C40600751AF2 /* CustomPasswordForm.swift */; };
 		ACD968DA2C26C6EE00751AF2 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD968D92C26C6EE00751AF2 /* SignUpButton.swift */; };
 		ACE012CE2C2C075C0080DF7E /* FilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE012CD2C2C075C0080DF7E /* FilterCriteria.swift */; };
+		C04532C22C2C279000AC80FA /* TalentSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04532C12C2C279000AC80FA /* TalentSingleton.swift */; };
 		C06FC9F32C118C7600A7001A /* WavernApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06FC9F22C118C7600A7001A /* WavernApp.swift */; };
 		C06FC9F72C118C7700A7001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06FC9F62C118C7700A7001A /* Assets.xcassets */; };
 		C06FC9FA2C118C7700A7001A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06FC9F92C118C7700A7001A /* Preview Assets.xcassets */; };
@@ -218,6 +219,7 @@
 		ACD968D72C26C40600751AF2 /* CustomPasswordForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordForm.swift; sourceTree = "<group>"; };
 		ACD968D92C26C6EE00751AF2 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		ACE012CD2C2C075C0080DF7E /* FilterCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCriteria.swift; sourceTree = "<group>"; };
+		C04532C12C2C279000AC80FA /* TalentSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentSingleton.swift; sourceTree = "<group>"; };
 		C06FC9EF2C118C7600A7001A /* Wavern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wavern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06FC9F22C118C7600A7001A /* WavernApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavernApp.swift; sourceTree = "<group>"; };
 		C06FC9F62C118C7700A7001A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 				AC9E40052C253DC200A3813E /* Size.swift */,
 				AC9E402E2C2556CB00A3813E /* Fonts.swift */,
 				AC9E403A2C25620C00A3813E /* Background.swift */,
+				C04532C12C2C279000AC80FA /* TalentSingleton.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1083,6 +1086,7 @@
 				AC2392D62C2A9F7C004CC38D /* SkillFilterView.swift in Sources */,
 				E27C62012C2A5DA300D6A9C4 /* TalentLabelView.swift in Sources */,
 				AC11C88F2C1812D000854500 /* OnboardingView.swift in Sources */,
+				C04532C22C2C279000AC80FA /* TalentSingleton.swift in Sources */,
 				AC2392E22C2AFEE7004CC38D /* UserModel.swift in Sources */,
 				ACB3D64F2C228F7E0052C895 /* TalentListView.swift in Sources */,
 				AC11C88B2C1812C300854500 /* LoginView.swift in Sources */,

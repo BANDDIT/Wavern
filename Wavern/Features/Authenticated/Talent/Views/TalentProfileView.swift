@@ -14,6 +14,7 @@ struct TalentProfileView: View {
    @Binding var talent: Talent?
    
    var viewModel = TalentViewModel()
+    @StateObject var talentSingleton = TalentSingleton.shared
    
    var body: some View {
       VStack(alignment: .center){
@@ -80,7 +81,9 @@ struct TalentProfileView: View {
                      }
                   
                   CustomButtons(text: "Invite to Interview", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {
-                     path.append(Destination.interviewDateView)
+                      
+                      talentSingleton.listTalent.append(talent!)
+                      path.append(Destination.interviewDateView)
 //                     withAnimation{
 //                        viewModel.feedbackPopUp(isInvited: $isInvited)
 //                     }
@@ -102,7 +105,7 @@ struct TalentProfileView: View {
 }
 
 
-
+/*
 #Preview {
    TalentProfileView(path: .constant(NavigationPath()), talent: .constant(Talent(
       User_Nama: "justin",
@@ -115,3 +118,4 @@ struct TalentProfileView: View {
       Interview_Count: 1, Skills: [""], Links: [""]
    ))).environment(ModelData())
 }
+*/

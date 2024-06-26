@@ -14,6 +14,7 @@ struct InterviewDateView: View {
     @Binding var progress: Double
 
     @EnvironmentObject var user: UserModel
+    @StateObject var talentSingleton = TalentSingleton.shared
 
     var body: some View {
         VStack(spacing: 5) {
@@ -59,6 +60,10 @@ struct InterviewDateView: View {
                 CustomButtons(text: "Send Request", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {
                     withAnimation {
                         if progress < 1.0 {
+                            talentSingleton.listDate.append(interviewDateViewModel.date)
+                            talentSingleton.listStartTime.append(interviewDateViewModel.time)
+                            talentSingleton.listEndTime.append(interviewDateViewModel.time2)
+                            
                             path.append(Destination.completedChallengeView)
                             progress = 1.0
                             user.points += 100
