@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct RoleModalView: View {
-   var roles = ["Product Designer", "Product Marketing", "Product Manager", "Backend Engineer", "Frontend Engineer", "iOS Developer", "Mobile Developer", "Data Scientist"]
+   var roles = ["Product Designer", "Business Analyst", "UI/UX Designer"]
    
-   @State var rolesBool = [false, false, false, false, false, false, false, false]
+   @State var rolesBool = [false, false, false]
    
    var body: some View {
       VStack(alignment: .leading, spacing: 12){
@@ -33,7 +33,7 @@ struct RoleModalView: View {
          }
          
          CustomButtons(text: "Save", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {})
-            .padding(.vertical)
+              .padding(.vertical)
       }
       .padding()
       .frame(width: UIScreen.main.bounds.width, alignment: .leading)

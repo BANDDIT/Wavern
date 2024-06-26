@@ -7,12 +7,26 @@
 
 import SwiftUI
 
+class Filter: ObservableObject{
+    @Published var people: [Talent]
+    @Published var filteredUsers: [Talent]
+    init(people: [Talent]) {
+        self.people = people
+        self.filteredUsers = people
+    }
+    
+    func applyFilter(role: String){
+        filteredUsers = people.filter { $0.Role == role}
+    }
+}
+
 struct ExploreTalentsView: View {
    @Binding var path: NavigationPath
    @Environment(ModelData.self) private var modelData
    @Binding var talent: Talent?
    @Binding var skill: TalentSkill?
    @Binding var links: TalentPortofolio?
+   @ObservedObject var filter: Filter
    
    var userList: [Talent]{
       modelData.talentList
@@ -22,9 +36,10 @@ struct ExploreTalentsView: View {
       modelData.talentSkill
    }
    
-   var portfolios: [TalentPortofolio]{
-      modelData.talentPortfolio
-   }
+    var portfolios: [TalentPortofolio]{
+        modelData.talentPortfolio
+    }
+    
    
    var body: some View {
       VStack{
@@ -47,7 +62,7 @@ struct ExploreTalentsView: View {
          }
          .padding(.vertical, 8)
          
-         ForEach(Array(zip(userList, userSkill)).prefix(3), id: \.0){user in
+          ForEach(Array(zip(filter.filteredUsers, userSkill)).prefix(3), id: \.0){user in
             TalentListView(user: user.0, skill: user.1)
                .padding()
                .background(.white)
@@ -63,7 +78,9 @@ struct ExploreTalentsView: View {
                   
                   path.append(Destination.talentDetailView)
                }
-         }
+          }.onAppear{
+              filter.applyFilter(role: "Product Designer")
+          }
       }
       .padding(.horizontal, 21)
       .padding(.top, 16)
@@ -72,7 +89,7 @@ struct ExploreTalentsView: View {
 
 #Preview {
    ScrollView {
-      ExploreTalentsView(path: .constant(NavigationPath()), talent: .constant(Talent(User_Nama: "Hello", User_Email: "Hello", User_Password: "Hello", User_Description: "Hello", Role: "Hello", Experience: 1, Offering: 1, Willing_To_relocate: "Hello", Interview_Count: 1)), skill: .constant(TalentSkill(User_Nama: "H", Skill1: "H", Skill2: "H", Skill3: "H", Skill4: "H", Skill5: "H", Skill6: "H")), links: .constant(TalentPortofolio(User_Nama: "", Link1: "", Link2: "", Link3: "", Link4: "", Link5: "", Link6: "")))
+       ExploreTalentsView(path: .constant(NavigationPath()), talent: .constant(Talent(User_Nama: "Hello", User_Email: "Hello", User_Password: "Hello", User_Description: "Hello", Role: "Hello", Experience: 1, Offering: 1, Willing_To_relocate: "Hello", Interview_Count: 1)), skill: .constant(TalentSkill(User_Nama: "H", Skill1: "H", Skill2: "H", Skill3: "H", Skill4: "H", Skill5: "H", Skill6: "H")), links: .constant(TalentPortofolio(User_Nama: "", Link1: "", Link2: "", Link3: "", Link4: "", Link5: "", Link6: "")), filter: Filter(people: ModelData().talentList))
          .environment(ModelData())
    }
 }
