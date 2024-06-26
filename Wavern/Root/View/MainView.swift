@@ -11,7 +11,6 @@ struct MainView: View {
     init() {
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.backgroundColor = .white
-        
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
     }
     
@@ -20,6 +19,7 @@ struct MainView: View {
     @State var progress: Double = 0.0
     @StateObject var user = UserModel()
     @State var isShow: Bool = false
+    @State var searchQuery: String = ""
 
     var body: some View {
         NavigationStack(path: $path) {
@@ -86,6 +86,11 @@ struct MainView: View {
                 case .interviewDateView:
                     InterviewDateView(path: $path, progress: $progress)
                         .environmentObject(user)
+
+                case .exploreTalentsView(let searchQuery): // Handle the new case here
+                    ExploreTalentsView(path: $path, searchQuery: searchQuery)
+                        .navigationBarBackButtonHidden(true)
+                        .environment(ModelData())
                 }
             }
         }
@@ -96,3 +101,4 @@ struct MainView: View {
 #Preview {
     MainView()
 }
+

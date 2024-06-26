@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct HeaderView: View {
+   @Binding var searchQuery: String // Add this line
    @StateObject var model = DashboardModel()
    
    var body: some View {
       VStack {
-         HStack{
+         HStack {
             Text("Explore")
                .font(Fonts.semibold32)
                .foregroundStyle(.neutral)
@@ -27,7 +28,7 @@ struct HeaderView: View {
          .padding()
          
          VStack {
-            SearchTextField(search: $model.search)
+            SearchTextField(search: $searchQuery) // Bind searchQuery to SearchTextField
          }
          .padding(.horizontal)
       }
@@ -46,13 +47,13 @@ struct HeaderView: View {
                   .opacity(0.08)
             }
          }
-            .frame(maxWidth: .infinity, maxHeight: 213, alignment: .center)
-            .clipped()
+         .frame(maxWidth: .infinity, maxHeight: 213, alignment: .center)
+         .clipped()
       )
       .ignoresSafeArea()
    }
 }
 
 #Preview {
-   HeaderView()
+   HeaderView(searchQuery: .constant("")) // Pass a constant empty string for preview
 }

@@ -9,18 +9,20 @@ import SwiftUI
 
 struct ExploreTalentsView: View {
    @Binding var path: NavigationPath
+   var searchQuery: String // Add this line
    
    @Environment(ModelData.self) private var modelData
    
-   var userList: [Talent]{
-      modelData.talentList
+   var userList: [Talent] {
+      modelData.talentList.filter { $0.User_Nama.contains(searchQuery) || searchQuery.isEmpty }
    }
-   var userSkill:[TalentSkill]{
+   
+   var userSkill: [TalentSkill] {
       modelData.talentSkill
    }
    
    var body: some View {
-      VStack{
+      VStack {
          HStack {
             Text("Explore Talents")
                .frame(maxWidth: .infinity, alignment: .leading)
@@ -49,7 +51,7 @@ struct ExploreTalentsView: View {
                path.append(Destination.talentDetailView)
             }
          
-         ForEach(Array(zip(userList, userSkill)), id: \.0){user in
+         ForEach(Array(zip(userList, userSkill)), id: \.0) { user in
             TalentListView(user: user.0, skill: user.1)
                .padding()
                .background(.white)
@@ -71,7 +73,7 @@ struct ExploreTalentsView: View {
 
 #Preview {
    ScrollView {
-      ExploreTalentsView(path: .constant(NavigationPath()))
+      ExploreTalentsView(path: .constant(NavigationPath()), searchQuery: "")
          .environment(ModelData())
    }
 }

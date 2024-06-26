@@ -10,16 +10,17 @@ import SwiftUI
 struct DashboardView: View {
     @Binding var path: NavigationPath
     @Binding var progress: Double
+    @State var searchQuery: String = "" // Add this line
     
     var body: some View {
         ScrollView {
-            HeaderView()
+            HeaderView(searchQuery: $searchQuery) // Pass searchQuery to HeaderView
             ChallengeView(progress: $progress)
             Rectangle()
                 .frame(maxWidth: .infinity, maxHeight: 4)
                 .foregroundStyle(.neutral)
             
-            ExploreTalentsView(path: $path)
+            ExploreTalentsView(path: $path, searchQuery: searchQuery) // Pass searchQuery to ExploreTalentsView
               .environment(ModelData())
         }
         .background(Colors.white)
@@ -32,4 +33,5 @@ struct DashboardView: View {
         DashboardView(path: .constant(NavigationPath()), progress: .constant(0.5))
     }
 }
+
 
