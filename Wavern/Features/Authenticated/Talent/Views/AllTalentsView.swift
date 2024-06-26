@@ -9,21 +9,23 @@ import SwiftUI
 
 struct AllTalentsView: View {
    @Environment(ModelData.self) private var modelData
-   @Environment(\.dismiss) var dismiss
    @Binding var path: NavigationPath
-   @State private var color: Color = .red
    @Binding var talent: Talent?
+   @ObservedObject var filter: Filter
    
-   var userList: [Talent]{
-      modelData.talentList
-   }
-   
+   @State private var filterCriteria = FilterCriteria(selectedRoles: [], yoe: "", budget: "")
+
    var body: some View {
-      TalentLabelView(path: $path)
-      
-      ScrollView{
+      ScrollView {
+         TalentLabelView(path: $path)
+
+         ScrollView(.horizontal, showsIndicators: false) {
+            FilterView(filterCriteria: $filterCriteria)
+         }
+         .padding()
+
          VStack {
-            ForEach(Array(userList), id: \.self){user in
+            ForEach(Array(filter.filteredUsers), id: \.self) { user in
                TalentListView(user: user)
                   .padding()
                   .background(.white)
@@ -39,14 +41,20 @@ struct AllTalentsView: View {
                   }
             }
          }
-         .padding()
+         .padding(.horizontal)
+      }
+      .onAppear {
+         filter.applyFilter(criteria: filterCriteria)
+      }
+      .onChange(of: filterCriteria) { newCriteria in
+         filter.applyFilter(criteria: newCriteria)
       }
    }
 }
 
 #Preview {
    NavigationStack {
-      AllTalentsView(path: .constant(NavigationPath()), talent: .constant(Talent(User_Nama: "Hello", User_Email: "Hello", User_Password: "Hello", User_Description: "Hello", Role: "Hello", Experience: 1, Offering: 1, Willing_To_relocate: "Hello", Interview_Count: 1, Skills: [""], Links: [""])))
+      AllTalentsView(path: .constant(NavigationPath()), talent: .constant(Talent(User_Nama: "Hello", User_Email: "Hello", User_Password: "Hello", User_Description: "Hello", Role: "Hello", Experience: 1, Offering: 1, Willing_To_relocate: "Hello", Interview_Count: 1, Skills: [""], Links: [""])), filter: Filter(people: ModelData().talentList))
          .environment(ModelData())
    }
 }

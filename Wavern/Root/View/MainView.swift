@@ -18,6 +18,9 @@ struct MainView: View {
    let notificationDelegate = NotificationDelegate()
    @State var path: NavigationPath = NavigationPath()
    @State var talent: Talent?
+   @State var selectedRoles: [String] = []
+   @State var budget = ""
+   @State var yoe = ""
    @State var isShow: Bool = false
    @State var progress: Double = 0.0
    @StateObject var user = UserModel()
@@ -70,7 +73,7 @@ struct MainView: View {
          .navigationDestination(for: Destination.self) { destination in
             switch destination{
             case .allTalentsView:
-               AllTalentsView(path: $path, talent: $talent)
+               AllTalentsView(path: $path, talent: $talent, filter: Filter(people: ModelData().talentList))
                   .navigationBarBackButtonHidden(true)
                   .environment(ModelData())
                

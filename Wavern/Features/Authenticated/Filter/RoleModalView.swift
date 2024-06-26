@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct RoleModalView: View {
-   var roles = ["Product Designer", "Product Marketing", "Product Manager", "Backend Engineer", "Frontend Engineer", "iOS Developer", "Mobile Developer", "Data Scientist"]
+   var roles = ["Product Designer", "Business Analyst", "UI/UX Designer"]
+   @Environment(\.dismiss) var dismiss
    
-   @State var rolesBool = [false, false, false, false, false, false, false, false]
+   @Binding var selectedRoles: [String]
+   @State var rolesBool: [Bool]
+   
+   init(selectedRoles: Binding<[String]>) {
+      self._selectedRoles = selectedRoles
+      self._rolesBool = State(initialValue: roles.map { selectedRoles.wrappedValue.contains($0) })
+   }
    
    var body: some View {
       VStack(alignment: .leading, spacing: 12){
@@ -32,8 +39,11 @@ struct RoleModalView: View {
             }
          }
          
-         CustomButtons(text: "Save", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {})
-            .padding(.vertical)
+         CustomButtons(text: "Save", bgColor: Colors.purple600, txtColor: Colors.white, height: 56, action: {
+            selectedRoles = roles.indices.compactMap { rolesBool[$0] ? roles[$0] : nil }
+            dismiss()
+         })
+         .padding(.vertical)
       }
       .padding()
       .frame(width: UIScreen.main.bounds.width, alignment: .leading)
@@ -41,5 +51,5 @@ struct RoleModalView: View {
 }
 
 #Preview {
-   RoleModalView()
+   RoleModalView(selectedRoles: .constant([""]))
 }

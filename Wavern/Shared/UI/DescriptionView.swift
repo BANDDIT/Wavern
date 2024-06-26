@@ -13,25 +13,27 @@ struct DescriptionView: View {
    var willingToRelocate: String
    var body: some View {
       VStack(alignment: .leading, spacing: 4){
-         HStack{
-            Image(systemName: "suitcase")
+         HStack(spacing: 4){
+            Image("briefcase")
             Text("\(userExp) YOE")
                .font(Fonts.medium13)
+               .foregroundStyle(Colors.neutral400)
          }
          
-         HStack{
-            Image(systemName: "creditcard")
+         HStack(spacing: 4){
+            Image("credit_card")
             Text("Rp. \(offering)")
                .font(Fonts.medium13)
+               .foregroundStyle(Colors.neutral400)
          }
          
-         HStack{
-            Image(systemName: "suitcase")
+         HStack(spacing: 4){
+            Image("pin")
             Text(willingToRelocate)
                .font(Fonts.medium13)
+               .foregroundStyle(Colors.neutral400)
          }
       }
-      .opacity(0.4)
    }
 }
 

@@ -13,6 +13,8 @@ struct FilterView: View {
    @State private var isBudgetModalPresented = false
    @State private var isYoeModalPresented = false
    
+   @Binding var filterCriteria: FilterCriteria
+   
    var body: some View {
       ScrollView(.horizontal, showsIndicators: false) {
          HStack{
@@ -34,7 +36,8 @@ struct FilterView: View {
                .foregroundStyle(.black)
             })
             .sheet(isPresented: $isRoleModalPresented, content: {
-               RoleModalView()
+               RoleModalView(selectedRoles: $filterCriteria.selectedRoles)
+                  .presentationDetents([.height(300)])
             })
             
             Button(action: {
@@ -76,7 +79,8 @@ struct FilterView: View {
                .foregroundStyle(.black)
             })
             .sheet(isPresented: $isBudgetModalPresented, content: {
-               BudgetModalView()
+               BudgetModalView(budget: $filterCriteria.budget)
+                  .presentationDetents([.height(226)])
             })
             
             Button(action: {
@@ -97,13 +101,15 @@ struct FilterView: View {
                .foregroundStyle(.black)
             })
             .sheet(isPresented: $isYoeModalPresented, content: {
-               YOEModalView()
+               YOEModalView(yoe: $filterCriteria.yoe)
+                  .presentationDetents([.height(226)])
             })
          }
       }
    }
 }
 
+
 #Preview {
-   FilterView()
+   FilterView(filterCriteria: .constant(FilterCriteria(selectedRoles: [""], yoe: "", budget: "")))
 }

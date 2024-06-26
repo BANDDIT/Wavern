@@ -32,11 +32,6 @@ struct ExploreTalentsView: View {
                .font(Fonts.regular14)
          }
          
-         ScrollView(.horizontal, showsIndicators: false){
-            FilterView()
-         }
-         .padding(.vertical, 8)
-         
          ForEach(Array(userList).prefix(3), id: \.self){user in
             TalentListView(user: user)
                .padding()

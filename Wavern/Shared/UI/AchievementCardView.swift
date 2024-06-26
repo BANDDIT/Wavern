@@ -39,8 +39,9 @@ struct AchievementCardView: View {
             
             if isStarted{
                 HStack{
-                    ProgressView(value:0).background(.white).frame(width:90,height:30).accentColor(.yellow)
-                    
+                    ProgressView(value:0)
+                      .progressViewStyle(CustomProgressViewStyle(myColor: Colors.yellow100))
+                      .padding(.horizontal)
 
                 }
 

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AchievementView: View {
+   @Binding var path: NavigationPath
+   
    var body: some View {
       VStack(alignment: .leading){
          Text("Achievement")
@@ -15,16 +17,26 @@ struct AchievementView: View {
             .foregroundStyle(Colors.neutral600)
             .padding(.vertical)
          
-         HStack(spacing: 16){
-            Image("gold_star")
-               .resizable()
-               .frame(width: 54, height: 54)
-            Image("gold_star")
-               .resizable()
-               .frame(width: 54, height: 54)
-            Image("gold_star")
-               .resizable()
-               .frame(width: 54, height: 54)
+         VStack {
+            HStack(spacing: 16){
+               Image("gold_star")
+                  .resizable()
+                  .frame(width: 54, height: 54)
+               Image("gold_star")
+                  .resizable()
+                  .frame(width: 54, height: 54)
+               Image("gold_star")
+                  .resizable()
+                  .frame(width: 54, height: 54)
+            }
+            .padding(.bottom, 4)
+            
+            CustomButtons(text: "View All", bgColor: Colors.purple600, txtColor: Colors.white, height: 44, action: {})
+         }
+         .padding()
+         .overlay {
+            RoundedRectangle(cornerRadius: 12)
+               .stroke(Colors.neutral200, lineWidth: 1)
          }
       }
       .frame(maxWidth: .infinity, alignment: .leading)
@@ -32,5 +44,5 @@ struct AchievementView: View {
 }
 
 #Preview {
-   AchievementView()
+   AchievementView(path: .constant(NavigationPath()))
 }

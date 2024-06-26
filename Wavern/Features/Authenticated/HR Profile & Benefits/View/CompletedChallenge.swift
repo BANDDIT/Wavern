@@ -82,7 +82,7 @@ struct CompletedChallenge: View {
                         }
                         else{
                             //path.removeLast(path.count)
-                           path.removeLast(path.count)
+                           path.removeLast(2)
                         }
                     }, label: {
                         VStack {
