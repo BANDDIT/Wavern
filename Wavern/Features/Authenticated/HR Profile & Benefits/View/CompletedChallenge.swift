@@ -83,7 +83,7 @@ struct CompletedChallenge: View {
                             }
                         }
                         else{
-                            //path.removeLast(path.count)
+                            //path.removeLast()
                             dimsiss()
                         }
                     }, label: {

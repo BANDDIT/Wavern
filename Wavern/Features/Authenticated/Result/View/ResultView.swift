@@ -8,7 +8,20 @@
 import SwiftUI
 
 struct ResultView: View {
-   var body: some View {
+    @State var acceptedTalent:[Talent] = TalentSingleton.shared.acceptedTalent
+    @State var acceptedTalentSkill:[TalentSkill] = TalentSingleton.shared.acceptedTalentSkill
+    
+    @State var listTalent:[Talent] = TalentSingleton.shared.listTalent
+    @State var listTalentInterview:[Talent]=TalentSingleton.shared.listTalentForInterview
+    
+    //INI Cuma Buat Testing
+    /*
+    @State var testing:String = TalentSingleton.shared.testing
+    @State var testing2:String = TalentSingleton.staticTesting
+    */
+    @StateObject var talentSingleton = TalentSingleton.shared
+    
+    var body: some View {
       ScrollView {
          VStack {
             Text("Accepted")
@@ -19,11 +32,24 @@ struct ResultView: View {
                .padding(.vertical)
             
             Divider()
+             
+             ForEach(Array(talentSingleton.acceptedTalent.enumerated()),id:\.offset){ index,talent in
+                 
+                 TalentListView(user: talent, skill: talentSingleton.acceptedTalentSkill[index]).padding().background(.white).clipShape(RoundedRectangle(cornerRadius: 12)).environment(ModelData())
+                 Divider()
+                  
+               
+             }
+             //Text(TalentSingleton.staticTesting)
+             /*
+             Text(talentSingleton.testing)
+             //Text(testing2)
+             Text("Halohalo")
+              */
          }
          .background(.white)
-         
-            .padding()
-            .background(.white)
+         .padding()
+         .background(.white)
       }
       .background(Colors.neutral100)
       .padding(.top, 60)

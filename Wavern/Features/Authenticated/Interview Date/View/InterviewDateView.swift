@@ -14,6 +14,17 @@ struct InterviewDateView: View {
     @Binding var progress: Double
 
     @EnvironmentObject var user: UserModel
+    
+    
+    @StateObject var talentSingleton = TalentSingleton.shared
+    
+    //@Binding var viewModel:TalentViewModel
+    
+    /*
+    @State var timeStartSingleton:[Time] = TalentSingleton.shared.listStartTime
+    @State var dateSingleton:[Date] = TalentSingleton.shared.listDate
+    @State var timeEndSingleton:[Time] = TalentSingleton.shared.listEndTime
+     */
 
     var body: some View {
         VStack(spacing: 5) {
@@ -63,6 +74,21 @@ struct InterviewDateView: View {
                             progress = 1.0
                             user.points += 100
                             user.isChallengeCompleted = true
+                            /*
+                            TalentSingleton.shared.listDate.append(interviewDateViewModel.date)
+                            dateSingleton = TalentSingleton.shared.listDate
+                            
+                            TalentSingleton.shared.listStartTime.append(interviewDateViewModel.time)
+                            timeStartSingleton = TalentSingleton.shared.listStartTime
+                            
+                            TalentSingleton.shared.listEndTime.append(interviewDateViewModel.time2)
+                            timeEndSingleton = TalentSingleton.shared.listEndTime
+                            */
+                            //print(dateSingleton)
+                            
+                            talentSingleton.listDate.append(interviewDateViewModel.date)
+                            talentSingleton.listStartTime.append(interviewDateViewModel.time)
+                            talentSingleton.listEndTime.append(interviewDateViewModel.time2)
                         }
                     }
                 })
@@ -72,11 +98,14 @@ struct InterviewDateView: View {
         }
         .navigationBarBackButtonHidden(true)
         .ignoresSafeArea()
+
     }
 }
+
 
 #Preview {
     NavigationStack {
         InterviewDateView(path: .constant(NavigationPath()), progress: .constant(0.0))
     }
 }
+

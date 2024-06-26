@@ -12,5 +12,5 @@ enum Destination {
     case talentDetailView
     case rewardsView
     case completedChallengeView
-    case interviewDateView 
+    case interviewDateView
 }
