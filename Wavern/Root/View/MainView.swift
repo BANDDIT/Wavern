@@ -91,7 +91,7 @@ struct MainView: View {
                CompletedChallenge(path: $path, isShow: $isShow, title1: "Challenge", title2: "Completed", btnText: "Done")
                
             case .interviewDateView:
-               InterviewDateView(path: $path, progress: $progress)
+               InterviewDateView(path: $path, progress: $progress, talent: $talent)
                   .navigationBarBackButtonHidden(true)
                   .environmentObject(user)
             }
