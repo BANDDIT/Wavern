@@ -119,6 +119,6 @@ struct TalentCardView: View {
         Role: "role", Experience: 1,
         Offering: 1000,
         Willing_To_relocate: "yes",
-        Interview_Count: 1
+        Interview_Count: 1, Skills: [""], Links: [""]
     )).environment(ModelData())
 }

@@ -12,14 +12,12 @@ struct TalentProfileView: View {
    @State var isInvited: Bool = false
    @Environment(ModelData.self) private var modelData
    @Binding var talent: Talent?
-   @Binding var skill: TalentSkill?
-   @Binding var link: TalentPortofolio?
    
    var viewModel = TalentViewModel()
    
    var body: some View {
       VStack(alignment: .center){
-         if let talents = talent, let skills = skill {
+         if let talents = talent {
             TalentCardView(path: $path, user: Talent(
                User_Nama: talents.User_Nama,
                User_Email: talents.User_Email,
@@ -28,7 +26,9 @@ struct TalentProfileView: View {
                Role: talents.Role, Experience: talents.Experience,
                Offering: talents.Offering,
                Willing_To_relocate: talents.Willing_To_relocate,
-               Interview_Count: talents.Interview_Count
+               Interview_Count: talents.Interview_Count, 
+               Skills: talents.Skills, 
+               Links: talents.Links
             ))
             
             VStack(alignment: .leading){
@@ -40,17 +40,17 @@ struct TalentProfileView: View {
                      .font(Fonts.semibold16)
                      .padding(.vertical, 8)
                   
-                  HStack{
-                     CustomSkillTag(skills.Skill1)
-                     CustomSkillTag(skills.Skill2)
-                     CustomSkillTag(skills.Skill3)
-                  }
+                  let columns = [
+                     GridItem(.flexible(), spacing: 2, alignment: .leading),
+                     GridItem(.flexible(), spacing: 2, alignment: .leading),
+                     GridItem(.flexible(), spacing: 2, alignment: .leading)
+                  ]
                   
-                  HStack{
-                     CustomSkillTag(skills.Skill4)
-                     CustomSkillTag(skills.Skill5)
-                     CustomSkillTag(skills.Skill6)
-                  }
+                  LazyVGrid(columns: columns, content: {
+                     ForEach(talents.Skills, id: \.self){skill in
+                        CustomSkillTag(skill)
+                     }
+                  })
                }
                .padding()
                
@@ -61,8 +61,11 @@ struct TalentProfileView: View {
                VStack(alignment: .leading) {
                   Text("Portfolio Links")
                      .font(Fonts.semibold16)
-                  
-                  PortfolioViews(img: "figma_logo", url: URL(string: "https://www.apple.com")!)
+                  HStack{
+                     ForEach(talents.Links, id: \.self){link in
+                        PortfolioViews(img: "figma", url: link)
+                     }
+                  }
                }
                .padding()
                
@@ -109,6 +112,6 @@ struct TalentProfileView: View {
       Role: "role", Experience: 1,
       Offering: 1000,
       Willing_To_relocate: "yes",
-      Interview_Count: 1
-   )), skill: .constant(TalentSkill(User_Nama: "justin", Skill1: "skill1", Skill2: "skill1", Skill3: "skill1", Skill4: "skill1", Skill5: "skill1", Skill6: "skill1")), link: .constant(TalentPortofolio(User_Nama: "", Link1: "", Link2: "", Link3: "", Link4: "", Link5: "", Link6: ""))).environment(ModelData())
+      Interview_Count: 1, Skills: [""], Links: [""]
+   ))).environment(ModelData())
 }

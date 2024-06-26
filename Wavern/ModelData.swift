@@ -10,8 +10,6 @@ import Foundation
 @Observable
 class ModelData{
     var talentList: [Talent] = load("User_Table.json")
-    var talentSkill: [TalentSkill] = load("User_SkillTable.json")
-   var talentPortfolio: [TalentPortofolio] = load("User_PortofolioTable.json")
 }
 
 

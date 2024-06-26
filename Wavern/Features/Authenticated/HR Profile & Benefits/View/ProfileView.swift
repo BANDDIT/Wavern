@@ -40,6 +40,7 @@ struct ProfileView: View {
 
                AchievementView()
                    .padding(.horizontal)
+                   .padding(.bottom)
            }
           
        }

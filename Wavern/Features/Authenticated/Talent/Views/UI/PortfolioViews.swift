@@ -9,11 +9,11 @@ import SwiftUI
 
 struct PortfolioViews: View {
    var img: String
-   var url: URL
+   var url: String
    var body: some View {
       VStack(alignment: .leading) {
          HStack{
-            Link(destination: url, label: {
+            Link(destination: URL(string: url)!, label: {
                Image(img)
                   .frame(width:42,height:42)
                   .background(
@@ -27,5 +27,5 @@ struct PortfolioViews: View {
 }
 
 #Preview {
-   PortfolioViews(img: "figma_logo", url: URL(string: "https://www.apple.com")!)
+   PortfolioViews(img: "figma_logo", url: "https://www.apple.com")
 }

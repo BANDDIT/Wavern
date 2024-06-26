@@ -18,8 +18,6 @@ struct MainView: View {
    let notificationDelegate = NotificationDelegate()
    @State var path: NavigationPath = NavigationPath()
    @State var talent: Talent?
-   @State var skill: TalentSkill?
-   @State var link: TalentPortofolio?
    @State var isShow: Bool = false
    @State var progress: Double = 0.0
    @StateObject var user = UserModel()
@@ -28,7 +26,7 @@ struct MainView: View {
       NavigationStack(path: $path) {
          TabView {
             VStack{
-               DashboardView(path: $path, progress: $progress, talent: $talent, skill: $skill, link: $link)
+               DashboardView(path: $path, progress: $progress, talent: $talent)
                   .padding(.bottom, 2)
             }
             .tabItem {
@@ -72,12 +70,12 @@ struct MainView: View {
          .navigationDestination(for: Destination.self) { destination in
             switch destination{
             case .allTalentsView:
-               AllTalentsView(path: $path, talent: $talent, skill: $skill)
+               AllTalentsView(path: $path, talent: $talent)
                   .navigationBarBackButtonHidden(true)
                   .environment(ModelData())
                
             case .talentDetailView:
-               TalentProfileView(path: $path, talent: $talent, skill: $skill, link: $link)
+               TalentProfileView(path: $path, talent: $talent)
                   .environment(ModelData())
                   .navigationBarBackButtonHidden(true)
                
