@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AchievementCardView: View {
     
-    var img:String="gold_star"
+    var img:String="coin_plus"
     var points:Int
     var title:String
     var desc:String

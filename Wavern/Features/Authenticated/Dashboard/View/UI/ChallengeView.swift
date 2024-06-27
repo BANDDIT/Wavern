@@ -20,7 +20,9 @@ struct ChallengeView: View {
             Image("challenge_bg")
             
             HStack {
-               Image("gold_star")
+               Image("coin_plus")
+                  .resizable()
+                  .frame(width: 72, height: 72)
                   .padding(.trailing)
                
                VStack(alignment: .leading) {

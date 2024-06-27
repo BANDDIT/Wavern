@@ -15,6 +15,7 @@ struct WavernApp: App {
         WindowGroup {
             MainView()
                 .environment(modelData)
+                .preferredColorScheme(.light)
         }
     }
 }

@@ -9,20 +9,44 @@ import SwiftUI
 
 struct SuccessfulExchangeView: View {
    var increments = [300, 500, 700, 900]
+   @Environment(\.dismiss) var dismiss
+   @Binding var isShow: Bool
    
    var body: some View {
-      VStack{
-         VStack {
+      VStack(alignment: .center){
+         VStack(alignment: .center) {
             Text("Successfully Exchanged 🎉")
                .font(Fonts.semibold32)
                .foregroundStyle(Colors.white)
+            
+            Spacer()
+            
+            Image("coin_min")
+               .resizable()
+               .frame(width: 180, height: 180)
+            
+            Spacer()
+            
+            Text("Human Resource Associate")
+               .font(Fonts.semibold32)
+               .foregroundStyle(Colors.white)
+               .multilineTextAlignment(.center)
+            
+            Text("- 100 Points")
+               .padding(.horizontal)
+               .padding(.vertical, 8)
+               .background(.white.opacity(0.2))
+               .clipShape(RoundedRectangle(cornerRadius: 25))
+               .font(Fonts.medium16)
+               .foregroundStyle(.white)
          }
          .padding(.vertical, 120)
          .padding(.horizontal)
          
-         Spacer()
          
-         CustomButtons(text: "Back Home", bgColor: Colors.white, txtColor: Colors.purple600, height: 56, action: {})
+         CustomButtons(text: "Back Home", bgColor: Colors.white, txtColor: Colors.purple600, height: 56, action: {
+            isShow = false
+         })
             .padding(.horizontal)
             .padding(.bottom, 60)
       }
@@ -45,5 +69,5 @@ struct SuccessfulExchangeView: View {
 }
 
 #Preview {
-   SuccessfulExchangeView()
+   SuccessfulExchangeView(isShow: .constant(false))
 }

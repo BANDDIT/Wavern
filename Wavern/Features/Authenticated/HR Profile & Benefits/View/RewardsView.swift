@@ -188,7 +188,7 @@ struct RewardsView: View {
       .ignoresSafeArea()
       .overlay {
          if rewardsViewModel.isShowMedal {
-            CompletedChallenge(path: $path, isShow:$rewardsViewModel.isShowMedal, title1:"Exchange",title2:"Successfully",btnText:"Done",points:rewardsViewModel.minusPoint)
+            SuccessfulExchangeView(isShow: $rewardsViewModel.isShowMedal)
                .ignoresSafeArea()
          }
       }

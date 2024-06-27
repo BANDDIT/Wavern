@@ -11,8 +11,14 @@ struct PointNavigationLink: View {
    
    var body: some View {
       HStack{
-         Text("Bronze")
-            .font(Fonts.semibold13)
+         HStack {
+            Image("sparkle")
+               .resizable()
+               .frame(width: 20, height: 20)
+            
+            Text("Bronze")
+               .font(Fonts.semibold13)
+         }
          
          Spacer()
          

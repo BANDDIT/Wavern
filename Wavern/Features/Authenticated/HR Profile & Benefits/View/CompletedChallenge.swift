@@ -39,7 +39,7 @@ struct CompletedChallenge: View {
                 }
                 
                 Spacer()
-                Image("gold_star").resizable().frame(width: 176, height: 176)
+                Image("coin_plus").resizable().frame(width: 176, height: 176)
                 Spacer()
                 VStack {
                     Text("First Journey")
