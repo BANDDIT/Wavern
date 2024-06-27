@@ -11,12 +11,16 @@ struct DashboardView: View {
    @Binding var path: NavigationPath
    @Binding var progress: Double
    @Binding var talent: Talent?
+    
+    @State var searchQuery: String = "" // Add this line
+
    
    var body: some View {
       ScrollView{
          // MARK: Top Section (Details)
-         HeaderView()
-         
+         //HeaderView()
+          HeaderView(searchQuery: $searchQuery) // Pass searchQuery to HeaderView
+
          // MARK: Challenge Box & Talents List
          ChallengeView(progress: $progress)
          
@@ -24,9 +28,12 @@ struct DashboardView: View {
             .frame(maxWidth: .infinity, maxHeight: 4)
             .foregroundStyle(.neutral)
          
-         ExploreTalentsView(path: $path, talent: $talent)
+         //ExploreTalentsView(path: $path, talent: $talent)
             .environment(ModelData())
             .padding(.bottom, 4)
+          
+          ExploreTalentsView(path: $path, talent: $talent,searchQuery: searchQuery) // Pass searchQuery to ExploreTalentsView
+            .environment(ModelData())
       }
       .background(Colors.white)
       .ignoresSafeArea()

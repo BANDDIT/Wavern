@@ -12,9 +12,12 @@ struct TalentProfileView: View {
    @State var isInvited: Bool = false
    @Environment(ModelData.self) private var modelData
    @Binding var talent: Talent?
-   
+
    var viewModel = TalentViewModel()
     @StateObject var talentSingleton = TalentSingleton.shared
+    
+    var portoLogo:[String]=["mail","ig","github","dribbble","figma","link_link-slant"]
+
    
    var body: some View {
       VStack(alignment: .center){
@@ -30,12 +33,12 @@ struct TalentProfileView: View {
                Interview_Count: talents.Interview_Count, 
                Skills: talents.Skills, 
                Links: talents.Links
-            ))
+            )).frame(height:380)
             
             VStack(alignment: .leading){
                //            SkillsView()
                //            .padding()
-               
+               /*
                VStack(alignment: .leading) {
                   Text("Skills")
                      .font(Fonts.semibold16)
@@ -54,6 +57,9 @@ struct TalentProfileView: View {
                   })
                }
                .padding()
+                */
+                SkillsView(skills:talent!.Skills)
+                    .padding()
                
                Rectangle()
                   .frame(maxWidth: .infinity, maxHeight: 4)
@@ -63,8 +69,8 @@ struct TalentProfileView: View {
                   Text("Portfolio Links")
                      .font(Fonts.semibold16)
                   HStack{
-                     ForEach(talents.Links, id: \.self){link in
-                        PortfolioViews(img: "figma", url: link)
+                      ForEach(Array(talents.Links.enumerated()), id: \.offset){index,link in
+                        PortfolioViews(img: portoLogo[index], url: link)
                      }
                   }
                }
@@ -73,6 +79,8 @@ struct TalentProfileView: View {
                Divider()
                   .padding(.bottom, 8)
                
+               //Spacer()
+                Spacer()
                HStack{
                   CustomButtons(text: "Save Profile", bgColor: Colors.white, txtColor: Colors.purple600, height: 56, action: {})
                      .overlay {
@@ -90,6 +98,8 @@ struct TalentProfileView: View {
                   })
                }
                .padding(.horizontal)
+                Spacer()
+                Spacer()
             }
             .frame(maxHeight: .infinity)
             .background(Colors.white)

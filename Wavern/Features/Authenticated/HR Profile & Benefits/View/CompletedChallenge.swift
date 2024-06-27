@@ -91,10 +91,11 @@ struct CompletedChallenge: View {
                     })
                     .padding(16)
                     Spacer()
-                    
+                    /*
                     VStack {
                         Text("")
                     }.frame(width: 120, height: 5).background(.white).cornerRadius(5).padding(10).padding(.bottom, 10)
+                     */
                 }.frame(maxWidth: .infinity, maxHeight: 128).background(.clear)
             }
         }.ignoresSafeArea().navigationBarBackButtonHidden(true)

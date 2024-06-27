@@ -13,8 +13,10 @@ struct ExploreTalentsView: View {
    @Binding var talent: Talent?
    
    var userList: [Talent]{
-      modelData.talentList
+       modelData.talentList.filter { $0.User_Nama.contains(searchQuery) || searchQuery.isEmpty }
    }
+
+    var searchQuery:String
    
    var body: some View {
       VStack{
@@ -53,10 +55,10 @@ struct ExploreTalentsView: View {
       .padding(.top, 16)
    }
 }
-
+/*
 #Preview {
    ScrollView {
       ExploreTalentsView(path: .constant(NavigationPath()), talent: .constant(Talent(User_Nama: "Hello", User_Email: "Hello", User_Password: "Hello", User_Description: "Hello", Role: "Hello", Experience: 1, Offering: 1, Willing_To_relocate: "Hello", Interview_Count: 1, Skills: [""], Links: [""])))
          .environment(ModelData())
    }
-}
+}*/

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @Binding var searchQuery: String // Add this line
    @StateObject var model = DashboardModel()
    
    var body: some View {
@@ -27,7 +28,9 @@ struct HeaderView: View {
          .padding()
          
          VStack {
-            SearchTextField(search: $model.search)
+             //SearchTextField(search: $model.search)
+             SearchTextField(search: $searchQuery) // Bind searchQuery to SearchTextField
+
          }
          .padding(.horizontal)
       }
@@ -52,7 +55,8 @@ struct HeaderView: View {
       .ignoresSafeArea()
    }
 }
-
+/*
 #Preview {
    HeaderView()
 }
+*/

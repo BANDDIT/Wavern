@@ -14,12 +14,28 @@ struct PortfolioViews: View {
       VStack(alignment: .leading) {
          HStack{
             Link(destination: URL(string: url)!, label: {
-               Image(img)
-                  .frame(width:42,height:42)
-                  .background(
-                     Background.bgGradient
-                  )
-                  .clipShape(Circle())
+                
+                if(img=="github"){
+                    VStack{
+                        Image(img).padding(.top,6).padding(.trailing,1)
+
+                    }.frame(width:42,height:42)
+                        .background(
+                           Background.bgGradient
+                        )
+                        .clipShape(Circle())
+                }
+                else{
+                    VStack{
+                        Image(img)
+
+                    }.frame(width:42,height:42)
+                        .background(
+                           Background.bgGradient
+                        )
+                        .clipShape(Circle())
+                }
+                  
             })
          }
       }

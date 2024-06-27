@@ -8,9 +8,10 @@
 import Foundation
 
 enum Destination: Hashable {
-   case allTalentsView
-   case talentDetailView
-   case rewardsView
-   case completedChallengeView
-   case interviewDateView
+    case allTalentsView
+    case talentDetailView
+    case rewardsView
+    case completedChallengeView
+    case interviewDateView
+    case exploreTalentsView(searchQuery: String) // Add this line
 }

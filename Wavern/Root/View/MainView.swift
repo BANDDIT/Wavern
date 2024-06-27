@@ -24,6 +24,9 @@ struct MainView: View {
    @State var isShow: Bool = false
    @State var progress: Double = 0.0
    @StateObject var user = UserModel()
+    
+    @State var searchQuery: String = ""
+    
    
    var body: some View {
       NavigationStack(path: $path) {
@@ -94,6 +97,11 @@ struct MainView: View {
                InterviewDateView(path: $path, progress: $progress, talent: $talent)
                   .navigationBarBackButtonHidden(true)
                   .environmentObject(user)
+            
+            case .exploreTalentsView(let searchQuery): // Handle the new case here
+                ExploreTalentsView(path: $path, talent:$talent,searchQuery: searchQuery)
+                                 .navigationBarBackButtonHidden(true)
+                                 .environment(ModelData())
             }
          }
       }
